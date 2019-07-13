@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+
+    &__logj{}
+
+    &__nav{
+        .nav__list {
+            display: flex;
+        }
+    }
+
+    &__tel{}
+}

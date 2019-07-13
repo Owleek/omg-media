@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "browserslist": [
-    "last 15 versions",
-    "ie 8"
+    "last 7 versions",
+    "ie 11"
   ],
   "devDependencies": {
     "browser-sync": "^2.26.7",
