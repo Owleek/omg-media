@@ -2,9 +2,19 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+b {
+    font-weight: 500;
+}
+
 img {
     max-width: 100%;
 }
+
+
 // ***************** ASSETS
 .text-uppercase {
     text-transform: uppercase;
