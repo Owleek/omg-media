@@ -24,6 +24,10 @@ img {
     color: white;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .d-flex {
     display: flex;
 }
@@ -32,6 +36,26 @@ img {
     display: block;
 }
 // ***************** ASSETS
+.button {
+	border: none;
+	font-size: 18px;
+	padding: 20px 24px;
+	color: #ffffff;
+	background: #E54745;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	vertical-align: middle;
+	text-decoration: none !important;
+	text-align: center;
+	cursor: pointer;
+    transition: all 0.15s ease-in;
+    
+    &_blue {
+        background: $base-color;
+    }
+}
+
 
 .page-wrapper {
     &:after {
@@ -49,7 +73,7 @@ img {
 .layout-center {
     max-width: 1152px;
     margin: 0 auto;
-    padding: 0 10%;
+    // padding: 0 10%;
 }
 
 .relative-section {
@@ -65,11 +89,12 @@ img {
     
     &__list-item {
         &:not(:last-child) {
-            margin-right: 30px;
+            padding-right: 30px;
         }
     }
 
     &__list-item-link {
+        text-decoration: none;
         color: #ffffff;
     }
 }
