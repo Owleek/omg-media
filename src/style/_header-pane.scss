@@ -1,0 +1,30 @@
+.header-pane {
+    min-height: 200px;
+    background-color: $bg-сolor;
+}
+
+.header {
+    display: flex;
+    position: absolute;
+    left: 0; top: 70px;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.presentation {
+    position: relative;
+    min-height: 300px;
+
+    &__hero {
+    }
+
+    &__text-box-left {
+        position: absolute;
+        bottom: 50px; left: 0px;
+    }
+
+    &__text-box-right {
+        position: absolute;
+        top: 150px; right: 0px;
+    }
+}
