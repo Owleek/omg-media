@@ -1,6 +1,7 @@
 .header-pane {
     min-height: 200px;
     background-color: $bg-сolor;
+    margin-bottom: 70px;
 }
 
 .header {
@@ -9,7 +10,7 @@
     position: absolute;
     left: 0; top: 70px;
     justify-content: space-between;
-    z-index: 1;
+    z-index: 100;
 
     &__nav {
         font-size: 16px;
