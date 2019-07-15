@@ -1,0 +1,20 @@
+.blog-briefs {
+   &__title {} 
+   
+   &__content {} 
+   
+   &__post-view {
+      .blog-briefs__post-title {}
+   } 
+   
+   &__post-list {} 
+   
+   &__post {} 
+   
+   &__post-title {} 
+
+   &__post-desc {} 
+   
+   &__post-read {} 
+}
+
