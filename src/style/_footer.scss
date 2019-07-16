@@ -1,9 +1,15 @@
-.main-footer {
+.footer {
     &__content {}
     
-    &__title {}
+    &__col {
+        &-nav {}
+    }
     
-    &__box {}
+    &__nav {}
+    
+    &__list {}
+    
+    &__list-item {}
     
     &__contacts-box {}
     
@@ -14,6 +20,4 @@
         
         &_adress {}
     }
-    
-    &__copyrights {}
 }
