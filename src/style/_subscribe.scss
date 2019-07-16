@@ -1,0 +1,23 @@
+.subscribe {
+    &__title {}
+    
+    &__subtitle {}
+    
+    &__social {
+
+        .social__icon {
+            &_vk {}
+        
+            &_facebook {}
+            
+            &_youtube {}
+            
+            &_inst {}
+            
+            &_telegram {}
+            
+            &_email {}
+        }
+    
+    }
+}
