@@ -94,9 +94,14 @@ b {
 	position: relative;
 	vertical-align: middle;
 	text-decoration: none !important;
-	text-align: center;
+    text-align: center;
+    white-space: nowrap;
 	cursor: pointer;
     transition: all 0.15s ease-in;
+
+    &_dark-blue {
+        background: $dark-blue;
+    }
 }
 
 
@@ -124,45 +129,44 @@ b {
     position: relative;
 }
 
+.logo {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #ffffff !important;
+    border: 3px solid #ffffff;
+    text-decoration: none !important;
+    font-weight: 900;
+    outline: none !important;
+    white-space: nowrap;
 
-// .nav {
-//     &__list {
-//         &_flex {
-//             display: flex;
-//         }
-//     }
+    &__item {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 1.75rem;
+
+        &_2 {    
+            padding-left: 4px;
+            font-size: 0.95rem;
+            line-height: 0.9;
+            font-weight: 400;
+        }
+    }
+}
+
+.nav {
+    &__list {}
     
-//     &__list-item {
-//         &:not(:last-child) {
-//             padding-right: 30px;
-//         }
-//     }
+    &__list-item {}
 
-//     &__list-item-link {
-//         text-decoration: none;
-//         color: #ffffff;
-//     }
-// }
+    &__list-item-link {
+        text-decoration: none;
+        color: #ffffff;
+        
+        &:hover {
+            color: #ffffff;
+        }
+    }
+}
 
-// .logo {
-//     display: flex;
-//     padding: 8px 12px;
-//     color: #ffffff;
-//     border: 3px solid #ffffff;
-//     text-decoration: none !important;
-
-//     &__item {
-//         &_1 {
-//             padding-right: 4px;
-//             font-size: 28px;
-//         }
-
-//         &_2 {
-//             align-self: flex-start;
-//             font-size: 15px;
-//             line-height: 0.8;
-//         }
-//     }
-// }
 
 

@@ -1,0 +1,11 @@
+.presentation { 
+    &__hero {}
+    
+    &__text-box {
+        span {}
+
+        &_left {}
+
+        &_right {}
+    }
+ }
