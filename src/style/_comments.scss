@@ -1,0 +1,43 @@
+.comments {
+    &__title {}
+
+    &__form-container {}
+
+    &__textarea-box {}
+
+    &__actions-form {
+        &_reply {}
+    }
+    
+    &__btn-group {}
+    
+    &__body {}
+    
+    &__list {
+        &_deep {}
+    }
+}
+
+.comments-post {
+    &__container {}
+    
+    &__header {}
+    
+    &__avatar {
+        &_deep {}
+    }
+    
+    &__header-content {
+        &_deep {}
+    }
+    
+    &__author {}
+
+    &__publisher-author {}
+    
+    &__date {}
+    
+    &__body {}
+    
+    &__reply {}
+}
