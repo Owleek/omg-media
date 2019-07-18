@@ -1,7 +1,15 @@
 .basic-form {
-    &__row-inputs {}
+    &__row-inputs {
+        display: flex;
+        margin-bottom: 20px;
+    }
     
-    &__input-box {}
+    &__input-box {
+        input {
+            height: 64px;
+            width: 285px;
+        }
+    }
     
     &__input-confirm {}
 }

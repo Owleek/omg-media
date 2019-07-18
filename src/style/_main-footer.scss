@@ -85,6 +85,17 @@
 
     &__basic-form {
         margin-left: 50px;
+
+        .basic-form__row-inputs {
+        }
+        
+        .basic-form__input-box {
+
+        }
+        
+        .basic-form__input-confirm {
+            color: $secondary-blue;
+        }
     }
 
     &__copyrights {
