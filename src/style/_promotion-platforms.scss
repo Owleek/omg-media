@@ -1,9 +1,36 @@
+.promotion-platforms-wrapper {
+    width: 960px;
+    margin: 0 auto 200px;
+}
+
 .promotion-platforms {
-    &__title {}
+    display: flex;
+    padding: 3.5rem 2.5rem;
+    background-color: $dark-blue;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 900;
+        margin-bottom: 0;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 1.4; 
+    }
     
     &__carousel-container {}
     
-    &__carousel {}
+    &__carousel {
+        display: flex;
+        justify-content: flex-end;
+    }
     
-    &__carousel-item {}
+    &__carousel-item {
+        color: #ffffff;
+        font-size: 1.5rem;
+        flex-basis: 140px;
+        padding-left: 16px;
+        margin-bottom: 0;
+        margin-right: 10px;
+        border-left: 4px solid $light-blue;
+    }
 }
