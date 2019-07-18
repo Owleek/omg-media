@@ -1,20 +1,59 @@
 .blog-briefs {
-   &__title {} 
-   
-   &__content {} 
-   
-   &__post-view {
-      .blog-briefs__post-title {}
+   &__title {
+      font-size: 4.5rem;
+      text-align: center;
+      line-height: 1.3;
+      margin-bottom: 3rem;
+
+      span {
+         text-indent: -16.8rem;
+         font-size: 3.5rem;
+      }
    } 
    
-   &__post-list {} 
+   &__content {
+      display: flex;
+   } 
    
-   &__post {} 
-   
-   &__post-title {} 
+   &__post-view {
+      flex-basis: 40%;
+      padding-right: 6%;
 
-   &__post-desc {} 
+      .blog-briefs__post-title {
+         font-size: 2rem;
+         font-weight: 500;
+         line-height: 1.4;
+         margin-bottom: 1rem;
+      }
+   } 
    
-   &__post-read {} 
+   &__post-list {
+      flex-basis: 60%;
+      display: flex;
+      flex-wrap: wrap;
+   } 
+   
+   &__post {
+      flex-basis: calc(50% - 3.5rem);
+      display: inline-flex;
+      flex-direction: column;
+      margin-bottom: 2.25rem;
+      margin-left: 3.5rem;
+   } 
+   
+   &__post-title {
+      font-size: 1.25rem;
+      font-weight: 400;
+      margin-bottom: 1.2rem;
+      color: $text;
+   } 
+
+   &__post-desc {
+      margin-bottom: 1rem;
+   } 
+   
+   &__post-read {
+      margin-top: auto;
+   } 
 }
 
