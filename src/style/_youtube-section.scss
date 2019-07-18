@@ -1,15 +1,54 @@
 .youtube-section {
-    &__title {}
+    &__title {
+        font-size: 6.25rem;
+        padding-left: 6rem;
+        margin-bottom: 7rem;
+
+        span {
+            font-size: 4rem;
+        }
+
+    }
     
-    &__carousel {}
+    &__carousel {
+    }
     
-    &__carousel-item {}
+    &__carousel-item {
+        display: flex;
+        align-items: flex-start;
+    }
     
-    &__card {}
+    &__card {
+        flex-basis: 33.333%;
+        background-color: #ffffff;
+
+        &_lower {
+            margin-top: 120px;
+        }
+
+        &_upper {
+            margin-top: -48px;
+        }
+    }
     
-    &__card-video {}
+    &__card-video {
+        margin-bottom: 30px;
+    }
     
-    &__card-title {}
+    &__card-content {
+        padding: 0 40px;
+    }
+
+    &__card-title {
+        margin-bottom: 16px;
+        font-size: 1.25rem;
+        font-weight: 400;
+        color: $text;
+    }
     
-    &__card-time {}
+    &__card-time {
+        display: block;
+        margin-bottom: 30px;
+        color: $secondary;
+    }
 }
