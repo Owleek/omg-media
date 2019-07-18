@@ -1,7 +1,14 @@
 .partner-section {
+    background: $dark-blue;
+    padding: 80px;
+
     &__carousel {}
     
-    &__carousel-item {}
+    &__carousel-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
     
     &__clients {}
 }
