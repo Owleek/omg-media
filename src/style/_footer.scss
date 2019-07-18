@@ -1,23 +1,62 @@
 .footer {
-    &__content {}
-    
-    &__col {
-        &-nav {}
+    background-color: $light-blue;
+
+    &__container {
+        padding-top: 70px;
+    }
+
+    &__content {
+        display: flex;
+        margin-bottom: 20px;
     }
     
-    &__nav {}
+    &__col {
+        flex-basis: 30%;
+
+        &_nav {
+            flex-basis: 40%;
+        }
+    }
     
-    &__list {}
+    &__nav {
+        display: flex;
+    }
     
-    &__list-item {}
+    &__list {
+        padding-right: 50px;
+    }
+    
+    &__list-item {
+        margin-bottom: 10px;
+    }
     
     &__contacts-box {}
     
     &__contacts {
+        color: #ffffff;
+        display: block;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: #ffffff; 
+        }
+
         &_tel {}
         
         &_email {}
         
-        &_adress {}
+        &_adress {
+            color: #B0D9FF;
+            font-size: 0.875rem;
+
+            &:hover {
+                color: #B0D9FF;
+            }
+
+        }
+    }
+
+    &__copyrights {
+        padding-bottom: 60px;
     }
 }
