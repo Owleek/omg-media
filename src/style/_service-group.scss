@@ -25,9 +25,10 @@
     &__item {
         flex-basis: 25%;
         padding-right: 35px;
+    }
 
-        span {
-            margin-bottom: 15px;
-        }
+    &__half-number {
+        margin-bottom: 10px;
+        display: block;
     }
 }
