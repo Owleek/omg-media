@@ -107,6 +107,8 @@ b {
 
 .page-wrapper {
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     &:after {
         content: "";
@@ -123,6 +125,10 @@ b {
 .layout-center {
     max-width: 1152px;
     margin: 0 auto;
+}
+
+.main {
+    flex-grow: 1;
 }
 
 .relative-section {

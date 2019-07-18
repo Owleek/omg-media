@@ -8,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link rel="stylesheet" href="style/libs.css">
+    <link rel="stylesheet" href="style/libs.css">
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
@@ -20,51 +20,52 @@
 
 <body>
     <div class="page-wrapper">
-        <section class="head-section" style="margin-bottom: 100px;">
+        <main class="main">
+            <section class="head-section" style="min-height: 600px">
+                <div class="layout-center">
+                    <div class="relative-section">
+                        //= template/header.html
+                    </div><!-- relative-section -->
+                </div><!-- /layout-center -->
+            </section><!-- /head-section -->
+
             <div class="layout-center">
                 <div class="relative-section">
-                    //= template/header.html
-                    <div class="div" style="min-height: 400px"></div>
-                </div><!-- relative-section -->
+                    <div class="consult-request">
+                        <div class="consult-request__text">
+                            Специализируемся на performance-
+                            маркетинге + аналитике для малого
+                            и среднего бизнеса.
+                        </div><!-- /consult-request__text -->
+
+                        <button class="button">
+                            Бесплатная консультация
+                        </button><!-- /button -->
+                    </div><!-- /consult-request -->
+                </div><!-- /relative-section -->
+
+                <div class="services-list-wrapper">
+                    <ul class="services-list">
+                        <li class="services-list__item">
+                            <span class="d-block">01</span>
+                            Делаем анализ маркетинга бесплатно
+                        </li>
+                        <li class="services-list__item">
+                            <span class="d-block">02</span>
+                            Даём финансовые и юридические гарантии
+                        </li>
+                        <li class="services-list__item">
+                            <span class="d-block">03</span>
+                            Отправляем регулярные отчеты
+                        </li>
+                        <li class="services-list__item">
+                            <span class="d-block">04</span>
+                            Оплата после достижения результата
+                        </li>
+                    </ul><!-- /services-list -->
+                </div><!-- /services-list-wrapper -->
             </div><!-- /layout-center -->
-        </section><!-- /head-section -->
-
-        <div class="layout-center" style="display: none;">
-            <div class="relative-section">
-                <div class="consult-request">
-                    <div class="consult-request__text">
-                        Специализируемся на performance- 
-                        маркетинге + аналитике для малого
-                        и среднего бизнеса.
-                    </div><!-- /consult-request__text -->
-
-                    <button class="button">
-                        Бесплатная консультация
-                    </button><!-- /button -->
-                </div><!-- /consult-request -->
-            </div><!-- /relative-section -->
-            
-            <div class="services-list-wrapper">
-                <ul class="services-list">
-                    <li class="services-list__item">
-                        <span class="d-block">01</span>
-                        Делаем анализ маркетинга бесплатно
-                    </li>
-                    <li class="services-list__item">
-                        <span class="d-block">02</span>
-                        Даём финансовые и юридические гарантии
-                    </li>
-                    <li class="services-list__item">
-                        <span class="d-block">03</span>
-                        Отправляем регулярные отчеты
-                    </li>
-                    <li class="services-list__item">
-                        <span class="d-block">04</span>
-                        Оплата после достижения результата
-                    </li>
-                </ul><!-- /services-list -->
-            </div><!-- /services-list-wrapper -->
-        </div><!-- /layout-center -->
+        </main><!-- /main -->
         //= template/footer.html
     </div><!-- /page-wrapper -->
 </body>

@@ -1,12 +1,14 @@
 .consult-request {
     position: absolute;
-    right: 0; top: -160px;
+    right: 0; top: -185px;
     z-index: 10;
     width: 40%;
-    padding: 40px 100px 70px 40px;
+    padding: 40px 45px 70px 40px;
+    background-color: #ffffff;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
     &__text {
+        font-size: 1.25rem;
         margin-bottom: 30px;
     }
 }
@@ -18,17 +20,14 @@
 .services-list {
     width: 60%;
     display: flex;
-    font-size: 16px;
+    font-size: 1rem;
 
     &__item {
-        max-width: 145px;
+        flex-basis: 25%;
+        padding-right: 35px;
 
         span {
             margin-bottom: 15px;
-        }
-
-        &:not(:last-child) {
-            margin-right: 40px;
         }
     }
 }
