@@ -4,12 +4,20 @@
         margin-bottom: 20px;
     }
     
-    &__input-box {
-        input {
-            height: 64px;
-            width: 285px;
+    &__input-box {}
+
+    &__input {
+        height: 64px;
+        width: auto;
+        border: none;
+        padding: 20px 16px;
+
+        &_bg-gray {
+            background-color: $fade;
         }
     }
     
-    &__input-confirm {}
+    &__input-confirm {
+        color: $light-blue;
+    }
 }

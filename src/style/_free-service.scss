@@ -1,3 +1,27 @@
-.audit-request {
-    &__title {}
+.free-service {
+    padding: 84px 96px 0px 0px;
+    background-color: #ffffff;
+    margin-bottom: 400px;
+
+    &__inner {
+        width: 670px;
+        margin-left: auto;
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        line-height: 1;
+        margin-bottom: 2rem;
+
+        span {
+            font-size: 3.5rem;
+            text-indent: -100px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    &__basic-form {
+        padding-bottom: 150px;
+    }
 }
