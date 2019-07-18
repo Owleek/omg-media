@@ -1,27 +1,83 @@
 .cases-section {
+    position: relative;
+    background-color: #ffffff;
+    margin-bottom: 20rem; //6
+
     &__carousel {}
     
-    &__carousel-item {}
+    &__carousel-item {
+        display: flex;
+        padding: 3.5rem 6rem 2rem;
+        position: relative;
+    }
 
-    &__video {}
+    &__video {
+        position: absolute;
+        left: 17.8rem; bottom: 4rem;
+    }
 
-    &__content {}
+    &__content {
+        flex-basis: 18rem;
+        margin-left: auto;
+    }
     
-    &__subtitle {}
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 500;
+    }
     
-    &__description {}
+    &__description {
+        font-size: 1rem;
+    }
     
-    &__price-container {}
-    
-    &__price-box {}
-    
+    &__price-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__col{
+        flex-basis: 40%;
+        padding-left: 28px;
+
+        &_2 {
+            flex-basis: 60%;
+        }
+    }
+
+    &__price-box {
+        margin-bottom: 1.5rem;
+    }
+
     &__price-headline {}
     
-    &__price {}
-    
-    &__old-price {}
-    
-    &__old-price {}
+    &__price {
+        display: block;
+        font-size: 1.5rem;
+        color: dark-blue;
+        font-weight: 500;
 
-    &__title {}
+        &_old {
+            text-decoration: line-through;
+            color: $secondary;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+    }
+
+    &__title {
+        font-size: 6.25rem;
+        text-transform: uppercase;
+        position: absolute;
+        margin: 0;
+        left: 2.5rem; 
+        bottom: 7.9rem;
+
+        span {
+            padding-left: 2rem;
+            display: block;
+            font-size: 4rem;
+            font-weight: 400;
+            text-transform: capitalize;
+        }
+    }
 }
