@@ -1,15 +1,60 @@
 .achievements {
-    &__title {}
+    padding: 60px 80px;
+    background-color: #ffffff;
+    margin-bottom: 200px;
+    position: relative;
+
+    &__title {
+        font-size: 4.5rem;
+        margin-bottom: 2.5rem;
+
+        span {
+            font-size: 3.5rem;
+        }
+    }
     
     &__symbol {}
     
-    &__list {}
-    
-    &__list-item {}
-    
-    &__list-item-data {
-        span {}
+    &__list {
+        display: flex;
+        margin-bottom: 3rem;
     }
     
-    &__footnote {}
+    &__list-item {
+        flex-basis: 25%;
+        font-size: 1.25rem;
+        color: $dark;
+        display: inline-flex;
+        flex-direction: column;
+
+        &:not(:last-child) {
+            padding-right: 50px;
+        }
+    }
+    
+    &__list-item-data {
+        font-size: 4rem;
+        font-weight: 900;
+        color: $dark-blue;
+        margin-top: auto;
+        position: relative;
+
+        .subdata {
+            font-size: 0.875rem;
+            position: absolute;
+            left: 0; bottom: 0;
+            text-transform: uppercase;
+        }
+    }
+    
+    &__footnote {
+        font-size: 0.875rem;
+        color: $secondary;
+
+        &:before {
+            content: "*";
+            color: $button;
+            padding-right: 10px;
+        }
+    }
 }
