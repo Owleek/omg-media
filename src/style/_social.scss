@@ -1,29 +1,74 @@
 .social {
-    &__box {
-        &_vk {}
+    display: flex;
+
+    &__box { 
+        width: 64px;
+        height: 64px;
+        position: relative;
+        display: inline-block;
+        text-decoration: none !important;
+
+        &_vk {
+            background-color: #4A76A8;
+        }
         
-        &_facebook {}
+        &_facebook {
+            background-color: #4267B2;;
+        }
         
-        &_youtube {}
+        &_youtube {
+            background-color: #F80000;
+        }
         
-        &_inst {}
+        &_inst {
+            background-color: #BE0457;
+        }
         
-        &_telegram {}
+        &_telegram {
+            background-color: #35A9DC;
+        }
         
-        &_email {}
+        &_email {
+            background-color: #E54745;
+        }
     }
 
     &__icon {
-        &_vk {}
+        fill: #ffffff;
+        width: 26px;
+        height: 20px;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        &_vk {
+            width: 26px;
+            height: 15px;
+        }
         
-        &_facebook {}
+        &_facebook {
+            width: 12px;
+            height: 22px;
+        }
         
-        &_youtube {}
+        &_youtube {
+            width: 26px;
+            height: 18px;
+        }
         
-        &_inst {}
+        &_inst {
+            width: 26px;
+            height: 26px;
+        }
         
-        &_telegram {}
+        &_telegram {
+            width: 26px;
+            height: 26px;
+        }
         
-        &_email {}
+        &_email {
+            width: 26px;
+            height: 20px;
+        }
     }
 }

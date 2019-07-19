@@ -1,22 +1,51 @@
 .subscribe {
-    &__title {}
+    color: #ffffff;
+    background-color: $dark-blue;
+    margin-bottom: 400px;
+    padding: 50px 80px;
+
+    &__title,  
+    &__subtitle {
+        color: #ffffff;
+    }
     
-    &__subtitle {}
+    &__title {
+        font-size: 2rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    
+    &__subtitle {
+        font-size: 1.25rem;
+        font-weight: 400;
+        margin-bottom: 1.25rem;
+    }
     
     &__social {
+        margin-bottom: 50px;
+        
+        .social__box {
+            margin-right: 10px;
+        }
 
         .social__icon {
-            &_vk {}
+            &_vk {
+            }
         
-            &_facebook {}
+            &_facebook {
+            }
             
-            &_youtube {}
+            &_youtube {
+            }
             
-            &_inst {}
+            &_inst {
+            }
             
-            &_telegram {}
+            &_telegram {
+            }
             
-            &_email {}
+            &_email {
+            }
         }
     
     }
