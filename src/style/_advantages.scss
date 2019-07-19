@@ -1,16 +1,49 @@
 .advantages {
-    &__title-box {}
+    display: flex;
+
+    &__title-box {
+        flex-basis: 50%;
+        padding-right: 6.5rem;
+        align-self: center;
+        transform: translateY(-15%);
+    }
     
-    &__title {}
+    &__title {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
     
-    &__subtitle {}
+    &__subtitle {
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: right;
+    }
     
-    &__list {}
+    &__list {
+        flex-basis: 50%;
+    }
     
-    &__list-item {}
+    &__list-item {
+        font-size: 1.25rem;
+        padding-left: 5.5rem;
+        max-width: 520px;
+        margin-bottom: 1.8rem;
+        position: relative;
+
+        .half-number {
+            position: absolute;
+            top: 0; left: 0;
+            line-height: 1.125;    
+        }
+    }
     
-    &__list-item-title {}
+    &__list-item-title {
+        color: $dark-blue;
+    }
     
-    &__list-item-desc {}
+    &__list-item-desc {
+        font-size: 1rem;
+        color: $dark;
+    }
 
 }
