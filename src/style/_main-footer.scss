@@ -26,22 +26,24 @@
         flex-basis: 70%;
     }
     
-    &__contacts-box {
+    &__contacts-list {
         margin-bottom: 30px;
     }
     
     &__contacts {
-        display: block;  
         color: #ffffff;
         font-size: 1.25rem;
         margin-bottom: 20px;
-        white-space: nowrap;     
-
-        &:hover {
-            color: #ffffff;
-            text-decoration: none;
-        }
         
+        a {     
+            color: #ffffff;
+
+            &:hover {
+                color: #ffffff;
+                text-decoration: none;
+            }
+        }
+
         span {
             display: inline-block;
             vertical-align: middle;
@@ -97,6 +99,6 @@
     }
 
     &__copyrights {
-        padding-bottom: 50px;
+        margin-bottom: 50px;
     }
 }

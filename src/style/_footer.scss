@@ -30,15 +30,17 @@
         margin-bottom: 10px;
     }
     
-    &__contacts-box {}
+    &__contacts-list{}
     
     &__contacts {
-        color: #ffffff;
-        display: block;
         margin-bottom: 10px;
 
-        &:hover {
-            color: #ffffff; 
+        a {
+            color: #ffffff;
+           
+            &:hover {
+                color: #ffffff; 
+            }
         }
 
         &_tel {}
@@ -57,6 +59,6 @@
     }
 
     &__copyrights {
-        padding-bottom: 60px;
+        margin-bottom: 60px;
     }
 }
