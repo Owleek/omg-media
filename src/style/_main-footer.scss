@@ -22,8 +22,7 @@
     }
     
     &__box {
-        padding-left: 6%;
-        padding-top: 130px;
+        padding: 130px 0px 0px 90px;
         flex-basis: 70%;
     }
     
@@ -35,7 +34,8 @@
         display: block;  
         color: #ffffff;
         font-size: 1.25rem;
-        margin-bottom: 20px;      
+        margin-bottom: 20px;
+        white-space: nowrap;     
 
         &:hover {
             color: #ffffff;
@@ -86,11 +86,13 @@
         }
         
         .basic-form__input-box {
+        }
 
+        .basic-form__input {
+            min-width: 275px;
         }
         
         .basic-form__input-confirm {
-            color: $secondary-blue;
         }
     }
 

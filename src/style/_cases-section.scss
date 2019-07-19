@@ -35,17 +35,14 @@
         flex-wrap: wrap;
     }
 
-    &__col{
-        flex-basis: 40%;
-        padding-left: 28px;
-
-        &_2 {
-            flex-basis: 60%;
-        }
-    }
-
     &__price-box {
+        flex-basis: 50%;
         margin-bottom: 1.5rem;
+        padding-left: 1.5rem;
+
+        &:nth-child(even) {
+            padding-left: 10px;
+        }
     }
 
     &__price-headline {}

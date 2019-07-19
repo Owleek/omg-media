@@ -1,19 +1,47 @@
 .team-section {
-    &__title {}
+    position: relative;
+    padding: 90px 40px 0px;
+    background-color: #ffffff;
+
+    &__title {
+        font-size: 4.5rem;
+        line-height: 1.1;
+        position: absolute;
+        top: 50px; left: 50%;
+
+        span {
+            text-indent: -2.5rem;
+            font-size: 3.5rem;
+        }
+    }
     
     &__carousel {}
     
     &__carousel-item {}
     
-    &__hero-card {}
+    &__hero-card {
+        display: flex;
+    }
     
     &__hero-image {}
     
-    &__hero-info {}
+    &__hero-info {
+        padding-top: 170px;
+    }
     
-    &__hero-name{}
+    &__hero-name{
+        font-size: 2rem;
+        font-weight: 500;
+        color: $text;
+    }
     
-    &__hero-about {}
+    &__hero-about {
+        margin-bottom: 1.5rem;
+    }
     
-    &__hero-achievements {}
+    &__hero-achievements {
+        img {
+            margin-right: 1rem;
+        }
+    }
 }

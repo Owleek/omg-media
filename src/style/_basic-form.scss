@@ -19,5 +19,9 @@
     
     &__input-confirm {
         color: $light-blue;
+        
+        &_aqua {
+            color: $aqua;
+        }
     }
 }
