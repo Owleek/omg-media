@@ -1,9 +1,33 @@
+.head-teaser-wrapper {
+    margin-top: -17rem;
+    margin-bottom: 6.8rem;
+}
+
 .head-teaser {
-    &__hero {}
+    display: flex;
+    padding: 15px 50px 0px;
+    background-color: #ffffff;
+
+    &__hero {
+        flex-basis: 50%;
+    }
     
-    &__content {}
+    &__content {
+        flex-basis: 50%;
+        padding-top: 38px;
+        padding-left: 60px;
+    }
     
-    &__title {}
+    &__title {
+        font-size: 3rem;
+        line-height: 1.2;
+        margin-bottom: 2.5rem;
+
+        span {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
     
     &__button {}
 }

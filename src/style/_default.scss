@@ -71,6 +71,10 @@ b {
     color: white;
 }
 
+.text-aqua {
+    color: $aqua;
+}
+
 .text-center {
     text-align: center;
 }
@@ -120,6 +124,7 @@ b {
 
 
 .page-wrapper {
+    // height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -188,6 +193,15 @@ b {
     }
 }
 
+.page-title {
+    font-size: 4.5rem;
+    color: #ffffff;
+    padding-top: 13.3rem;
+    padding-bottom: 14.6rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
 .half-number {
     font-size: 2rem;
     color: $dark-blue;
@@ -198,11 +212,6 @@ b {
 }
 
 .copyrights {
-    color: #ffffff;
     font-size: 0.875rem;
-    padding-bottom: 50px;
-
-    &_aqua {
-        color: $aqua;
-    }
+    color: $aqua;
 }
