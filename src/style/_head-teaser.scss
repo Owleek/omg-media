@@ -5,17 +5,17 @@
 
 .head-teaser {
     display: flex;
-    padding: 15px 50px 0px;
+    padding: 0px 50px;
     background-color: #ffffff;
 
     &__hero {
         flex-basis: 50%;
+        margin-top: 20px;
     }
     
     &__content {
         flex-basis: 50%;
-        padding-top: 38px;
-        padding-left: 60px;
+        padding: 60px 0px 60px 60px;
     }
     
     &__title {

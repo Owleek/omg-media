@@ -1,9 +1,33 @@
-.platform-cards {}
+.platform-cards {
+    display: flex;
+    justify-content: space-between;
+}
 
 .platform-card {
-    &__logo {}
+    width: 300px;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 0 2rem;
+
+    &__logo {
+        height: 215px;
+        padding-top: 115px;
+    }
+
+    &__logo-icon { }
+
+    &__content {}
     
-    &__stats {}
+    &__stats {
+        font-size: 2.5rem;
+        font-weight: 500;
+        color: $dark-blue;
+        margin-bottom: 1.5rem;
+    }
     
-    &__desc {}
+    &__desc {
+        font-size: 1.25rem;
+        color: $dark;
+        padding-bottom: 2rem;
+    }
 }
