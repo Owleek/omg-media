@@ -59,8 +59,8 @@ b {
 
 .button {
 	border: none;
-	font-size: 1.25rem;
-	padding: 1.25rem 1.5rem;
+	font-size: 20px;
+	padding: 20px 24px;
 	color: #ffffff;
 	background: $button;
 	display: inline-block;
@@ -80,11 +80,10 @@ b {
     &_transparent {
         background: transparent;
     }
-
 }
 
 .page-wrapper {
-    // height: 100%;
+    min-height: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -92,12 +91,12 @@ b {
     &:after {
         content: "";
         position: absolute;
-        top: .875rem;
-        right: .875rem;
-        bottom: .875rem;
-        left: .875rem;
+        top: 16px;
+        right: 16px;
+        bottom: 16px;
+        left: 16px;
         pointer-events: none;
-        border: 0.4rem solid $dark-blue;
+        border: 8px solid $dark-blue;
     }
 }
 
