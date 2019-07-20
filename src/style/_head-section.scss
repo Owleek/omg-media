@@ -8,20 +8,41 @@
     justify-content: space-between;
     align-items: flex-end;
     position: absolute;
-    top: 4.3rem; left: 0;
+    top: 72px; left: 0;
     width: 100%;
 
+    @media only screen and (max-width: 767px) {
+        top: 24px;
+    }
+
     &__logo {
-        align-self: center;
+        .logo-icon {
+            @media only screen and (max-width: 1170px) {
+                display: none;
+            }
+        }
+        
+        .logo-icon-mobile {
+            display: none;
+
+            @media only screen and (max-width: 1170px) {
+                display: block;
+            }
+        }
     }
 
     &__nav {
         font-weight: 500;
-        align-self: flex-end;
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 1399px) {
+            text-transform: none;
+            font-weight: 400;
+        }
 
         .nav__list {
             display: flex;
-            text-transform: uppercase;
+            
         }        
     
         .nav__list-item {
@@ -29,14 +50,18 @@
             
             &:not(:last-child) {
                 padding-right: 30px;
+
+                @media only screen and (max-width: 1399px) {
+                    padding-right: 16px;
+                }
             }
         }
     
         .nav__list-item-link {
             display: block;
-            padding-bottom: 20px;
+            padding-bottom: 15px;
             position: relative;
-            text-decoration: none !important;
+            text-decoration: none;
             
             &:after {
                 content: "";
@@ -66,60 +91,50 @@
                     transform: scaleX(1);
                 }
             }
-        
+        }
+
+        @media only screen and (max-width: 1023px) {
+            display: none; //////// временно
         }
     }
 
     &__tel {
-        font-size: 1rem;
+        font-size: 16px;
         font-weight: 500;
-        outline: none !important;
-
+        padding: 15px 16px;
         color: #ffffff;
+
         &:hover {
             color: #ffffff;
         }
+
+        @media only screen and (max-width: 1170px) {
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        @media only screen and (max-width: 1023px) {
+            display: none; //////// временно
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @media only screen and (max-width: 1023px) {
+            display: block;
+        }
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 35px;
+        fill: #ffffff;
+
+        @media only screen and (max-width: 767px) {
+            width: 24px;
+            height: 21px;
+            margin-bottom: 6px;
+        }
     }
 }
-
-// .presentation {
-//     position: relative;
-//     min-height: 300px;
-
-//     &__hero {
-//     }
-
-//     &__text-box {
-//         color: #ffffff;
-//         text-align: center;
-
-//         span {
-//             padding-top: 15px;
-//             display: block;
-//             text-transform: uppercase;
-//             font-weight: 900;
-//         }
-        
-//         &_left {
-//             width: 550px;
-//             font-size: 64px;
-//             position: absolute;
-//             bottom: 15%; left: 0px;
-
-//             span {
-//                 font-size: 100px;
-//             }
-//         }
-
-//         &_right {
-//             width: 350px;
-//             font-size: 32px;
-//             position: absolute;
-//             top: 35%; right: 0px;
-
-//             span {
-//                 font-size: 48px;
-//             }
-//         }
-//     }
-// }

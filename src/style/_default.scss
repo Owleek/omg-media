@@ -73,6 +73,10 @@ b {
 	cursor: pointer;
     transition: all 0.15s ease-in;
 
+    &_blue {
+        background: $dark-blue;
+    }
+
     &_lightblue {
         background: #348AD9;
     }
@@ -97,6 +101,10 @@ b {
         left: 16px;
         pointer-events: none;
         border: 8px solid $dark-blue;
+
+        @media only screen and (max-width: 1023px) {
+            display: none;
+        }
     }
 }
 
@@ -104,6 +112,18 @@ b {
     max-width: 1392px;
     margin: 0 auto;
     padding: 0 120px;
+
+    @media only screen and (max-width: 1080px) {
+        padding: 0 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        padding: 0 40px;
+    }
+
+    @media only screen and (max-width: 567px) {
+        padding: 0 24px;
+    }
 }
 
 .main {
@@ -115,28 +135,23 @@ b {
 }
 
 .logo {
-    display: inline-block;
-    padding: 8px 12px;
-    color: #ffffff !important;
-    border: 3px solid #ffffff;
-    text-decoration: none !important;
-    font-weight: 900;
-    outline: none !important;
-    white-space: nowrap;
+    line-height: 0;
 
-    &__item {
-        display: inline-block;
-        vertical-align: middle;
-        font-size: 1.75rem;
-
-        &_2 {    
-            padding-left: 4px;
-            font-size: 0.95rem;
-            line-height: 0.9;
-            font-weight: 400;
-        }
+    a {
+        text-decoration: none !important;
     }
 }
+
+.logo-icon {
+    width: 114px;
+    height: 48px;
+}
+
+.logo-icon-mobile {
+    width: 52px;
+    height: 48px;
+}
+
 
 .nav {
     &__list {}
