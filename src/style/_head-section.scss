@@ -6,7 +6,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     position: absolute;
     top: 4.3rem; left: 0;
     width: 100%;
@@ -17,6 +17,7 @@
 
     &__nav {
         font-weight: 500;
+        align-self: flex-end;
 
         .nav__list {
             display: flex;
@@ -24,6 +25,8 @@
         }        
     
         .nav__list-item {
+            display: flex;
+            
             &:not(:last-child) {
                 padding-right: 30px;
             }
@@ -31,6 +34,7 @@
     
         .nav__list-item-link {
             display: block;
+            padding-bottom: 20px;
             position: relative;
             text-decoration: none !important;
             
