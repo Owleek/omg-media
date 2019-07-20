@@ -1,37 +1,101 @@
 .comments {
-    &__title {}
+    margin-bottom: 50px;
 
-    &__form-container {}
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    &__form-container {
+        margin-bottom: 50px;
+    }
 
     &__textarea-box {}
+
+    &__textarea {
+        width: 100%;
+        background-color: $fade;
+        border: none;
+        resize: none;
+        padding: 1.5rem;
+        text-align: left;
+
+        &_top {
+            height: 64px;
+        }
+
+        &_bottom {
+            height: 140px;
+        }
+    }
 
     &__actions-form {
         &_reply {}
     }
     
-    &__btn-group {}
+    &__btn-group {
+        display: flex;
+        justify-content: flex-end;
+        padding: 1rem;
+        background-color: $fade;
+    }
     
-    &__body {}
+    &__body {
+        margin-bottom: 50px;
+    }
     
     &__list {
-        &_deep {}
+        &_deep {
+            padding-top: 30px;
+            padding-left: 50px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-left: 1px dashed #D3D4D8;
+        }
     }
 }
 
 .comments-post {
+    margin-bottom: 20px;
+
     &__container {}
     
-    &__header {}
+    &__header {
+        display: flex;
+        margin-bottom: 1rem;
+    }
     
     &__avatar {
-        &_deep {}
+        width: 42px;
+        height: 40px;
+        margin-right: 10px;
+
+        &_deep {
+            width: 25px;
+            height: 24px;
+        }
     }
     
     &__header-content {
-        &_deep {}
+        color: $secondary;
+
+        span {
+            display: block;
+            font-size: 0.875rem;
+        }
+
+        &_deep {
+            span {
+                display: inline-block;
+            }
+        }
     }
     
-    &__author {}
+    &__author {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $text;
+    }
 
     &__publisher-author {}
     
@@ -39,5 +103,9 @@
     
     &__body {}
     
-    &__reply {}
+    &__reply {
+        color: $secondary;
+        font-size: 0.875rem;
+        cursor: pointer;
+    }
 }
