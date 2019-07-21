@@ -59,7 +59,7 @@ function browserSync(done) {
     });
     done();
 }
- 
+
 function browserSyncReload(done) {
     browsersync.reload();
     done();
@@ -86,6 +86,7 @@ function style() {
 
 function scripts() {
     return gulp.src(path.src.js)
+    .pipe(rigger())
     .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream());
 }
@@ -112,7 +113,7 @@ function svg() {
     .pipe(gulp.dest(path.build.svg))
     .pipe(svgSprite({
         mode: {
-            symbol: { 
+            symbol: {
                 sprite: "sprite.svg"
             }
         }
