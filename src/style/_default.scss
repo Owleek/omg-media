@@ -73,6 +73,11 @@ b {
 	cursor: pointer;
     transition: all 0.15s ease-in;
 
+    &_block {
+        display: block;
+        width: 100%;
+    }
+
     &_blue {
         background: $dark-blue;
     }
@@ -102,26 +107,32 @@ b {
         pointer-events: none;
         border: 8px solid $dark-blue;
 
-        @media only screen and (max-width: 1023px) {
+        @include respond(lg) {
             display: none;
         }
     }
 }
 
 .layout-center {
-    max-width: 1392px;
+    box-sizing: content-box;
+    max-width: 1152px;
+    
     margin: 0 auto;
     padding: 0 120px;
 
-    @media only screen and (max-width: 1080px) {
+    @include respond(lg) {
         padding: 0 60px;
     }
 
-    @media only screen and (max-width: 767px) {
+    @include respond(md) {
         padding: 0 40px;
     }
 
-    @media only screen and (max-width: 567px) {
+    @include respond(sm) {
+        padding: 0 30px;
+    }
+
+    @include respond(xs) {
         padding: 0 24px;
     }
 }

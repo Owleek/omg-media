@@ -1,6 +1,6 @@
 .head-section { 
     background-color: $light-blue;
-    margin-bottom: 4.5rem;
+    margin-bottom: 70px;
 }
 
 .header {
@@ -11,13 +11,17 @@
     top: 72px; left: 0;
     width: 100%;
 
+    @media only screen and (max-width: 1023px) {
+        top: 40px;
+    }
+
     @media only screen and (max-width: 767px) {
         top: 24px;
     }
 
     &__logo {
         .logo-icon {
-            @media only screen and (max-width: 1170px) {
+            @media only screen and (max-width: 1023px) {
                 display: none;
             }
         }
@@ -25,7 +29,7 @@
         .logo-icon-mobile {
             display: none;
 
-            @media only screen and (max-width: 1170px) {
+            @media only screen and (max-width: 1023px) {
                 display: block;
             }
         }
@@ -108,7 +112,7 @@
             color: #ffffff;
         }
 
-        @media only screen and (max-width: 1170px) {
+        @media only screen and (max-width: 1199px) {
             font-size: 14px;
             font-weight: 400;
         }
