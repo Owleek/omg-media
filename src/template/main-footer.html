@@ -3,48 +3,54 @@
         <div class="main-footer__container">
             <div class="main-footer__content">
                 <h2 class="main-footer__title bigger">
-                    <span>Необходимо</span>
-                    Обсудить проект?
+                    <span class="smaller">Необходимо</span>
+                    Обсудить <br>проект?
                 </h2><!-- /main-footer__title -->
                 <div class="main-footer__box">
-                    <ul class="main-footer__contacts-list">
-                        <li class="main-footer__contacts main-footer__contacts_tel">
+                    <div class="main-footer__contact-list">
+                        <div class="main-footer__contact-list-item">
                             <a href="tel: 89295255583">
-                                <span class="main-footer__svg-box">
-                                    <svg class="main-footer__svg main-footer__svg_tel">
-                                        <use xlink:href="images\svg\symbol\sprite.svg#omg-media-svg-tel">
-                                    </svg>
-                                </span>
-                                <span>
-                                    8 929 525 55 83
+                                <span class="main-footer__contact">
+                                    <span class="main-footer__svg-box">
+                                        <svg class="main-footer__svg main-footer__svg_tel">
+                                            <use xlink:href="images\svg\symbol\sprite.svg#omg-media-svg-tel">
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        8 929 525 55 83
+                                    </span>
                                 </span>
                             </a>
-                        </li><!-- /main-footer__contacts -->
+                        </div><!-- /main-footer__contact-list-item -->
 
-                        <li class="main-footer__contacts main-footer__contacts_email">
+                        <div class="main-footer__contact-list-item">
                             <a href="mailto:hello@omgmedia.ru">
+                                <span class="main-footer__contact">
+                                    <span class="main-footer__svg-box">
+                                        <svg class="main-footer__svg main-footer__svg_email">
+                                            <use xlink:href="images\svg\symbol\sprite.svg#omg-media-svg-email">
+                                        </svg>
+                                    </span>
+                                    <span>
+                                        hello@omgmedia.ru
+                                    </span>
+                                </span>
+                            </a>
+                        </div><!-- /main-footer__contact-list-item -->
+
+                        <div class="main-footer__contact-list-item">
+                            <span class="main-footer__contact">
                                 <span class="main-footer__svg-box">
-                                    <svg class="main-footer__svg main-footer__svg_email">
-                                        <use xlink:href="images\svg\symbol\sprite.svg#omg-media-svg-email">
+                                    <svg class="main-footer__svg main-footer__svg_adress">
+                                        <use xlink:href="images\svg\symbol\sprite.svg#omg-media-svg-map-marker">
                                     </svg>
                                 </span>
                                 <span>
-                                    hello@omgmedia.ru
+                                    Москва, ул. Авиамоторная, д.8, стр 39
                                 </span>
-                            </a>
-                        </li><!-- /main-footer__contacts -->
-
-                        <li class="main-footer__contacts main-footer__contacts_adress">
-                            <span class="main-footer__svg-box">
-                                <svg class="main-footer__svg main-footer__svg_adress">
-                                    <use xlink:href="images\svg\symbol\sprite.svg#omg-media-svg-map-marker">
-                                </svg>
                             </span>
-                            <span>
-                                Москва, ул. Авиамоторная, д.8, стр 39
-                            </span>
-                        </li><!-- /main-footer__contacts -->
-                    </ul><!-- /main-footer__contacts-list -->
+                        </div><!-- /main-footer__contact-list-item -->
+                    </div><!-- /main-footer__contact-list -->
                     <div class="basic-form main-footer__basic-form">
                         <div class="basic-form__row-inputs">
                             <div class="basic-form__input-box">
@@ -52,16 +58,20 @@
                             </div><!-- basic-form__input-box -->
 
                             <div class="basic-form__input-box">
-                                <button class="button">
+                                <button class="button basic-form__button">
                                     Обратный звонок
                                 </button>
                             </div><!-- basic-form__input-box -->
                         </div><!-- /basic-form__row-inputs -->
 
-                        <div class="basic-form__input-confirm_aqua">
-                            <label>
-                                <input type="checkbox">
-                                Согласие на обработку персональных данных
+                        <div class="basic-form__input-confirm basic-form__input-confirm_aqua">
+                            <label class="checkbox">
+                                <span class="checkbox__bullet">
+                                    <input type="checkbox">
+                                </span>
+                                <span class="checkbox__label">
+                                    Согласие на обработку персональных данных
+                                </span>
                             </label>
                         </div><!-- /basic-form__input-confirm -->
                     </div><!-- /basic-form -->

@@ -3,7 +3,6 @@ const sass             = require('gulp-sass');
 const autoprefixer     = require('gulp-autoprefixer');
 const cssbeautify      = require('gulp-cssbeautify');
 const imagemin         = require('gulp-imagemin');
-const plumber          = require('gulp-plumber');
 const rigger           = require('gulp-rigger');
 const del              = require('del');
 const svgSprite        = require('gulp-svg-sprite');
@@ -69,7 +68,6 @@ function browserSyncReload(done) {
 
 function html() {
     return gulp.src(path.src.html)
-    .pipe(plumber())
     .pipe(rigger())
     .pipe(gulp.dest(path.build.html))
     .pipe(browsersync.stream());
@@ -77,7 +75,6 @@ function html() {
 
 function style() {
     return gulp.src(path.src.style)
-    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
         cascade: false
@@ -89,7 +86,6 @@ function style() {
 
 function scripts() {
     return gulp.src(path.src.js)
-    .pipe(plumber())
     .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream());
 }

@@ -2,9 +2,18 @@
     &__row-inputs {
         display: flex;
         margin-bottom: 20px;
+
+        @include respond(xs) {
+            flex-direction: column;
+            margin-bottom: 0px;
+        }
     }
     
-    &__input-box {}
+    &__input-box {
+        @include respond(xs) {
+            margin-bottom: 16px;
+        }
+    }
 
     &__input {
         height: 64px;
@@ -15,13 +24,35 @@
         &_bg-gray {
             background-color: $fade;
         }
+
+        @include respond(xs) {
+           width: 100%;
+        }
+    }
+
+    &__button {
+        @include respond(xs) {
+            width: 100%;
+         }
     }
     
     &__input-confirm {
         color: $light-blue;
-        
+
         &_aqua {
             color: $aqua;
         }
+    }
+
+    .checkbox {
+        display: flex;
+    }
+
+    .checkbox__bullet {
+        margin-right: 10px;
+    }
+
+    .checkbox__label {
+        cursor: pointer;
     }
 }
