@@ -1,0 +1,32 @@
+@mixin respond($device) {
+
+    @if $device == xl {
+        @media only screen and (max-width: 1399px) {
+            @content;
+        }
+    };
+
+    @if $device == lg {
+        @media only screen and (max-width: 1199px) {
+            @content;
+        }
+    };
+
+    @if $device == md {
+        @media only screen and (max-width: 1023px) {
+            @content;
+        }
+    };
+
+    @if $device == sm {
+        @media only screen and (max-width: 767px) {
+            @content;
+        }
+    };
+
+    @if $device == xs {
+        @media only screen and (max-width: 567px) {
+            @content;
+        }
+    };
+}
