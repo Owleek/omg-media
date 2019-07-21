@@ -7,8 +7,11 @@
     
     &__content {
         display: flex;
-        flex-wrap: wrap;
         margin-bottom: 55px;
+
+        @include respond(md) {
+            flex-wrap: wrap;
+        }
     }
     
     &__title {
