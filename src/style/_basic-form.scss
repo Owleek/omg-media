@@ -3,14 +3,14 @@
         display: flex;
         margin-bottom: 20px;
 
-        @include respond(xs) {
+        @include respond(md) {
             flex-direction: column;
             margin-bottom: 0px;
         }
     }
     
     &__input-box {
-        @include respond(xs) {
+        @include respond(md) {
             margin-bottom: 16px;
         }
     }
@@ -25,19 +25,23 @@
             background-color: $fade;
         }
 
-        @include respond(xs) {
+        @include respond(md) {
            width: 100%;
         }
     }
 
     &__button {
-        @include respond(xs) {
+        @include respond(md) {
             width: 100%;
          }
     }
     
     &__input-confirm {
         color: $light-blue;
+
+        @include respond(sm) {
+            color: $aqua;
+        }
 
         &_aqua {
             color: $aqua;

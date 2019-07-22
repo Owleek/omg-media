@@ -39,8 +39,11 @@
         }
 
         @include respond(md) {
-            flex-basis: 100%;
             padding-right: 0px;
+        }
+
+        @include respond(sm) {
+            flex-basis: 100%;
             font-size: 2.5rem;
             margin-bottom: 40px;
         }
@@ -55,14 +58,14 @@
         }
 
         @include respond(md) {
-            padding-top: 0px;
+            padding-top: 15px;
             margin-right: 60px;
             margin-left: auto;
         }
 
         @include respond(sm) {
-            flex-basis: 100%;
-            margin: 0;
+            margin: 0px;
+            padding: 0px;
         }
     }
     
@@ -128,7 +131,7 @@
                 width: 255px;
             }
  
-            @include respond(lg) {
+            @include respond(md) {
                 width: 100%;
             }
         }
