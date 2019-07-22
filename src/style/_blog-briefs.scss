@@ -121,6 +121,10 @@
       @include respond(md) {
          font-size: 24px;
        }
+
+       @include respond(sm) {
+         margin-bottom: 8px;
+       }
    } 
 
    &__post-desc {
