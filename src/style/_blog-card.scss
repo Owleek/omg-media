@@ -1,10 +1,24 @@
 .blog-card {
-    width: 290px;
+    width: 30%;
     margin-bottom: 200px;
     background-color: #ffffff;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 
-    &__image {
+    &_large {
+        display: flex;
+S
+        .image-wrapper {
+            &:before {
+                padding-top: 74%;
+    
+                @include respond(sm) {
+                    paSdding-top: 58%;
+                }
+            }
+        }
+    }
+
+    &__image-wrapper {
         margin-bottom: 20px;
     }
 
@@ -46,7 +60,7 @@
                 margin-right: auto;
             }
         }
-        
+
         .metainfo__author {}
         
         .metainfo__author-pic {}
@@ -60,5 +74,14 @@
         .metainfo__comments {}
 
     }
-    
+            
+    .image-wrapper {
+        &:before {
+            padding-top: 68%;
+
+            @include respond(sm) {
+                padding-top: 58%;
+            }
+        }
+    }
 }
