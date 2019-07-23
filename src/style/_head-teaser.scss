@@ -50,7 +50,7 @@
         padding: 50px 150px 20px 0px;
 
         @include respond(md) {
-            padding: 4vw 0px 0px 0px;
+            padding: 4vw 40px 0px 0px;
         }
 
         @include respond(sm) {
