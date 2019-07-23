@@ -1,6 +1,5 @@
 .team-section {
     position: relative;
-    padding: 90px 40px 0px;
     background-color: #ffffff;
 
     &__title {
@@ -8,9 +7,10 @@
         line-height: 1.1;
         position: absolute;
         top: 50px; left: 50%;
+        z-index: 1;
 
-        span {
-            text-indent: -2.5rem;
+        .smaller {
+            text-indent: -40px;
             font-size: 3.5rem;
         }
     }
@@ -21,12 +21,22 @@
     
     &__hero-card {
         display: flex;
+
+        .image-wrapper {
+            &:before {
+                padding-top: 90%;
+            }
+        }
     }
     
-    &__hero-image {}
+    &__hero-image {
+        flex-basis: 58%;
+        padding: 90px 55px 0px 40px;
+    }
     
     &__hero-info {
-        padding-top: 170px;
+        padding-top: 260px;
+        max-width: 300px;
     }
     
     &__hero-name{
