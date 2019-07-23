@@ -6,6 +6,7 @@ body {
 	font-family: 'Roboto', sans-serif;
 	line-height: 1.5;
     color: #505565;
+    min-width: 320px;
     background-color: #F3F6FA;
 }
 
@@ -281,8 +282,12 @@ b {
     color: $aqua;
 }
 
-.text-gray {
+.text-main {
     color: $text;
+}
+
+.text-gray {
+    color: $secondary;
 }
 
 .text-center {
