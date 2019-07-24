@@ -10,7 +10,7 @@
         margin-bottom: 55px;
 
         @include respond(md) {
-            flex-wrap: wrap;
+            flex-direction: column;
         }
     }
     
@@ -55,6 +55,7 @@
         }
 
         @include respond(md) {
+            align-self: center;
             margin: 0px;
             padding: 0px;
         }
