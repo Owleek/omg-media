@@ -2,6 +2,16 @@
     background: $dark-blue;
     padding: 80px;
 
+    @include respond(md) {
+        display: none;
+    }
+
+    &__title {
+        color: #ffffff;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
     &__carousel {}
     
     &__carousel-item {
@@ -11,5 +21,70 @@
     }
     
     &__clients {}
-}
 
+    &_mobile {
+        display: none;
+        padding: 50px;
+
+        @include respond(md) {
+            display: block;
+        }
+
+        @include respond(sm) {
+            margin-right: -30px;
+            margin-left: -30px;
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    
+        @include respond(xs) {
+            margin-right: -24px;
+            margin-left: -24px;
+            padding: 50px 20px 60px 20px;
+        }
+
+        .partner-section__carousel {}
+        
+        .partner-section__carousel-item {
+            display: flex;
+            flex-direction: column;
+            padding-right: 50px;
+            padding-left: 50px;
+
+            @include respond(sm) {
+                padding-right: 0px;
+                padding-left: 0px;            
+            }
+            
+            @include respond(xs) {
+                flex-direction: row;
+            }
+        }
+        
+        .partner-section__clients {
+            @include respond(xs) {
+                margin-bottom: 60px;
+            }
+        }
+
+        .col {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            margin-bottom: 50px;
+
+            @include respond(sm) {
+                padding-right: 0px;
+                padding-left: 0px;
+            }
+
+            @include respond(xs) {
+                flex-direction: column;
+                margin-bottom: 0px;
+                justify-content: flex-start;
+                align-items: center;
+            }
+        }
+    }
+
+}
