@@ -24,4 +24,24 @@ $(document).ready(function(){
       casesCarousel.addClass("owl-carousel");
     }
   });
+
+  presentTeam();
+
 });
+
+function presentTeam() {
+  var $teamSlideImage = $('.team-slider .team-slider__image'),
+      randomImageIndex = random(0, $teamSlideImage.find('img').length - 1);
+
+  $teamSlideImage.find('img').eq(randomImageIndex).addClass('vis');
+  setTimeout(() => {
+    $('.team-slider').addClass('present');
+  }, 500);    
+}
+
+function random(min, max) {
+  var rand = min + Math.random() * (max + 1 - min);
+  rand = Math.floor(rand);
+  return rand;
+}
+
