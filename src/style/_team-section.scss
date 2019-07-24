@@ -1,17 +1,68 @@
 .team-section {
     position: relative;
     background-color: #ffffff;
+    box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        top: -185px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20rem;
+        font-weight: 900;
+        color: $dark-blue;
+        user-select: none;
+        text-transform: uppercase;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include respond(xl) {
+            top: -170px;
+            font-size: 15.6rem;
+        }
+
+        @include respond(lg) {
+            top: -150px;
+            font-size: 14rem;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    @include respond(md) {
+        padding-top: 50px;
+        background-color: transparent;
+        box-shadow: none;
+    }
 
     &__title {
         font-size: 4.5rem;
         line-height: 1.1;
         position: absolute;
-        top: 50px; left: 50%;
+        top: 50px; right: 200px;
         z-index: 1;
 
         .smaller {
-            text-indent: -40px;
+            text-indent: -80px;
             font-size: 3.5rem;
+            
+            @include respond(md) {
+                text-indent: 0px;
+                font-size: 2.5rem;
+            }
+        }
+
+        @include respond(lg) {
+            right: 150px;
+        }
+        
+        @include respond(md) {
+            position: static;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
         }
     }
     
@@ -27,31 +78,83 @@
                 padding-top: 90%;
             }
         }
+
+        @include respond(md) {
+            flex-direction: column;
+        }
     }
     
     &__hero-image {
         flex-basis: 58%;
         padding: 90px 55px 0px 40px;
+
+        @include respond(xl) {
+            padding: 165px 0px 0px 30px;
+            margin-right: -87px;
+            background-color: #ffffff;
+        }
+
+        @include respond(md) {
+            padding: 5px 36px 0px 36px;
+            margin-right: 0px;
+            box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
     }
     
     &__hero-info {
         padding-top: 260px;
         max-width: 300px;
+        z-index: 10;
+
+        @include respond(md) {
+            padding-top: 0px;
+            max-width: 100%;
+        }
     }
     
     &__hero-name{
         font-size: 2rem;
         font-weight: 500;
+        margin-bottom: 24px;
         color: $text;
+
+        @include respond(xs) {
+            margin-bottom: 10px;
+        }
+
+        @include respond(xs) {
+            font-size: 1.5rem;
+        }
     }
     
     &__hero-about {
-        margin-bottom: 1.5rem;
+        margin-bottom: 24px;
+
+        @include respond(xl) {
+            margin-bottom: 30px;
+        }
+        
+        @include respond(md) {
+            color: $secondary;
+        }
     }
     
     &__hero-achievements {
         img {
-            margin-right: 1rem;
+            margin-right: 16px;
+
+            @include respond(xl) {
+                margin-right: 6px;
+            }
+            
+            @include respond(md) {
+                margin-right: 10px;
+            }
+        }
+
+        @include respond(md) {
+            margin-bottom: 120px;
         }
     }
 }

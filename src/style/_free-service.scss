@@ -8,7 +8,8 @@
         content: attr(data-text);
         position: absolute;
         bottom: -185px;
-        left: -210px;  // ширина прибивки к лево + 1/3 шрифта + отступ центровщика
+        left: 50%;
+        transform: translateX(-50%);
         font-size: 14.1rem;
         font-weight: 900;
         color: $dark-blue;
@@ -18,13 +19,11 @@
         z-index: -1;
 
         @include respond(xl) {
-            left: -130px; // ширина прибивки к лево + отступ центровщика
             bottom: -170px;
             font-size: 12rem;
         }
 
         @include respond(lg) {
-            left: -70px; // ширина прибивки к лево + отступ центровщика
             bottom: -150px;
             font-size: 10rem;
         }
