@@ -11,13 +11,13 @@
     top: 72px; left: 0;
     width: 100%;
 
-    @media only screen and (max-width: 1023px) {
+    @include respond(md) {
         top: 24px;
     }
 
     &__logo {
         .logo-icon {
-            @media only screen and (max-width: 1023px) {
+            @include respond(md) {
                 display: none;
             }
         }
@@ -25,7 +25,7 @@
         .logo-icon-mobile {
             display: none;
 
-            @media only screen and (max-width: 1023px) {
+            @include respond(md) {
                 display: block;
             }
         }
@@ -35,7 +35,7 @@
         font-weight: 500;
         text-transform: uppercase;
 
-        @media only screen and (max-width: 1399px) {
+        @include respond(xl) {
             text-transform: none;
             font-weight: 400;
         }
@@ -51,7 +51,7 @@
             &:not(:last-child) {
                 padding-right: 30px;
 
-                @media only screen and (max-width: 1399px) {
+                @include respond(xl) {
                     padding-right: 16px;
                 }
             }
@@ -93,7 +93,7 @@
             }
         }
 
-        @media only screen and (max-width: 1023px) {
+        @include respond(md) {
             display: none; //////// временно
         }
     }
@@ -108,12 +108,12 @@
             color: #ffffff;
         }
 
-        @media only screen and (max-width: 1199px) {
+        @include respond(lg) {
             font-size: 14px;
             font-weight: 400;
         }
 
-        @media only screen and (max-width: 1023px) {
+        @include respond(md) {
             display: none; //////// временно
         }
     }
@@ -121,20 +121,143 @@
     &__menu {
         display: none;
 
-        @media only screen and (max-width: 1023px) {
+        @include respond(md) {
             display: block;
         }
     }
 
     .menu-icon {
-        width: 30px;
-        height: 35px;
+        width: 24px;
+        height: 21px;
         fill: #ffffff;
+    }
 
-        @media only screen and (max-width: 767px) {
-            width: 24px;
-            height: 21px;
-            margin-bottom: 6px;
+///***********  BLOG
+
+    &_blog {
+        position: static;
+        padding-top: 72px;
+        flex-direction: column;
+        width: 100%;
+
+        .header__top {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 45px;
+
+            @include respond(md) {
+                margin-bottom: 85px;
+            }
+        }
+
+        .header__bottom {
+            width: 100%;
+            overflow-x: auto;
+            
+            .header__nav {
+                display: block;
+                margin: 0;
+                padding: 0;
+                text-transform: none;
+                font-weight: 400;
+
+                @include respond(xs) {
+                    font-size: 24px;
+                }
+            }
+
+
+            .nav__list-item {
+                display: flex;
+                 
+                &:not(:last-child) {
+                    padding-right: 30px;
+    
+                    @include respond(xl) {
+                        padding-right: 26px;
+                    }
+                    
+                    @include respond(md) {
+                        padding-right: 24px;
+                    }
+                }
+
+                @include respond(md) {
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                }
+            }
+
+            .nav__list-item-link {
+                .counter {
+                    font-size: 14px;
+                    color: $aqua;
+                    
+                    @include respond(sm) {
+                        font-size: 18px;
+                    }
+                }
+
+                &_selected {
+                    .counter {
+                        color: $dark-blue !important;
+                    }
+                }
+            }
+        }
+
+        @include respond(md) {
+            padding-top: 24px;
+        }
+
+        .header__logo {
+            margin-right: 16px;
+        }
+
+        .header__title {
+            color: #ffffff;
+            font-size: 1.75rem;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+
+        .header__left-side {
+            align-items: center;
+        }
+
+        .header__right-side {
+            @include respond(md) {
+                align-items: center;
+            }
+        }
+
+        .header__left-side,
+        .header__right-side {
+            display: flex;
+        }
+
+        .header__nav {
+            margin-right: 30px;
+        }
+
+        .header__search-container {
+            @include respond(md) {
+                margin-right: 35px;
+            }
+        }
+
+        .header__svg-box {
+            display: block;
+            cursor: pointer;
+        }
+
+        .search-icon {
+            width: 18px;
+            height: 18px;
+            fill: #ffffff;
         }
     }
 }
+
