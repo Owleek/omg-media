@@ -330,3 +330,158 @@ b {
     box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.25);
 }
 // ***************** ASSETS
+
+
+
+
+
+
+
+
+
+article {
+    margin: 0px 0px 40px 0px;
+    line-height: 32px;
+    font-size: 20px;
+}
+
+article h1 {
+    font-size: 72px;
+    line-height: 1.11;
+
+    @include respond(sm) {
+        font-size: 32px;        
+    }    
+}
+
+article ul,
+article ol {
+    padding-left: 50px;
+    margin: 24px 0px 24px 0px;
+
+    @include respond(sm) {
+        padding-left: 10px;
+    }    
+}
+
+article ul li,
+article ol li {
+    max-width: 540px;
+    position: relative;
+    margin: 24px 0px 24px 0px;
+    padding: 0px 0px 0px 35px;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+
+article ul li:before {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 10px; top: 7px;
+    border-radius: 50%;
+    background: #348AD9;
+    content: '';
+}
+
+article ol {
+    counter-reset: num;
+}
+
+article ol li:before {
+    position: absolute;
+    left: 0px; top: 0px;
+
+    counter-increment: num;
+    content: counter(num) ' ';
+    color: #348AD9;
+
+    @include respond(sm) {
+        position: static;
+        display: block;
+    }            
+}
+
+
+article mark {
+    display: block;
+    padding: 24px;
+    margin: 30px 0px 50px 0px;
+    background: #F0F1F3;
+
+    @include respond(sm) {
+        margin-left: -24px;
+        margin-right: -24px;
+    }        
+}
+
+article blockquote {
+    position: relative;
+    margin: 0px 0px 20px 0px;
+}
+
+article blockquote {
+    background: #F0F1F3;
+    padding: 24px 90px;
+
+    @include respond(sm) {
+        margin-left: -24px;
+        margin-right: -24px;
+    }            
+}
+
+article blockquote,
+article blockquote p {
+    font-style: italic;
+    line-height: 1.67;
+    font-size: 24px;    
+}
+
+article blockquote p {
+    max-width: 700px;
+    margin: 6px 0px;
+}
+
+article blockquote:before,
+article blockquote:after {
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-style: normal;
+    font-size: 72px;
+}
+
+article blockquote:before {
+    left: 20px;
+    content: '«';
+}
+
+article blockquote:after {
+    right: 20px;
+    content: '»';
+}
+
+
+article .cols {
+    display: flex;
+    margin-left: -20px;
+
+    @include respond(sm) {
+        display: block;
+        margin-left: 0;
+    }    
+}
+
+article .col-6 {
+    width: 50%;
+    flex: 0 0 50%;
+    padding-left: 20px;
+
+    @include respond(sm) {
+        width: auto;
+        padding: 0px;
+    }        
+}
+
+
