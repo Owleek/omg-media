@@ -77,7 +77,6 @@ function html() {
 
 function style() {
     return gulp.src(path.src.style)
-    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
         cascade: false
