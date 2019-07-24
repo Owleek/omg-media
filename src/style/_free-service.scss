@@ -12,9 +12,10 @@
         font-size: 14.1rem;
         font-weight: 900;
         color: $dark-blue;
+        user-select: none;
+        text-transform: uppercase;
         opacity: 0.05;
         z-index: -1;
-        text-transform: uppercase;
 
         @include respond(xl) {
             left: -130px; // ширина прибивки к лево + отступ центровщика
@@ -108,6 +109,37 @@
 
         @include respond(sm) {
             padding-bottom: 60px;
+        }
+    }
+
+    .half-number {
+        position: absolute;
+        left: 0; top: 0;
+        line-height: 1;
+        text-indent: -11rem;
+        opacity: 0.08;
+        font-size: 36.8rem;
+        letter-spacing: -0.04em;
+        user-select: none;
+        
+        .smaller {
+            font-size: 16.3rem;
+            font-weight: 500;
+
+            @include respond(xl) {
+                font-size: 8.8rem;
+            }
+        }
+
+        @include respond(xl) {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20rem;
+            text-indent: -6rem;
+        }
+
+        @include respond(lg) {
+            display: none;
         }
     }
 }
