@@ -4,30 +4,72 @@
     margin-bottom: 400px;
     padding: 50px 80px;
 
+    @include respond(md) {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+
+    @include respond(sm) {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+
+    @include respond(xs) {
+        // padding-bottom: 135px;
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
     &__title,  
     &__subtitle {
         color: #ffffff;
     }
     
     &__title {
-        font-size: 2rem;
+        font-size: 32px;
         font-weight: 500;
         margin-bottom: 5px;
+
+        @include respond(xs) {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
     }
     
     &__subtitle {
-        font-size: 1.25rem;
+        font-size: 20px;
         font-weight: 400;
-        margin-bottom: 1.25rem;
+        margin-bottom: 20px;
+        
+        @include respond(xs) {
+            margin-bottom: 24px;
+        }
     }
     
     &__social {
         margin-bottom: 50px;
         
+        @include respond(xs) {
+           display: flex;
+           flex-direction: column;     
+        }
+        
         .social__box {
-            margin-right: 10px;
+            margin-right: 6px;
+
+            @include respond(xs) {
+                width: 77px;
+                margin-right: 1px;
+            }
         }
 
+        .row {
+            margin-right: 5px;
+
+            @include respond(xs) {
+                margin: -1px;
+            }
+        }
         .social__icon {
             &_vk {
             }

@@ -2,26 +2,86 @@
     &__row-inputs {
         display: flex;
         margin-bottom: 20px;
+
+        @include respond(md) {
+            flex-direction: column;
+            margin-bottom: 0px;
+        }
     }
     
-    &__input-box {}
+    &__input-box {
+        position: relative;
+
+        &:not(:first-child):before {
+            content: "";
+            position: absolute;
+            left: 0; top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 32px;
+            background-color: $dark-blue;
+            opacity: 0.2;
+
+            @include respond(md) {
+                display: none;
+            }
+        }
+
+        @include respond(md) {
+            margin-bottom: 16px;
+        }
+    }
+
+    &__button {
+        @include respond(md) {
+            margin-bottom: 16px;
+        }
+    }
 
     &__input {
         height: 64px;
         width: auto;
         border: none;
         padding: 20px 16px;
+        color: $text;
 
         &_bg-gray {
             background-color: $fade;
         }
+
+        @include respond(md) {
+           width: 100%;
+        }
+    }
+
+    &__button {
+        @include respond(md) {
+            width: 100%;
+         }
     }
     
     &__input-confirm {
         color: $light-blue;
-        
+        user-select: none;
+
+        @include respond(sm) {
+            color: $aqua;
+        }
+
         &_aqua {
             color: $aqua;
         }
+    }
+
+    .checkbox {
+        display: inline-flex;
+    }
+
+    .checkbox__bullet {
+        margin-right: 10px;
+    }
+
+    .checkbox__label {
+        cursor: pointer;
     }
 }

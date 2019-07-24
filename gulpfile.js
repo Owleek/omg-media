@@ -3,7 +3,6 @@ const sass             = require('gulp-sass');
 const autoprefixer     = require('gulp-autoprefixer');
 const cssbeautify      = require('gulp-cssbeautify');
 const imagemin         = require('gulp-imagemin');
-const plumber          = require('gulp-plumber');
 const rigger           = require('gulp-rigger');
 const del              = require('del');
 const svgSprite        = require('gulp-svg-sprite');
@@ -17,12 +16,12 @@ const browsersync      = require('browser-sync').create();
 
 const path = {
     build: {
-        html  : "dist/",
-        js    : "dist/js/",
-        style : "dist/style/",
-        images: "dist/images/",
-        svg   : "dist/images/svg/",
-        fonts : "dist/fonts/"
+        html   : "dist/",
+        js     : "dist/js/",
+        style  : "dist/style/",
+        images : "dist/images/",
+        svg    : "dist/images/svg/",
+        fonts  : "dist/fonts/"
     },
 
     src: {
@@ -69,7 +68,6 @@ function browserSyncReload(done) {
 
 function html() {
     return gulp.src(path.src.html)
-    .pipe(plumber())
     .pipe(rigger())
     .pipe(gulp.dest(path.build.html))
     .pipe(browsersync.stream());
@@ -88,7 +86,6 @@ function style() {
 
 function scripts() {
     return gulp.src(path.src.js)
-    .pipe(plumber())
     .pipe(rigger())
     .pipe(gulp.dest(path.build.js))
     .pipe(browsersync.stream());
@@ -102,6 +99,7 @@ function images() {
 
 function svg() {
     return gulp.src(path.src.svg)
+    .pipe(gulp.dest(path.build.svg))
     .pipe(svgmin({
         js2svg: {
             pretty: true
@@ -113,7 +111,6 @@ function svg() {
         $('[style]').removeAttr('style');
     }))
     .pipe(replace('&gt;', '>'))
-    .pipe(gulp.dest(path.build.svg))
     .pipe(svgSprite({
         mode: {
             symbol: {

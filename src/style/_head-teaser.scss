@@ -1,34 +1,128 @@
 .head-teaser-wrapper {
-    margin-top: -17rem;
-    margin-bottom: 6.8rem;
+    margin-top: -275px;
+    margin-bottom: 100px;
+
+    @include respond(sm) {
+        margin-top: -324px;
+    }
 }
 
 .head-teaser {
     display: flex;
-    padding: 0px 50px;
-    background-color: #ffffff;
+    background-color: #ffffff; 
+    
+    @include respond(sm) {
+        flex-direction: column;
+    }
 
     &__hero {
-        flex-basis: 50%;
-        margin-top: 20px;
+        flex-basis: 51%;
+        padding: 10px 60px 0px 55px;
+
+        @include respond(lg) {
+            padding: 10px 50px 0px 40px;
+        }
+
+        @include respond(md) {
+            padding: 10px 20px 0px 20px;
+        }
+
+        @include respond(sm) {
+            flex-basis: auto;
+            padding: 30px 100px 0px 100px;
+            margin-bottom: 30px;
+        }
+
+        @include respond(xs) {
+            flex-basis: auto;
+            padding: 30px 15px 0px 15px;
+        }
+
+        .image-wrapper {
+            &:before {
+                padding-top: 93.3%;
+            }
+        }
     }
     
     &__content {
-        flex-basis: 50%;
-        padding: 60px 0px 60px 60px;
+        flex-basis: 49%;
+        padding: 50px 150px 20px 0px;
+
+        @include respond(md) {
+            padding: 4vw 40px 0px 0px;
+        }
+
+        @include respond(sm) {
+            text-align: center;
+            flex-basis: auto;
+            align-self: center;
+            padding: 20px 0px 0px 0px;
+            margin-bottom: 65px;
+        }
+
+        @include respond(xs) {
+            padding: 0 24px;
+            align-self: stretch;
+            text-align: left;
+        }
     }
     
     &__title {
         font-size: 3rem;
         line-height: 1.2;
-        margin-bottom: 2.5rem;
+        margin-bottom: 24px;
 
-        span {
+        .smaller {
             font-size: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 16px;
+
+            @include respond(md) {
+                margin-bottom: 5px;
+            }
+
+            @include respond(xs) {
+                font-size: 1.5rem;
+            }
+        }
+
+        @include respond(lg) {
+            font-size: 2.5rem;
+        }
+
+        @include respond(md) {
+            margin-bottom: 16px;
+        }
+
+        @include respond(sm) {
+            margin-bottom: 30px;
+        }
+
+        @include respond(xs) {
+            font-size: 1.5rem;
         }
     }
     
-    &__button {}
+    &__button {
+        padding-right: 34px;
+        padding-left: 34px;
+
+        @include respond(lg) {
+            padding-right: 17px;
+            padding-left: 17px;
+        }
+
+        @include respond(sm) {
+            padding-right: 34px;
+            padding-left: 34px;
+        }
+        
+        @include respond(xs) {
+            width: 100%;
+            font-size: 16px;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }
 }
 

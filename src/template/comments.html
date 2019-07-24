@@ -11,16 +11,16 @@
     <div class="comments__body">
         <ul class="comments__list">
             <li class="comments-post">
-                <div class="comments-post__container">
+                <div class="comments-post__container"> 
                     <div class="comments-post__header">
                         <span class="comments-post__avatar">
                             <img src="images/temp/comments-avatar-1.png" alt="">
                         </span>
                         <div class="comments-post__header-content">
-                            <span class="comments-post__author">
+                            <span class="comments-post__author tag">
                                 Vadim Zhdanov
                             </span>
-                            <span class="comments-post__date">
+                            <span class="comments-post__date tag">
                                 2 часа назад
                             </span>
                         </div><!-- comments-post__header-content -->
@@ -42,13 +42,15 @@
                                     <img src="images/temp/comments-avatar-2.png" alt="">
                                 </span>
                                 <div class="comments-post__header-content comments-post__header-content_deep">
-                                    <span class="comments-post__author">
-                                        Павел
+                                    <span class="comments-post__author-response-label tag">
+                                        <span class="comments-post__author tag">
+                                            Павел
+                                        </span>
+                                        <span class="comments-post__publisher-author tag">
+                                            &#8592 Vadim Zhdanov
+                                        </span>
                                     </span>
-                                    <span class="comments-post__publisher-author">
-                                        &#8592 Vadim Zhdanov
-                                    </span>
-                                    <span class="comments-post__date">
+                                    <span class="comments-post__date tag">
                                         2 часа назад
                                     </span>
                                 </div><!-- comments-post__header-content -->
@@ -70,13 +72,15 @@
                                     <img src="images/temp/comments-avatar-3.png" alt="">
                                 </span>
                                 <div class="comments-post__header-content comments-post__header-content_deep">
-                                    <span class="comments-post__author">
-                                        Михаил
+                                    <span class="comments-post__author-response-label tag">
+                                        <span class="comments-post__author tag">
+                                            Михаил
+                                        </span>
+                                        <span class="comments-post__publisher-author tag">
+                                            &#8592 Vadim Zhdanov
+                                        </span>
                                     </span>
-                                    <span class="comments-post__publisher-author">
-                                        &#8592 Vadim Zhdanov
-                                    </span>
-                                    <span class="comments-post__date">
+                                    <span class="comments-post__date tag">
                                         2 часа назад
                                     </span>
                                 </div><!-- comments-post__header-content -->
@@ -100,10 +104,10 @@
                             <img src="images/temp/comments-avatar-4.png" alt="">
                         </span>
                         <div class="comments-post__header-content">
-                            <span class="comments-post__author">
+                            <span class="comments-post__author tag">
                                 Антон Петров
                             </span>
-                            <span class="comments-post__date">
+                            <span class="comments-post__date tag">
                                 2 часа назад
                             </span>
                         </div><!-- comments-post__header-content -->
@@ -126,12 +130,13 @@
         </div><!-- /comments__textarea-box -->
         <div class="comments__actions-form comments__actions-form_reply">
             <div class="comments__btn-group">
-                <button class="button button_transparent text-gray">
+                <button class="button button_transparent comments__button text-gray">
                     Отменить
                 </button>
-                <button class="button button_lightblue">
+                <button class="button button_lightblue comments__button">
                     Ответить
                 </button>
             </div><!-- /comments__btn-group -->
         </div><!-- /comments__actions-form -->
-    </div><!-- /comments -->
+    </div><!-- /comments__form-container -->
+</div><!-- /comments -->
