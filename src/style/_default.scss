@@ -136,10 +136,17 @@ b {
     @include respond(xs) {
         padding: 0 24px;
     }
+
+    &_extra-thin {
+        @include respond(xs) {
+            padding: 0 16px;
+        }
+    }
 }
 
 .main {
     flex-grow: 1;
+    overflow: hidden;
 }
 
 .relative-section {

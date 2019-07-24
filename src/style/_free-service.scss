@@ -1,7 +1,37 @@
 .free-service {
+    position: relative;
     padding: 84px 96px 0px 0px;
     margin-bottom: 100px;
     background-color: #ffffff;
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        bottom: -185px;
+        left: -210px;  // ширина прибивки к лево + 1/3 шрифта + отступ центровщика
+        font-size: 14.1rem;
+        font-weight: 900;
+        color: $dark-blue;
+        opacity: 0.05;
+        z-index: -1;
+        text-transform: uppercase;
+
+        @include respond(xl) {
+            left: -130px; // ширина прибивки к лево + отступ центровщика
+            bottom: -170px;
+            font-size: 12rem;
+        }
+
+        @include respond(lg) {
+            left: -70px; // ширина прибивки к лево + отступ центровщика
+            bottom: -150px;
+            font-size: 10rem;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
 
     @include respond(xl) {
         padding-right: 80px;
