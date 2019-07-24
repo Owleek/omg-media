@@ -16,12 +16,12 @@ const browsersync      = require('browser-sync').create();
 
 const path = {
     build: {
-        html  : "dist/",
-        js    : "dist/js/",
-        style : "dist/style/",
-        images: "dist/images/",
-        svg   : "dist/images/svg/",
-        fonts : "dist/fonts/"
+        html   : "dist/",
+        js     : "dist/js/",
+        style  : "dist/style/",
+        images : "dist/images/",
+        svg    : "dist/images/svg/",
+        fonts  : "dist/fonts/"
     },
 
     src: {
@@ -99,6 +99,7 @@ function images() {
 
 function svg() {
     return gulp.src(path.src.svg)
+    .pipe(gulp.dest(path.build.svg))
     .pipe(svgmin({
         js2svg: {
             pretty: true
@@ -110,7 +111,6 @@ function svg() {
         $('[style]').removeAttr('style');
     }))
     .pipe(replace('&gt;', '>'))
-    .pipe(gulp.dest(path.build.svg))
     .pipe(svgSprite({
         mode: {
             symbol: {
