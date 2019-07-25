@@ -32,6 +32,25 @@
 
 .services-list-wrapper {
     margin-bottom: 175px;
+
+    @include respond(md) {
+        margin-bottom: 80px;
+    }
+    
+    @include respond(sm) {
+        margin-left: -30px;
+        margin-right: -30px;
+        padding: 65px 30px 20px 30px;
+        margin-bottom: 0px;
+        background-color: #ffffff;
+    }
+
+    @include respond(xs) {
+        margin-left: -24px;
+        margin-right: -24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 .services-list {

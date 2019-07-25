@@ -122,6 +122,10 @@
 .cases-home-wrapper {
 	margin-bottom: 96px;
 
+	@include respond(md) {
+		margin-bottom: 46;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
@@ -130,6 +134,10 @@
 .promotion-platforms-home-wrapper {
 	margin-bottom: 96px;
 
+	@include respond(md) {
+		margin-bottom: 46;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
@@ -138,6 +146,10 @@
 .free-service-home-wrapper {
 	margin-bottom: 173px;
 
+	@include respond(md) {
+		margin-bottom: 80px;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
@@ -146,6 +158,10 @@
 .youtube-section-home-wrapper {
 	margin-bottom: 96px;
 
+	@include respond(md) {
+		margin-bottom: 80px;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
@@ -154,6 +170,10 @@
 .partner-section-home-wrapper {
 	margin-bottom: 84px;
 
+	@include respond(md) {
+		margin-bottom: 70px;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
@@ -162,6 +182,10 @@
 .blog-briefs-home-wrapper {
 	margin-bottom: 180px;
 
+	@include respond(md) {
+		margin-bottom: 50px;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
@@ -170,6 +194,10 @@
 .team-section-home-wrapper {
 	margin-bottom: 128px;
 
+	@include respond(md) {
+		margin-bottom: 50px;
+	}
+	
 	@include respond(sm) {
 		margin-bottom: 0;
 	}
