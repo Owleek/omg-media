@@ -33,6 +33,14 @@ $(document).ready(function(){
 
   presentTeam();
 
+
+  $('.consult-request__button')
+    .click(function() {
+      $('.consult-request').addClass('activated');
+    });
+
+
+
 });
 
 function presentTeam() {

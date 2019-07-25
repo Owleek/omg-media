@@ -28,6 +28,25 @@
     @include respond(sm) {
         display: none;
     }
+
+    .basic-form {
+        display: none;
+
+         &__input {
+            width: 210px;
+         }
+    }
+
+}
+
+.consult-request.activated {
+    .basic-form {
+        display: block;
+    }
+
+    .consult-request__button {
+        display: none;
+    }
 }
 
 .services-list-wrapper {
