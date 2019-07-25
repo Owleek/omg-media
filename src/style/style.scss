@@ -54,6 +54,7 @@
 .team-slider .team-slider__text {
 	width: 550px;
 	position: absolute;
+	font-weight: 900;
 	left: 50%; top: 50%;
 
 	line-height: 126px;
@@ -62,6 +63,7 @@
 }
 
 .team-slider .team-slider__text small {
+	font-weight: 400;
 	padding-left: 90px;
 	line-height: 72px;
 	font-size: 64px;
@@ -111,6 +113,78 @@
 	transform: translate(0, 0);
 	opacity: 1;
 }
+
+
+
+
+//************* HOME PAGE
+
+.cases-home-wrapper {
+	margin-bottom: 96px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+.promotion-platforms-home-wrapper {
+	margin-bottom: 96px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+.free-service-home-wrapper {
+	margin-bottom: 173px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+.youtube-section-home-wrapper {
+	margin-bottom: 96px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+.partner-section-home-wrapper {
+	margin-bottom: 84px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+.blog-briefs-home-wrapper {
+	margin-bottom: 180px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+.team-section-home-wrapper {
+	margin-bottom: 128px;
+
+	@include respond(sm) {
+		margin-bottom: 0;
+	}
+}
+
+//************* /HOME PAGE
+
+
+
+
+
+
+
+
+
 
 
 //********************* article styles
