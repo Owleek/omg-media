@@ -1,4 +1,5 @@
 //= ../vendors/OwlCarousel2-2.3.4/owl.carousel.min.js
+//= ../vendors/jquery.inview.min.js
 
 $(document).ready(function(){
   var casesCarousel = $(".js-cases-carousel");
@@ -39,6 +40,10 @@ $(document).ready(function(){
       $('.consult-request').addClass('activated');
     });
 
+  $('.block-fadein')
+    .one('inview', function() {
+      $(this).addClass('inview');
+    });
 
 
 });
