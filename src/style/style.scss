@@ -169,14 +169,14 @@
 }
 
 .partner-section-home-wrapper {
-	margin-bottom: 84px;
+	margin-bottom: 128px;
 
 	@include respond(md) {
 		margin-bottom: 70px;
 	}
 	
 	@include respond(sm) {
-		margin-bottom: 0;
+		margin-bottom: 0px;
 	}
 }
 
@@ -184,11 +184,7 @@
 	margin-bottom: 180px;
 
 	@include respond(md) {
-		margin-bottom: 50px;
-	}
-	
-	@include respond(sm) {
-		margin-bottom: 0;
+		margin-bottom: 0px;
 	}
 }
 
