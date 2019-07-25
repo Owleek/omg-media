@@ -17,11 +17,17 @@ $(document).ready(function(){
 
   casesCarousel.owlCarousel({
     loop: true,
-    nav: true,
-    dots: false,
+    nav: false,
+    dots: true,
     items: 1,
     onInitialized: function(that) {
       casesCarousel.addClass("owl-carousel");
+    },
+    responsive: {
+      1024: {
+        dots: false,
+        nav: true,
+      }
     }
   });
 
@@ -36,7 +42,7 @@ function presentTeam() {
   $teamSlideImage.find('img').eq(randomImageIndex).addClass('vis');
   setTimeout(() => {
     $('.team-slider').addClass('present');
-  }, 500);    
+  }, 500);
 }
 
 function random(min, max) {

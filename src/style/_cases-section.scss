@@ -10,18 +10,59 @@ $offset: 56px;
     @include respond(md) {
         display: block;
         background: $dark-blue;
+        padding: 45px $layout-center-padding-md 45px $layout-center-padding-md;
+        margin: 0px -#{$layout-center-padding-md};
     }
 
-    .owl-stage-outer {
-        padding-top: $offset;
+    @include respond(sm) {
+        padding-right: $layout-center-padding-sm;
+        padding-left: $layout-center-padding-sm;
+        margin: 0px -#{$layout-center-padding-sm};
+    }
 
-        @include respond(md) {
-            padding-top: 0;
+    @include respond(xs) {
+        padding-right: $layout-center-padding-xs;
+        padding-left: $layout-center-padding-xs;
+        margin: 0px -#{$layout-center-padding-xs};
+    }
+
+    .owl-carousel {
+        .owl-stage-outer {
+            padding-top: $offset;
+
+            @include respond(md) {
+                padding-top: 0;
+            }
+        }
+
+        .owl-dots {
+            text-align: center;
+            padding-top: 40px;
+
+            .owl-dot {
+                display: inline-block;
+                padding: 3px !important;
+                margin: 0 4px;
+                opacity: 0.3;
+                cursor: pointer;
+
+                &.active {
+                    opacity: 1;
+                }
+
+                span {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $white;
+                }
+            }
         }
     }
 
+
     &__carousel {
-        outline: 1px solid red;
         position: relative;
         bottom: 0;
         margin-top: -$offset;
@@ -38,6 +79,7 @@ $offset: 56px;
 
         @include respond(md) {
             padding: 0;
+            display: block;
         }
     }
 
@@ -45,17 +87,35 @@ $offset: 56px;
         width: 37%;
         margin-left: auto;
         margin-top: -$offset * 2;
-        background: pink;
+        position: relative;
+
+        @include respond(lg) {
+            width: 40%;
+        }
 
         @include respond(md) {
-            margin-top: 0
+            width: 100%;
+            margin-top: 0;
+
+            &:before {
+                display: block;
+                width: 0;
+                height: 0;
+                padding-top: 70%;
+                content: '';
+            }
         }
 
         img, video, iframe {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            background: pink;
+
+            @include respond(md) {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
         }
     }
 
@@ -66,6 +126,51 @@ $offset: 56px;
         display: flex;
         flex-direction: column;
         background: $white;
+
+        @include respond(lg) {
+            flex-basis: 300px;
+            margin-left: 50px;
+        }
+
+        @include respond(md) {
+            margin-left: 0;
+        }
+    }
+
+    &__text {
+        flex-grow: 1;
+
+        @include respond(md) {
+            display: none;
+        }
+    }
+
+    &__mobile-text {
+        display: none;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 100;
+        text-align: center;
+        padding: 0 8px;
+
+        &__subtitle {
+            color: $white;
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 40px;
+            line-height: 1.3;
+
+            @include respond(sm) {
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
+        }
+
+        @include respond(md) {
+            display: block;
+        }
     }
 
     &__subtitle {
@@ -78,7 +183,6 @@ $offset: 56px;
     &__description {
         line-height: 1.56;
         margin-bottom: 25px;
-        flex-grow: 1;
     }
 
     &__price-container {
@@ -86,7 +190,7 @@ $offset: 56px;
         flex-wrap: wrap;
         padding-left: 40px;
 
-        @include respond(md) {
+        @include respond(lg) {
             padding-left: 0;
         }
     }
@@ -99,6 +203,9 @@ $offset: 56px;
             text-align: center;
             padding: 14px 14px 8px 14px;
             margin-bottom: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
 
             &_request-price {
                 order: 2;
@@ -145,6 +252,10 @@ $offset: 56px;
         font-weight: 500;
         line-height: 1.4;
 
+        @include respond(xs) {
+            font-size: 20px;
+        }
+
         &_old {
             text-decoration: line-through;
             color: $secondary;
@@ -168,11 +279,20 @@ $offset: 56px;
             color: $white;
             pointer-events: auto;
             text-align: center;
+            margin-bottom: 34px;
+            font-size: 40px;
+            line-height: 1.48;
         }
+    }
 
-        span {
-            padding-left: 2rem;
-            font-size: 4rem;
+    &__title-span {
+        padding-left: 2rem;
+        font-size: 4rem;
+        font-weight: normal;
+
+        @include respond(md) {
+            font-size: 38px;
+            padding-left: 0;
         }
     }
 }
