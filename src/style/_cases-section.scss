@@ -64,6 +64,31 @@ $offset: 56px;
             }
         }
 
+        .owl-nav {
+            position: absolute;
+            bottom: 64px; right: 403px;
+
+            .owl-prev,
+            .owl-next {
+                width: 72px;
+                height: 72px;
+                display: inline-block;
+                font-size: 30px;
+                font-weight: 900;
+                color: $dark-blue;
+                background-color: $dark-blue;
+            }
+
+            .owl-prev {
+                background-color: $white;
+            }
+
+            .owl-next {
+                color: $white;
+            }
+
+        }
+
         .owl-dots {
             text-align: center;
             padding-top: 40px;
@@ -318,6 +343,7 @@ $offset: 56px;
         padding-left: 2rem;
         font-size: 4rem;
         font-weight: normal;
+        text-transform: none;
 
         @include respond(md) {
             font-size: 38px;
