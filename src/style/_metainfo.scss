@@ -1,9 +1,12 @@
 .metainfo {
     color: $secondary;
     display: flex;
+    align-items: center;
 
-    &__item {        
-        span {
+    &__item {
+        white-space: nowrap;   
+             
+        .meta-bit {
             display: inline-block;
             vertical-align: middle;
         }
@@ -11,7 +14,10 @@
     
     &__author {}
     
-    &__author-pic {}
+    &__author-pic {
+        width: 32px;
+        height: 32px;
+    }
     
     &__category {}
     
@@ -25,25 +31,81 @@
         fill: $icon;
         display: inline-block;
         vertical-align: middle;
+        width: 24px;
+        height: 24px;
 
         &_category {
-            width: 24px;
-            height: 24px;
+
         }
         
         &_date {
-            width: 18px;
-            height: 18px;
+
         }
         
         &_views  {
-            width: 20px;
-            height: 20px;
+
         }
         
         &_comments {
-            width: 21px;
-            height: 14px;
+
         }
+    }
+
+    &_blog {
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+
+        .col {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &_nowrap {
+                flex-wrap: nowrap;
+
+                .metainfo__item {
+                    @include respond(xs) {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+        .metainfo__item {
+            margin-right: 27px;
+            margin-bottom: 10px;
+            white-space: nowrap;
+
+            .meta-bit {}
+
+            @include respond(xs) {
+                margin-right: 25px;
+            }
+        }
+        
+        .metainfo__author {
+            font-weight: 500;
+        }
+
+        .metainfo__author-name {
+        }
+        
+        .metainfo__author-pic {
+            margin-right: 8px;
+        }
+        
+        .metainfo__icon {
+            margin-right: 6px;
+        }
+
+        .metainfo__category {
+        }
+        
+        .metainfo__date {}
+        
+        .metainfo__views {}
+        
+        .metainfo__comments {}
+
     }
 }

@@ -4,8 +4,41 @@ $offset: 56px;
     position: relative;
     background-color: #ffffff;
     box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.25);
-    margin-bottom: 60px;
     display: flex;
+
+    @include respond(md) {
+        display: none !important;
+    }
+
+    &:before {
+        content: attr(data-text);
+        position: absolute;
+        top: -180px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20rem;
+        font-weight: 900;
+        color: $dark-blue;
+        user-select: none;
+        letter-spacing: 2rem;
+        text-transform: uppercase;
+        opacity: 0.05;
+        z-index: -1;
+
+        @include respond(xl) {
+            top: -170px;
+            font-size: 15.6rem;
+        }
+
+        @include respond(lg) {
+            top: -150px;
+            font-size: 14rem;
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+    }
 
     @include respond(md) {
         display: block;
@@ -21,7 +54,7 @@ $offset: 56px;
     }
 
     &__carousel {
-        outline: 1px solid red;
+        // outline: 1px solid red;
         position: relative;
         bottom: 0;
         margin-top: -$offset;
@@ -170,7 +203,7 @@ $offset: 56px;
             text-align: center;
         }
 
-        span {
+        .smaller {
             padding-left: 2rem;
             font-size: 4rem;
         }

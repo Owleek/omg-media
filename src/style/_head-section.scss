@@ -1,6 +1,10 @@
 .head-section { 
     background-color: $light-blue;
     margin-bottom: 70px;
+
+    &_blog {
+        margin-bottom: 35px;
+    }
 }
 
 .header {
