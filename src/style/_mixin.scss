@@ -42,3 +42,19 @@
         }
     };
 }
+
+@mixin carousel-control {
+    width: $carousel-control-size;
+    height: $carousel-control-size;
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 900;
+    background-color: $dark-blue;
+    color: $white;
+
+    &.disabled {
+        color: $dark-blue;
+        background-color: $white;
+        cursor: default;
+    }
+}
