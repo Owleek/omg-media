@@ -6,7 +6,6 @@
         align-items: center;
     }
 
-
     &__title-box {
         flex-basis: 42%;
         padding-right: 80px;
@@ -64,7 +63,10 @@
         
         @include respond(md) {
             padding-left: 60px;
-            margin-bottom: 80px; 
+
+            &:not(:last-child) {
+                margin-bottom: 80px; 
+            }
         }
 
         @include respond(sm) {
@@ -101,4 +103,16 @@
         }
     }
 
+    &_offer {
+        margin-bottom: 120px;
+        
+        @include respond(md) {
+            padding-bottom: 34px;
+            margin-bottom: 50px;
+        }
+
+        @include respond(xs) {
+            margin-bottom: 0px;
+        }
+    }
 }

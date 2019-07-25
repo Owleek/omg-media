@@ -47,6 +47,7 @@ $offset: 56px;
         padding-right: $layout-center-padding-sm;
         padding-left: $layout-center-padding-sm;
         margin: 0px -#{$layout-center-padding-sm};
+        box-shadow: none;
     }
 
     @include respond(xs) {
