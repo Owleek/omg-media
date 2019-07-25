@@ -113,5 +113,169 @@
 }
 
 
+//********************* article styles
+.article__subscribe {
+    margin-top: 48px;
+    margin-bottom: 64px;
 
+    @include respond(md) {
+        margin-bottom: 48px;
+    }
+    
+    @include respond(sm) {
+        margin-right: -40px;
+        margin-left: -40px;
+    }
+
+    @include respond(xs) {
+        margin-right: -24px;
+        margin-left: -24px;
+    }
+}
+
+.article__tags-block {
+    margin-bottom: 20px;
+    width: 70%;
+
+    @include respond(lg) {
+		width: 80%;
+    }
+	
+	@include respond(md) {
+        width: 100%;
+        margin-bottom: 28px;
+    }
+}
+
+.article__tag {
+    display: inline-block;
+    padding: 2px 12px;
+    border: 1px solid #D3D4D8;
+    border-radius: 2px;
+	margin: 0px 5px 5px 0px;
+}
+
+
+.article__share-block {
+	margin-bottom: 70px;
+}
+
+.share {
+	display: flex;
+	justify-content: space-between;
+
+	@include respond(xs) {
+		flex-direction: column
+	}
+
+	&__text {
+		display: block;
+		font-size: 20px;
+		color: $dark;
+		margin-bottom: 14px;
+	}
+
+	&__repost {
+		@include respond(xs) {
+			margin-bottom: 38px;
+		}
+	}
+
+	&__follow {}
+
+	&__links {
+		.more-social {
+			width: 40px;
+			height: 28px;
+			background-color: $fade;
+			display: inline-block;
+			position: relative;
+			cursor: pointer;
+
+			&:before  {
+				content: "+";
+				position: absolute;
+				font-size: 20px;
+				font-weight: 500;
+				color: #A1A4B1;
+				left: 50%; top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		.social__box { 
+			width: 40px;
+			height: 28px;
+			margin-right: 5px;
+		}
+	
+		.social__icon {
+			&_vk {
+				width: 16px;
+				height: 9px;
+			}
+			
+			&_facebook {
+				width: 8px;
+				height: 14px;
+			}
+			
+			&_youtube {
+				width: 16px;
+				height: 11px;
+			}
+			
+			&_inst {
+				width: 16px;
+				height: 16px;
+			}
+			
+			&_telegram {
+				width: 16px;
+				height: 14px;
+			}
+			
+			&_twitter {
+				width: 14px;
+				height: 11px;
+			}
+		}
+	}
+}
+
+.others {
+	padding-top: 60px;
+	padding-bottom: 64px;
+	background-color: #F3F6FA;
+
+	&__title {
+		font-size: 2.5rem;
+		margin-bottom: 28px;
+
+		@include respond(xs) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__post-list {
+		display: flex;
+		justify-content: space-between;
+		overflow-x: auto;
+
+		.blog-card {
+			margin: 2px 0px 4px 2px;
+
+			&:not(:last-child) {
+				margin-right: 30px;
+			}
+
+			.image-wrapper {
+				&:before {
+					padding-top: 68%;
+				}
+			}
+		}
+	}
+}
+//********************* /article styles
 

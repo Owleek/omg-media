@@ -3,7 +3,9 @@
     display: flex;
     align-items: center;
 
-    &__item {        
+    &__item {
+        white-space: nowrap;   
+             
         .meta-bit {
             display: inline-block;
             vertical-align: middle;
@@ -57,6 +59,16 @@
             display: flex;
             align-items: center;
             flex-wrap: wrap;
+
+            &_nowrap {
+                flex-wrap: nowrap;
+
+                .metainfo__item {
+                    @include respond(xs) {
+                        margin-right: 20px;
+                    }
+                }
+            }
         }
 
         .metainfo__item {
@@ -64,7 +76,10 @@
             margin-bottom: 10px;
             white-space: nowrap;
 
-            .meta-bit {
+            .meta-bit {}
+
+            @include respond(xs) {
+                margin-right: 25px;
             }
         }
         
