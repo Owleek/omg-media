@@ -15,13 +15,11 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    position: absolute;
-    top: 72px; left: 0;
-    z-index: 1;
     width: 100%;
+    padding-top: 72px;
 
     @include respond(md) {
-        top: 24px;
+        padding-top: 24px;
     }
 
     &__logo {
@@ -143,11 +141,19 @@
 
 ///***********  BLOG
 
+    &_absolute {
+        position: absolute;
+        top: 72px; left: 0;
+        z-index: 1;
+        padding-top: 0px;
+
+        @include respond(md) {
+            top: 24px;
+        }
+    }
+
     &_blog {
-        position: static;
-        padding-top: 72px;
         flex-direction: column;
-        width: 100%;
 
         .header__top {
             display: flex;
@@ -215,10 +221,6 @@
                     }
                 }
             }
-        }
-
-        @include respond(md) {
-            padding-top: 24px;
         }
 
         .header__logo {
