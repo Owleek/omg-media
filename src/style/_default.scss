@@ -137,8 +137,8 @@ b {
         padding: 0 $layout-center-padding-xs;
     }
 
-    &_extra-thin {
-        @include respond(xs) {
+    &_ultra-thin {
+        @include respond(us) {
             padding: 0 16px;
         }
     }

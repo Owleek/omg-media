@@ -14,9 +14,7 @@
     }
 
     @include respond(xs) {
-        // padding-bottom: 135px;
-        padding-right: 24px;
-        padding-left: 24px;
+        padding: 50px 24px 0px 24px;
     }
 
     &__title,  
@@ -40,6 +38,10 @@
         font-weight: 400;
         margin-bottom: 20px;
         
+        @include respond(sm) {
+            margin-bottom: 40px;
+        }
+        
         @include respond(xs) {
             margin-bottom: 24px;
         }
@@ -48,25 +50,58 @@
     &__social {
         margin-bottom: 50px;
         
-        @include respond(xs) {
+        @include respond(sm) {
            display: flex;
            flex-direction: column;     
+        }
+
+        @include respond(xs) {
+           display: flex;
+           flex-direction: column; 
+           margin-bottom: 0px;
+           padding-bottom: 105px;    
+        }
+
+        @include respond(us) {
+            flex-direction: row; 
+            justify-content: space-around;
         }
         
         .social__box {
             margin-right: 6px;
 
-            @include respond(xs) {
-                width: 77px;
-                margin-right: 1px;
+            @include respond(sm) {
+                width: 94px;
+                margin-right: 0px;
+            }
+
+            @include respond(us) {
+                margin-bottom: 20px;
             }
         }
 
         .row {
             margin-right: 5px;
 
+            @include respond(sm) {
+                display: flex;
+                justify-content: space-between;
+                margin-right: 0px;
+                margin-bottom: 20px;
+                padding: 0px 10%;
+            }
+
             @include respond(xs) {
-                margin: -1px;
+                display: flex;
+                justify-content: space-around;
+                padding: 0;
+            }
+
+            @include respond(us) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 0px;
+                align-items: center;
             }
         }
         .social__icon {
@@ -89,5 +124,21 @@
             }
         }
     
+    }
+
+    &_blog {
+        margin-bottom: 32px;
+
+        @include respond(md) {
+			margin-bottom: 44px;
+        }
+        
+        @include respond(sm) {
+			margin-bottom: 30px;
+		}
+
+        @include respond(xs) {
+			margin-bottom: 20px;
+		}
     }
 }
