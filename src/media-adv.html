@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>HOME</title>
+    <title>MediaAdv</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,7 +44,8 @@
                             <span class="smaller">
                                 Новые клиенты
                             </span>
-                            Для Вашего бизнеса!
+                            Для Вашего<br>
+                            бизнеса!
                         </h2>
                         <buttton class="button head-teaser__button">
                             Бесплатная консультация
@@ -52,7 +53,7 @@
                     </div><!-- /head-teaser__content -->
                 </div><!-- /head-teaser -->
 
-                <div class="advantages advantages_media">
+                <div class="advantages advantages_offer">
                     <div class="advantages__title-box">
                         <h2 class="advantages__title bigger">
                             <span class="smaller">
@@ -116,9 +117,58 @@
                     </ul><!-- /advantages__title -->
                 </div><!-- /advantages -->
 
-                <div style="margin-bottom: 93px">
-                    //= template/platform-cards.html
-                </div>
+                <div class="platform-cards">
+                    <div class="platform-card">
+                        <div class="platform-card__logo">
+                            <svg class="platform-card__logo-icon platform-card__logo-icon_youtube">
+                                <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-youtube">
+                            </svg>
+                        </div>
+                        <div class="platform-card__content">
+                            <div class="platform-card__stats">
+                                44 млн
+                            </div>
+                            <p class="platform-card__desc">
+                                В Youtube 44 млн зрителей из России.
+                                Это 64% интернет-аудитории страны
+                            </p>
+                        </div><!-- /platform-card__content -->
+                    </div><!-- /platform-card -->
+
+                    <div class="platform-card">
+                        <div class="platform-card__logo">
+                            <svg class="platform-card__logo-icon platform-card__logo-icon_yandex">
+                                <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-yandex">
+                            </svg>
+                        </div>
+                        <div class="platform-card__content">
+                            <div class="platform-card__stats">
+                                100+ млн
+                            </div>
+                            <p class="platform-card__desc">
+                                Сеть Яндекса и Google ― это аудитория
+                                свыше 100 млн человек
+                            </p>
+                        </div><!-- /platform-card__content -->
+                    </div><!-- /platform-card -->
+
+                    <div class="platform-card">
+                        <div class="platform-card__logo">
+                            <svg class="platform-card__logo-icon platform-card__logo-icon_rbk">
+                                <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-rbk">
+                            </svg>
+                        </div>
+                        <div class="platform-card__content">
+                            <div class="platform-card__stats">
+                                на 40%
+                            </div>
+                            <p class="platform-card__desc">
+                                Повышается доверие покупателей к
+                                вашему бренду за счет публикаций в известных СМИ
+                            </p>
+                        </div><!-- /platform-card__content -->
+                    </div><!-- /platform-card -->
+                </div><!-- /platform-cards -->
 
                 <div class="advantages advantages_bussines">
                     <div class="advantages__title-box">
@@ -161,12 +211,238 @@
                     </ul><!-- /advantages__title -->
                 </div><!-- /advantages -->
 
-                <div style="margin-bottom: 96px;">
-                    //= template/cases-section.html
-                </div>
-                <div style="margin-bottom: 96px;">
-                    //= template/partner-section.html
-                </div>
+                <div class="cases-section" data-text="вкейсах">
+                    <h2 class="cases-section__title bigger content-fadein">
+                        <div class="cases-section__title-span">Результаты</div>
+                        В кейсах
+                    </h2>
+                    <div class="cases-section__carousel js-cases-carousel content-fadein">
+                        <div class="cases-section__carousel-item">
+                            <div class="cases-section__video">
+                                <img src="images/Rectangle 4.1.png" alt="">
+                                <div class="cases-section__mobile-text">
+                                    <h3 class="cases-section__mobile-text__subtitle">
+                                        Интернет-магазин одежды
+                                    </h3>
+                                </div>
+                                <!-- <span class="button button_play"></span> -->
+                            </div><!-- cases-section__video -->
+
+                            <div class="cases-section__content">
+                                <div class="cases-section__text">
+                                    <h3 class="cases-section__subtitle">
+                                        Интернет-магазин одежды
+                                    </h3>
+
+                                    <div class="cases-section__description">
+                                        До обращения к нам, клиент не мог
+                                        увеличить количество заявок в день
+                                        больше 8. После трех месяцев настройки
+                                        нами рекламных кампаний, мы смогли
+                                        увеличить количество заявок до 25 в день
+                                        и снизить стоимость заявки с 500 руб. до 200 руб.
+                                    </div>
+                                </div>
+
+                                <div class="cases-section__price-container">
+                                    <div class="cases-section__price-box cases-section__price-box_click-price">
+                                        <h6 class="cases-section__price-headline">
+                                            Цена клика
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            2,1 ₽
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            5,3 ₽
+                                        </span>
+                                    </div><!-- cases-section__price-box -->
+
+                                    <div class="cases-section__price-box cases-section__price-box_request-price">
+                                        <h6 class="cases-section__price-headline">
+                                            Цена заявки
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            200 ₽
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            500 ₽
+                                        </span>
+                                    </div><!-- cases-section__price-box -->
+
+                                    <div class="cases-section__price-box cases-section__price-box_requests-count">
+                                        <h6 class="cases-section__price-headline">
+                                            Заявок
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            600
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            400
+                                        </span>
+                                    </div><!-- cases-section__price-box -->
+
+                                    <div class="cases-section__price-box cases-section__price-box_monthly-budget">
+                                        <h6 class="cases-section__price-headline">
+                                            Бюджет на месяц
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            720 000 ₽
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            800 000 ₽
+                                        </span>
+                                    </div><!-- /cases-section__price-box -->
+                                </div><!-- /cases-section__price-container -->
+                            </div><!-- /cases-section__content -->
+                        </div><!-- /cases-section__carousel-item -->
+
+                        <div class="cases-section__carousel-item">
+                            <div class="cases-section__video">
+                                <img src="images/Rectangle 4.1.png" alt="">
+                                <div class="cases-section__mobile-text">
+                                    <h3 class="cases-section__mobile-text__subtitle">
+                                        Интернет-магазин одежды
+                                    </h3>
+                                </div>
+                                <!-- <span class="button button_play"></span> -->
+                            </div><!-- cases-section__video -->
+
+                            <div class="cases-section__content">
+                                <div class="cases-section__text">
+                                    <h3 class="cases-section__subtitle">
+                                        Интернет-магазин одежды
+                                    </h3>
+
+                                    <div class="cases-section__description">
+                                        До обращения к нам, клиент не мог
+                                        увеличить количество заявок в день
+                                        больше 8. После трех месяцев настройки
+                                        нами рекламных кампаний, мы смогли
+                                        увеличить количество заявок до 25 в день
+                                        и снизить стоимость заявки с 500 руб. до 200 руб.
+                                    </div>
+                                </div>
+
+                                <div class="cases-section__price-container">
+                                    <div class="cases-section__price-box cases-section__price-box_click-price">
+                                        <h6 class="cases-section__price-headline">
+                                            Цена клика
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            2,1 ₽
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            5,3 ₽
+                                        </span>
+                                    </div><!-- cases-section__price-box -->
+
+                                    <div class="cases-section__price-box cases-section__price-box_request-price">
+                                        <h6 class="cases-section__price-headline">
+                                            Цена заявки
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            200 ₽
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            500 ₽
+                                        </span>
+                                    </div><!-- cases-section__price-box -->
+
+                                    <div class="cases-section__price-box cases-section__price-box_requests-count">
+                                        <h6 class="cases-section__price-headline">
+                                            Заявок
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            600
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            400
+                                        </span>
+                                    </div><!-- cases-section__price-box -->
+
+                                    <div class="cases-section__price-box cases-section__price-box_monthly-budget">
+                                        <h6 class="cases-section__price-headline">
+                                            Бюджет на месяц
+                                        </h6>
+                                        <span class="cases-section__price">
+                                            720 000 ₽
+                                        </span>
+                                        <span class="cases-section__price cases-section__price_old">
+                                            800 000 ₽
+                                        </span>
+                                    </div><!-- /cases-section__price-box -->
+                                </div><!-- /cases-section__price-container -->
+                            </div><!-- /cases-section__content -->
+                        </div><!-- /cases-section__carousel-item -->
+                    </div><!-- /cases-section__carousel -->
+                </div><!-- /cases-section -->
+                <div class="partner-section-wrapper">
+                    <div class="partner-section">
+                        <div class="partner-section__carousel">
+                            <div class="partner-section__carousel-item">
+                                <div class="partner-section__clients">
+                                    <img src="images/temp/logo-clients-1.png" alt="">
+                                </div><!-- /partner-section__clients -->
+
+                                <div class="partner-section__clients">
+                                    <img src="images/temp/logo-clients-2.png" alt="">
+                                </div><!-- /partner-section__clients -->
+
+                                <div class="partner-section__clients">
+                                    <img src="images/temp/logo-clients-3.png" alt="">
+                                </div><!-- /partner-section__clients -->
+
+                                <div class="partner-section__clients">
+                                    <img src="images/temp/logo-clients-4.png" alt="">
+                                </div><!-- /partner-section__clients -->
+
+                                <div class="partner-section__clients">
+                                    <img src="images/temp/logo-clients-5.png" alt="">
+                                </div><!-- /partner-section__clients -->
+                            </div><!-- /partner-section__carousel-item -->
+                        </div><!-- /partner-section__carousel -->
+                    </div><!-- /partner-section -->
+
+                    <div class="partner-section partner-section_mobile">
+                        <h2 class="partner-section__title bigger">
+                            <span class="smaller">
+                                Нам
+                            </span>
+                            Доверяют
+                        </h2>
+                        <div class="partner-section__carousel">
+                            <div class="partner-section__carousel-item">
+                                <div class="col">
+                                    <div class="partner-section__clients">
+                                        <img src="images/temp/logo-clients-1.png" alt="">
+                                    </div><!-- /partner-section__clients -->
+
+                                    <div class="partner-section__clients">
+                                        <img src="images/temp/logo-clients-2.png" alt="">
+                                    </div><!-- /partner-section__clients -->
+
+                                    <div class="partner-section__clients">
+                                        <img src="images/temp/logo-clients-4.png" alt="">
+                                    </div><!-- /partner-section__clients -->
+                                </div><!-- /col -->
+
+                                <div class="col">
+                                    <div class="partner-section__clients">
+                                        <img src="images/temp/logo-clients-4.png" alt="">
+                                    </div><!-- /partner-section__clients -->
+
+                                    <div class="partner-section__clients">
+                                        <img src="images/temp/logo-clients-3.png" alt="">
+                                    </div><!-- /partner-section__clients -->
+
+                                    <div class="partner-section__clients">
+                                        <img src="images/temp/logo-clients-1.png" alt="">
+                                    </div><!-- /partner-section__clients -->
+                                </div><!-- /col -->
+                            </div><!-- /partner-section__carousel-item -->
+                        </div><!-- /partner-section__carousel -->
+                    </div><!-- /partner-section -->
+                </div><!-- /partner-section-wrapper -->
 
                 <div class="free-service" data-text="Бесплатный">
                     <div class="half-number">
@@ -210,7 +486,6 @@
                         </div><!-- /basic-form -->
                     </div><!-- /free-service__inner -->
                 </div><!-- /free-service -->
-
             </div><!-- /layout-center -->
         </main><!-- /main -->
         //= template/footer.html

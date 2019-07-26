@@ -121,6 +121,18 @@ function svg() {
     .pipe(gulp.dest(path.build.svg));
 }
 
+function svgOrigin() {
+    return gulp.src(path.src.svg)
+    .pipe(svgSprite({
+        mode: {
+            symbol: {
+                sprite: "spriteOrigin.svg"
+            }
+        }
+    }))
+    .pipe(gulp.dest(path.build.svg));
+}
+
 
 function fonts() {
     return gulp.src(path.src.fonts)
@@ -133,6 +145,7 @@ function watchFiles() {
     gulp.watch(path.watch.js, scripts);
     gulp.watch(path.watch.images, images);
     gulp.watch(path.watch.svg, svg);
+    gulp.watch(path.watch.svg, svgOrigin);
     gulp.watch(path.watch.fonts, fonts);
 }
 
@@ -140,7 +153,7 @@ function clean() {
     return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, style, scripts, images, svg, fonts));
+const build = gulp.series(clean, gulp.parallel(html, style, scripts, images, svg, svgOrigin, fonts));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.html        = html;
@@ -148,6 +161,7 @@ exports.style       = style;
 exports.scripts     = scripts;
 exports.images      = images;
 exports.svg         = svg;
+exports.svgOrigin   = svgOrigin;
 exports.fonts       = fonts;
 exports.watchFiles  = watchFiles;
 exports.clean       = clean;

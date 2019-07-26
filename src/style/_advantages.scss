@@ -29,6 +29,7 @@
         margin-bottom: 8px;
 
         @include respond(md) {
+
             line-height: 1.4;
             margin-bottom: 24px;
         }
@@ -53,7 +54,7 @@
         }
 
     }
-    
+
     &__list-item {
         font-size: 20px;
         padding-left: 90px;
@@ -80,7 +81,7 @@
             line-height: 1.125; 
             
             @include respond(sm) {
-                top: -5px;
+                top: 2px;
                 transform: translateY(-100%);
             }
         }
@@ -113,6 +114,38 @@
 
         @include respond(xs) {
             margin-bottom: 0px;
+        }
+
+        .advantages__title {            
+            @include respond(xs) {
+                font-size: 2rem;
+                
+                &_static {
+                    white-space: nowrap;
+                }
+            }
+        }
+        
+        .advantages__subtitle {}
+
+            
+        
+    }
+
+
+    &_bussines {
+        .advantages__list-item {
+            .half-number {
+                position: absolute;
+                top: 50%; left: 0;
+                line-height: 1.125;
+                transform: translateY(-50%); 
+                
+                @include respond(sm) {
+                    top: 2px;
+                    transform: translateY(-100%);
+                }
+            }
         }
     }
 }

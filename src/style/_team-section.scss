@@ -146,7 +146,11 @@
     }
     
     &__hero-achievements {
-        img {
+        display: flex;
+        
+        .google-partner-icon {
+            width: 111px;
+            height: 40px;
             margin-right: 16px;
 
             @include respond(xl) {
