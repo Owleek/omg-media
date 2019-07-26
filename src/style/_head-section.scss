@@ -23,17 +23,9 @@
     }
 
     &__logo {
-        .logo-icon {
+        .logo__icon {
             @include respond(md) {
                 display: none;
-            }
-        }
-        
-        .logo-icon-mobile {
-            display: none;
-
-            @include respond(md) {
-                display: block;
             }
         }
     }

@@ -149,38 +149,36 @@ b {
     overflow: hidden;
 }
 
-.relative-section {
+.relative-wrapper {
     position: relative;
 }
 
 .logo {
     line-height: 0;
 
-    a {
-        text-decoration: none !important;
+    &__icon,
+    &__icon-blue {
+        width: 114px;
+        height: 48px;
     }
-}
-
-.logo-icon {
-    width: 114px;
-    height: 48px;
-
-    @include respond(sm) {
-        display: none;
-    }
-
-    &__blue {
+    
+    &__icon-blue {
         display: none;
 
         @include respond(sm) {
-            display: block;
+            display: inline-block;
         }
     }
-}
+    
+    &__icon-mobile {
+        width: 52px;
+        height: 48px;
+        display: none;
 
-.logo-icon-mobile {
-    width: 52px;
-    height: 48px;
+        @include respond(md) {
+            display: inline-block;
+        }
+    }
 }
 
 
