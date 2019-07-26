@@ -488,6 +488,18 @@ article .col-6 {
     }
 }
 
+.items-counter {
+    display: none;
 
+    &_active {
+      display: block;
+    }
 
+    &__total {}
 
+    &__current {
+      &:before {
+        content: '/';
+      }
+    }
+}
