@@ -1,4 +1,5 @@
 //= ../vendors/OwlCarousel2-2.3.4/owl.carousel.min.js
+//= ../vendors/typed-v2.0.9/typed.min.js
 //= ../vendors/jquery.inview.min.js
 
 $(document).ready(function(){
@@ -34,7 +35,6 @@ $(document).ready(function(){
 
   presentTeam();
 
-
   $('.consult-request__button')
     .click(function() {
       $('.consult-request').addClass('activated');
@@ -44,6 +44,49 @@ $(document).ready(function(){
     .one('inview', function() {
       $(this).addClass('inview');
     });
+
+
+    $('[data-typed]').each(function() {
+      var $this = $(this);
+      $this.data('runTyper', function() {
+
+        function startType() {
+          let $items = $this.find('[data-typeditem]');
+          for (var i = 0; i < $items.length; i++) {
+            console.log($items[i]);
+          }  
+        }
+
+        startType();
+
+
+        $this.find('[data-typeditem]')
+
+      });
+    });
+
+
+  // var typed = new Typed("#typed1", {
+  //   strings: ['Реклама'],
+  //   typeSpeed: 200,
+  //   backSpeed: 0,
+  //   fadeOut: true,
+  //   loop: false,
+  //   onStringTyped: function(pos, self) {
+  //     // console.log(pos);
+  //     self.destroy();
+  //   }
+  // });
+
+  setTimeout(() => {
+    $('[data-typed]')
+      .one('inview', function() {
+        $(this).data('runTyper')();
+      });
+  })
+
+
+
 
 
 });
