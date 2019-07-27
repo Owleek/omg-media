@@ -43,7 +43,7 @@
 .team-slider .team-slider__image {
 	text-align: center;
 
-    @include respond(sm) {
+    @include respond(xs) {
     	overflow: hidden;
         min-height: 100vh;
         position: relative;
@@ -57,7 +57,7 @@
 	transform: translate(-50px, 0);
 	opacity: 0;
 
-	@include respond(sm) {
+	@include respond(xs) {
 		height: 100%;
 		max-width: none !important;
 		position: absolute;
@@ -99,7 +99,7 @@
 		top: 490px;
 	}
 
-	@include respond(sm) {
+	@include respond(xs) {
 		display: none;
 	}		
 }
