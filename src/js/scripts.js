@@ -3,7 +3,6 @@
 //= ../vendors/jquery.inview.min.js
 
 $(document).ready(function(){
-
   initTypewriter();
   initTeamParalax();
   casesCarousel();
@@ -22,7 +21,6 @@ $(document).ready(function(){
     });
 
 });
-
 
 function casesCarousel() {
   const $casesSection = $(".js-cases-section");
@@ -71,6 +69,7 @@ function youtubeCarousel() {
 
     const youtubeItems =  youtubeSection.find(".youtube-section__carousel-item").clone();
     const youtubeCards = youtubeItems.find(".youtube-section__card").clone();
+
     let carousel = null;
     let mobileMode = false;
 
@@ -90,13 +89,21 @@ function youtubeCarousel() {
           youtubeCarousel.html(youtubeCards);
 
           carousel = youtubeCarousel.owlCarousel({
-            loop: false,
+            loop: true,
             nav: false,
             dots: true,
-            items: 3,
+            items: 1,
             onInitialized: function(event) {
               youtubeCarousel.addClass("owl-carousel");
               // $casesSection.find(".items-counter").addClass("items-counter_active");
+            },
+            responsive: {
+              568: {
+                items: 2,
+              },
+              768: {
+                items: 3,
+              }
             },
           });
         }
@@ -107,14 +114,42 @@ function youtubeCarousel() {
           carousel && youtubeCarousel.html(youtubeItems);
           carousel && carousel.trigger("destroy.owl.carousel");
 
+          youtubeCarousel.find(".youtube-carousel-nav__prev").on("click", function() {
+            carousel && carousel.trigger("prev.owl.carousel");
+          });
+
+          youtubeCarousel.find(".youtube-carousel-nav__next").on("click", function() {
+            carousel && carousel.trigger("next.owl.carousel");
+          });
+
           carousel = youtubeCarousel.owlCarousel({
             loop: false,
             nav: false,
-            dots: true,
+            dots: false,
             items: 1,
             onInitialized: function(event) {
               youtubeCarousel.addClass("owl-carousel");
               // $casesSection.find(".items-counter").addClass("items-counter_active");
+              const items = youtubeCarousel.find(".youtube-section__carousel-item");
+
+              if (items.length < 2) {
+                youtubeCarousel.find(".youtube-carousel-nav").remove();
+              } else {
+                items.eq(0).find(".youtube-carousel-nav__prev").addClass("disabled");
+                items.eq(items.length - 1).find(".youtube-carousel-nav__next").addClass("disabled");
+              }
+            },
+            onChanged: function(event) {
+              const current = event.item.index + 1;
+
+              if (current < event.item.count) {
+                youtubeCarousel.find(".youtube-carousel-nav__next").removeClass("disabled");
+              } else {
+                youtubeCarousel.find(".youtube-carousel-nav__next").addClass("disabled");
+              }
+
+              // $casesSection.find(".items-counter__total").text(event.item.count < 10 ? "0" + event.item.count : event.item.count);
+              // $casesSection.find(".items-counter__current").text(current < 10 ? "0" + current : current);
             },
           });
         }

@@ -47,14 +47,16 @@
     width: $carousel-control-size;
     height: $carousel-control-size;
     display: inline-block;
-    font-size: 30px;
+    font-size: 30px !important;
     font-weight: 900;
-    background-color: $dark-blue;
-    color: $white;
+    background-color: $dark-blue !important;
+    color: $white !important;
+    text-align: center;
+    cursor: pointer;
 
     &.disabled {
-        color: $dark-blue;
-        background-color: $white;
+        color: $dark-blue !important;
+        background-color: $white !important;
         cursor: default;
     }
 }
