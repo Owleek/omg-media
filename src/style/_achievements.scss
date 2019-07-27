@@ -1,5 +1,5 @@
 .achievements {
-    padding: 60px 80px 30px 80px;
+    padding: 50px 80px 0px 80px;
     background-color: #ffffff;
     position: relative;
     box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
@@ -37,9 +37,12 @@
     }
     
     &__body {
+        padding-bottom: 35px;
+
         @include respond(sm) {
             display: flex;
             flex-direction: column;
+
         } 
     }
 
@@ -83,7 +86,7 @@
 
         @include respond(sm) {
             flex-wrap: wrap;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
         } 
     }
     

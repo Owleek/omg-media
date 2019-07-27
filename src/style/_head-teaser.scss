@@ -46,6 +46,23 @@
         }
     }
 
+    &_analytic {
+        &:before {
+            bottom: -210px;
+            font-size: 17.5rem;
+    
+            @include respond(xl) {
+                font-size: 15rem;
+                bottom: -190px;
+            }
+    
+            @include respond(lg) {
+                font-size: 12.5rem;
+                bottom: -170px;
+            }
+        }
+    }
+
     &__hero {
         flex-basis: 51%;
         padding: 10px 60px 0px 55px;
