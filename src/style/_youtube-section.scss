@@ -132,7 +132,7 @@
         position: relative;
 
         @include respond(md) {
-            flex-basis: auto;
+            flex-basis: 100%;
             box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
         }
 
