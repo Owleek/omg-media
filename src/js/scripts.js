@@ -4,9 +4,9 @@
 
 $(document).ready(function(){
 
+  casesCarousel();
   initTypewriter();
   initTeamParalax();
-  casesCarousel();
 
   $('.consult-request__button')
     .click(function() {
@@ -24,10 +24,14 @@ $(document).ready(function(){
 
 
 function casesCarousel() {
-  const $casesSection = $(".js-cases-section");
+  const $casesSection = $(".cases-section");
   const $casesCarousel = $casesSection.find(".cases-section__carousel");
 
+
   if ($casesCarousel.find(".cases-section__carousel-item").length > 1) {
+
+    console.log('here 2');
+
     $casesCarousel.owlCarousel({
       loop: false,
       nav: false,

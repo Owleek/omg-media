@@ -156,31 +156,31 @@
 }
 
 
-// .block-fadein {
-// 	transition: transform 1s ease 0s, opacity 1s ease 0s;	
-// 	transform: translate(0, 2rem);
-// 	opacity: 0;
-// }
+.block-fadein {
+	transition: transform 1s ease 0s, opacity 1s ease 0s;	
+	transform: translate(0, 2rem);
+	opacity: 0;
+}
 
-// .block-fadein.inview {
-// 	transform: translate(0, 0);
-// 	opacity: 1;
-// }
+.block-fadein.inview {
+	transform: translate(0, 0);
+	opacity: 1;
+}
 
-// .content-fadein {
-// 	transition: transform 1.2s ease 0.2s, opacity 1.2s ease 0.2s;	
-// 	transform: translate(0, 2rem);
-// 	opacity: 0;
-// }
+.content-fadein {
+	transition: transform 1.2s ease 0.2s, opacity 1.2s ease 0.2s;	
+	transform: translate(0, 2rem);
+	opacity: 0;
+}
 
-// .inview .content-fadein {
-// 	transform: translate(0, 0);
-// 	opacity: 1;
-// }
+.inview .content-fadein {
+	transform: translate(0, 0);
+	opacity: 1;
+}
 
 
 
-/******************** HOME PAGE
+/******************** HOME PAGE */
 
 .cases-home-wrapper {
 	margin-bottom: 96px;
@@ -262,11 +262,11 @@
 	}
 }
 
-//********************* /HOME PAGE
+//********************* /HOME PAGE */
 
 
 
-//********************* BLOG
+//********************* BLOG */
 
 .card-list {
 	display: flex;
@@ -338,7 +338,7 @@
 }
 
 
-//********************* /BLOG
+//********************* /BLOG */
 
 
 
@@ -346,7 +346,7 @@
 
 
 
-//********************* article styles
+//********************* article styles */
 
 .article__subscribe {
     margin-top: 48px;
@@ -515,7 +515,8 @@
 		}
 	}
 }
-//********************* /article styles
+
+/********************* /article styles */
 
 
 
