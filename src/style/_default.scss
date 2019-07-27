@@ -161,7 +161,7 @@ b {
         width: 114px;
         height: 48px;
     }
-    
+
     &__icon-blue {
         display: none;
 
@@ -169,7 +169,7 @@ b {
             display: inline-block;
         }
     }
-    
+
     &__icon-mobile {
         width: 52px;
         height: 48px;
@@ -497,6 +497,10 @@ article .col-6 {
     letter-spacing: -2px;
     text-indent: -8px;
     overflow: hidden;
+
+    @include respond(md) {
+        font-weight: normal;
+    }
 
     &_active {
       display: block;
