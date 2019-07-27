@@ -157,6 +157,7 @@
 
     &__menu {
         display: none;
+        margin-top: 11px;
         position: relative;
         cursor: pointer;
         z-index: 101;
@@ -320,12 +321,11 @@
     .header {
         &__nav {
 
-            &:before {
-                opacity: 0.95;
-                top: 0;
-            }
-
             @include respond(md) {
+                &:before {
+                    opacity: 0.95;
+                    top: 0;
+                }                
                 .nav__list {
                     display: flex;
                 }
