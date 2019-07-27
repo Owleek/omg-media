@@ -320,12 +320,11 @@
     .header {
         &__nav {
 
-            &:before {
-                opacity: 0.95;
-                top: 0;
-            }
-
             @include respond(md) {
+                &:before {
+                    opacity: 0.95;
+                    top: 0;
+                }                
                 .nav__list {
                     display: flex;
                 }
