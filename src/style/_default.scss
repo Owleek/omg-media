@@ -364,7 +364,7 @@ article ol {
     margin: 24px 0px 24px 0px;
 
     @include respond(sm) {
-        padding-left: 10px;
+        padding-left: 0px;
     }
 }
 
@@ -378,6 +378,11 @@ article ol li {
     font-size: 16px;
 }
 
+article ol li {
+    @include respond(sm) {
+        padding-left: 0px;
+    }    
+}
 
 article ul li:before {
     width: 8px;
@@ -430,6 +435,7 @@ article blockquote {
     padding: 24px 90px;
 
     @include respond(sm) {
+        padding: 10px 24px;
         margin-left: -24px;
         margin-right: -24px;
     }
@@ -453,7 +459,16 @@ article blockquote:after {
     top: 50%;
     transform: translate(0%, -50%);
     font-style: normal;
+    line-height: 80px;
     font-size: 72px;
+
+    @include respond(sm) {
+        display: block;
+        position: static;
+        text-align: center;
+        transform: translate(0%, 0%);
+    }
+
 }
 
 article blockquote:before {
