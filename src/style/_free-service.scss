@@ -11,10 +11,10 @@
     &:before {
         content: attr(data-text);
         position: absolute;
-        bottom: -185px;
+        bottom: -135px;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 14.1rem;
+        font-size: 13.1rem;
         font-weight: 900;
         color: $dark-blue;
         user-select: none;
@@ -23,12 +23,12 @@
         z-index: -1;
 
         @include respond(xl) {
-            bottom: -170px;
+            bottom: -130px;
             font-size: 12rem;
         }
 
         @include respond(lg) {
-            bottom: -150px;
+            bottom: -110px;
             font-size: 10rem;
         }
 

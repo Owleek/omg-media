@@ -12,7 +12,7 @@
     
     @include respond(sm) {
         margin-top: -310px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
         flex-direction: column;
         box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
     }
@@ -20,7 +20,7 @@
     &:before {
         content: attr(data-text);
         position: absolute;   
-        bottom: -250px;
+        bottom: -230px;
         left: 50%;
         transform: translateX(-50%);
         font-size: 20rem;

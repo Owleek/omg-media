@@ -1,6 +1,5 @@
 .company-status {
     padding: 60px 75px 0px 75px;
-    margin-bottom: 200px;
     background-color: #ffffff;
     box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
 
@@ -33,7 +32,7 @@
             }
 
             @include respond(xs) {
-                font-size: 1.5rem;
+                font-size: 1.875rem;
                 font-weight: 500;
             }
         }
@@ -51,7 +50,11 @@
         @include respond(md) {
             display: flex;
             flex-direction: column;
-            padding-bottom: 70px;
+            padding-bottom: 75px;
+        }
+
+        @include respond(sm) {
+            padding-bottom: 45px;
         }
     }
     

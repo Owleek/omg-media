@@ -87,4 +87,25 @@
         }
     }
 
+    .clients-gray-pic {
+        display: none;
+    }
+
+    &_mobile-light {
+        background: #F0F1F3;
+        
+        .partner-section__title {
+            color: $dark-blue;
+            text-align: center;
+        }
+
+        img {
+            display: none;
+        }
+
+        .clients-gray-pic {
+            display: inline-block;
+        }
+    }
+
 }

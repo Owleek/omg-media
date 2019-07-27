@@ -6,6 +6,10 @@
         align-items: center;
     }
 
+    @include respond(sm) {
+        padding-top: 50px;
+    }
+
     &__title-box {
         flex-basis: 42%;
         padding-right: 80px;
@@ -53,6 +57,9 @@
             flex-basis: 50%;
         }
 
+        @include respond(sm) {
+            margin-bottom: 35px;
+        }
     }
 
     &__list-item {
