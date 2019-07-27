@@ -45,7 +45,7 @@
     &_simple {
         display: none;
         background-color: #ffffff;
-        padding: 50px 24px 0px 24px;
+        padding: 50px 24px 30px 24px;
 
         @include respond(md) {
             display: block;
@@ -74,7 +74,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        padding-bottom: 30px;
 
         @include respond (xs) {
             flex-direction: column;
