@@ -46,7 +46,8 @@
         }
     }
 
-    &_analytic {
+    &_analytic,
+    &_marketplace {
         &:before {
             bottom: -210px;
             font-size: 17.5rem;

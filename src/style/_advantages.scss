@@ -112,13 +112,13 @@
     }
 
     &_offer {
-        .advantages__title {            
+        .advantages__title {
+            &_static {
+                white-space: nowrap;
+            }
+            
             @include respond(xs) {
                 font-size: 2rem;
-                
-                &_static {
-                    white-space: nowrap;
-                }
             }
         }
         
