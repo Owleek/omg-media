@@ -45,6 +45,7 @@
         display: flex;
         margin-left: -20px;
         margin-right: -20px;
+        margin-top: -20px;
         width: auto !important;
 
         @include respond(md) {
@@ -54,7 +55,7 @@
         }
 
         @include respond(sm) {
-            margin-right: 64px;
+            margin-right: 46px;
         }
 
         .owl-stage-outer {
@@ -65,8 +66,8 @@
             }
 
             @include respond(sm) {
-                padding-right: 94px;
-                margin-right: -94px;
+                padding-right: 72px;
+                margin-right: -70px;
             }
 
             .owl-item {
