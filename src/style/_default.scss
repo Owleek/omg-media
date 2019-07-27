@@ -74,6 +74,10 @@ b {
     cursor: pointer;
     transition: all 0.15s ease-in;
 
+    &:hover {
+        color: inherit;
+    }
+
     &_block {
         display: block;
         width: 100%;
