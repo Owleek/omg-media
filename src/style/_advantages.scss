@@ -105,17 +105,6 @@
     }
 
     &_offer {
-        margin-bottom: 120px;
-        
-        @include respond(md) {
-            padding-bottom: 34px;
-            margin-bottom: 50px;
-        }
-
-        @include respond(xs) {
-            margin-bottom: 0px;
-        }
-
         .advantages__title {            
             @include respond(xs) {
                 font-size: 2rem;
@@ -127,11 +116,7 @@
         }
         
         .advantages__subtitle {}
-
-            
-        
     }
-
 
     &_bussines {
         .advantages__list-item {
