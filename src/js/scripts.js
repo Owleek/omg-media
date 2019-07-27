@@ -3,6 +3,7 @@
 //= ../vendors/jquery.inview.min.js
 
 $(document).ready(function(){
+  
   initTypewriter();
   initTeamParalax();
   casesCarousel();
@@ -19,6 +20,13 @@ $(document).ready(function(){
       $(this)
         .addClass('inview');
     });
+
+
+    $('.header__menu')
+      .click(function() {
+        $('body')
+          .toggleClass('mob-menu__open')
+      });
 
 });
 
