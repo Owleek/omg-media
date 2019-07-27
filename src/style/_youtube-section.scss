@@ -12,11 +12,11 @@
             font-size: 4rem;
         }
 
-        
+
         @include respond(xl) {
             padding-left: 0px;
         }
-        
+
         @include respond(md) {
             display: none;
         }
@@ -35,25 +35,40 @@
             }
         }
     }
-    
+
+    .owl-stage-outer {
+        .owl-item {
+            padding: 48px 20px;
+
+            @include respond(md) {
+                padding: 48px 8px;
+            }
+        }
+    }
+
     &__carousel {
+        display: flex;
+        margin-left: -20px;
+        margin-right: -20px;
+        width: auto !important;
+
         @include respond(sm) {
             margin-bottom: 120px;
         }
     }
-    
+
     &__carousel-item {
         display: flex;
         align-items: flex-start;
     }
-    
+
     &__card {
         flex-basis: 33.333%;
-        min-width: 270px;
+        //min-width: 270px;
         background-color: #ffffff;
 
         @include respond(md) {
-            margin-right: 16px;
+            //margin-right: 16px;
         }
 
         &_lower {
@@ -78,7 +93,7 @@
             }
         }
     }
-    
+
     &__card-video {
         margin-bottom: 30px;
 
@@ -86,7 +101,7 @@
             margin-bottom: 15px;
         }
     }
-    
+
     &__card-content {
         padding: 0 40px;
 
@@ -110,7 +125,7 @@
             margin-bottom: 3px;
         }
     }
-    
+
     &__card-time {
         display: block;
         margin-bottom: 35px;

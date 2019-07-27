@@ -3,6 +3,7 @@
 
 $(document).ready(function(){
   casesCarousel();
+  youtubeCarousel();
   presentTeam();
 
   $('.consult-request__button')
@@ -45,6 +46,66 @@ function casesCarousel() {
   }
 }
 
+function youtubeCarousel() {
+  const youtubeSection = $(".js-youtube-section");
+
+  if (youtubeSection) {
+    const youtubeCarousel = youtubeSection.find(".youtube-section__carousel");
+
+    const youtubeItems =  youtubeSection.find(".youtube-section__carousel-item").clone();
+    const youtubeCards = youtubeItems.find(".youtube-section__card").clone();
+    let carousel = null;
+    let mobileMode = false;
+
+    launchCarousel();
+
+    $(window).on("resize", debounce(launchCarousel, 300));
+
+    function launchCarousel() {
+      const matchMobile = window.matchMedia("(max-width: 1023px)").matches;
+
+      /** Если мобильная версия */
+      if (matchMobile) {
+        /** Если еще не запущена карусель в мобильной версии */
+        if (!mobileMode) {
+          mobileMode = true;
+          carousel && carousel.trigger("destroy.owl.carousel");
+          youtubeCarousel.html(youtubeCards);
+
+          carousel = youtubeCarousel.owlCarousel({
+            loop: false,
+            nav: false,
+            dots: true,
+            items: 3,
+            onInitialized: function(event) {
+              youtubeCarousel.addClass("owl-carousel");
+              // $casesSection.find(".items-counter").addClass("items-counter_active");
+            },
+          });
+        }
+      } else {
+        /** Если десктопная версия и если карусель еще не запущуна либо запущена в мобильной версии. */
+        if (!carousel || mobileMode) {
+          mobileMode = false;
+          carousel && youtubeCarousel.html(youtubeItems);
+          carousel && carousel.trigger("destroy.owl.carousel");
+
+          carousel = youtubeCarousel.owlCarousel({
+            loop: false,
+            nav: false,
+            dots: true,
+            items: 1,
+            onInitialized: function(event) {
+              youtubeCarousel.addClass("owl-carousel");
+              // $casesSection.find(".items-counter").addClass("items-counter_active");
+            },
+          });
+        }
+      }
+    }
+  }
+}
+
 function presentTeam() {
   var $teamSlideImage = $('.team-slider .team-slider__image'),
       randomImageIndex = random(0, $teamSlideImage.find('img').length - 1);
@@ -61,3 +122,12 @@ function random(min, max) {
   return rand;
 }
 
+// utils
+
+function debounce(func, delay) {
+  let timeout;
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, arguments), delay);
+  };
+}
