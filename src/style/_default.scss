@@ -501,3 +501,69 @@ article .col-6 {
       }
     }
 }
+
+
+// ***************** BASIC MARGINS
+.regular-wrapper {
+    margin-bottom: 95px;
+
+    @include respond(md) {
+        margin-bottom: 60px;
+    }
+
+    @include respond(sm) {
+        margin-bottom: 0px;
+    }
+}
+
+.free-service-second-wrapper,
+.team-section-wrapper,
+.advantages-wrapper {
+    margin-bottom: 120px;
+
+    @include respond(md) {
+        margin-bottom: 75px;
+    }
+
+    @include respond(sm) {
+        margin-bottom: 0px;
+    }
+}
+
+.advantages-second-wrapper {
+    margin-bottom: 150px;
+
+    @include respond(md) {
+        margin-bottom: 85px;
+    }
+
+    @include respond(sm) {
+        margin-bottom: 0px;
+    }
+}
+
+.services-list-wrapper,
+.free-service-wrapper {
+    margin-bottom: 170px;
+
+    @include respond(md) {
+        margin-bottom: 90px;
+    }
+
+    @include respond(sm) {
+        margin-bottom: 0px;
+    }
+}
+
+.blog-briefs-wrapper {
+    margin-bottom: 215px;
+
+    @include respond(md) {
+        margin-bottom: 100px;
+    }
+
+    @include respond(sm) {
+        margin-bottom: 0px;
+    }
+}
+// ***************** BASIC MARGINS
