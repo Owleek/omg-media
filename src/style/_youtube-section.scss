@@ -1,6 +1,6 @@
 .youtube-section {
     @include respond(sm) {
-        margin-top: 50px;
+        padding-top: 50px;
     }
 
     &__title {
@@ -21,18 +21,20 @@
             display: none;
         }
 
-        &_mobile {
+    }
+
+    &__title-mobile {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        display: none;
+
+        .smaller {
             font-size: 2.5rem;
-            margin-bottom: 40px;
-            display: none;
+            display: inline;
+        }
 
-            .smaller {
-                font-size: 2.5rem;
-            }
-
-            @include respond(md) {
-                display: block;
-            }
+        @include respond(md) {
+            display: block;
         }
     }
 
@@ -66,9 +68,11 @@
         flex-basis: 33.333%;
         //min-width: 270px;
         background-color: #ffffff;
+        box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
 
         @include respond(md) {
-            //margin-right: 16px;
+            margin-right: 16px;
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
         }
 
         &_lower {

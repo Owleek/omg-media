@@ -21,16 +21,16 @@
 <body>
     <div class="page-wrapper">
         <main class="main">
-            <section class="head-section">
+            <div class="head-section">
                 <div class="layout-center">
-                    <div class="relative-section">
+                    <div class="relative-wrapper">
                         <header class="header header_absolute">
                             <div class="logo header__logo">
-                                <a href="#">
-                                    <svg class="logo-icon" viewBox="0 0 114 48" fill="none">
+                                <a href="index.html">
+                                    <svg class="logo__icon">
                                         <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-logo" />
                                     </svg>
-                                    <svg class="logo-icon-mobile" viewBox="0 0 52 48" fill="none">
+                                    <svg class="logo__icon-mobile">
                                         <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-logo-mobile" />
                                     </svg>
                                 </a>
@@ -39,22 +39,22 @@
                             <nav class="nav header__nav">
                                 <ul class="nav__list">
                                     <li class="nav__list-item ">
-                                        <a href="#" class="nav__list-item-link nav__list-item-link_selected">
+                                        <a href="contextual-adv.html" class="nav__list-item-link nav__list-item-link_selected">
                                             Контекстная реклама
                                         </a>
                                     </li>
                                     <li class="nav__list-item">
-                                        <a href="#" class="nav__list-item-link">
+                                        <a href="media-adv.html" class="nav__list-item-link">
                                             Медийная реклама
                                         </a>
                                     </li>
                                     <li class="nav__list-item">
-                                        <a href="#" class="nav__list-item-link">
+                                        <a href="marketplace.html" class="nav__list-item-link">
                                             Маркетплейсы
                                         </a>
                                     </li>
                                     <li class="nav__list-item">
-                                        <a href="#" class="nav__list-item-link">
+                                        <a href="analytics.html" class="nav__list-item-link">
                                             Вебаналитика
                                         </a>
                                     </li>
@@ -71,7 +71,7 @@
                                 </svg>
                             </div>
                         </header>
-                    </div><!-- relative-section -->
+                    </div><!-- relative-wrapper -->
                 </div><!-- /layout-center -->
 
                 <div class="team-slider">
@@ -100,34 +100,30 @@
                             рекламы
                         </strong>
                     </div>
-                </div><!-- team-slider -->
-
-            </section><!-- /head-section -->
+                </div><!-- /team-slider -->
+            </div><!-- /head-section -->
 
             <div class="layout-center">
-                <div class="relative-section">
-                    <div class="consult-request box-shadow">
+                <div class="relative-wrapper">
+                    <div class="consult-request">
                         <div class="consult-request__text">
                             Специализируемся на performance-
                             маркетинге + аналитике для малого
                             и среднего бизнеса.
-                        </div><!-- /consult-request__text -->
-
+                        </div>
                         <button class="button button_block consult-request__button">
                             Бесплатная консультация
-                        </button><!-- /button -->
-
+                        </button>
                         <div class="basic-form">
                             <div class="basic-form__row-inputs">
                                 <div class="basic-form__input-box">
                                     <input class="basic-form__input basic-form__input_bg-gray" type="text"
                                         placeholder="Номер телефона">
-                                </div><!-- basic-form__input-box -->
+                                </div>
                                 <button class="button basic-form__button">
                                     Получить
                                 </button>
-                            </div><!-- /basic-form__row-inputs -->
-
+                            </div>
                             <div class="basic-form__input-confirm ">
                                 <label class="checkbox">
                                     <span class="checkbox__bullet">
@@ -139,9 +135,8 @@
                                 </label>
                             </div><!-- /basic-form__input-confirm -->
                         </div><!-- /basic-form -->
-
                     </div><!-- /consult-request -->
-                </div><!-- /relative-section -->
+                </div><!-- /relative-wrapper -->
 
                 <div class="services-list-wrapper">
                     <ul class="services-list">
@@ -164,104 +159,40 @@
                     </ul><!-- /services-list -->
                 </div><!-- /services-list-wrapper -->
 
-                <div class="cases-home-wrapper block-fadein">
+                <div class="regular-wrapper block-fadein">
                     //= template/cases-section.html
-                </div>
+                </div><!-- /cases-section -->
 
-                <div class="promotion-platforms-home-wrapper">
-                    <div class="promotion-platforms-wrapper">
-                        <div class="promotion-platforms">
-                            <h3 class="promotion-platforms__title">
-                                <span class="smaller">
-                                    С чем
-                                </span>
-                                работаем:
-                            </h3>
-                            <div class="promotion-platforms__carousel-container">
-                                <div class="promotion-platforms__carousel">
-                                    <h4 class="promotion-platforms__carousel-item">
-                                        Яндекс Директ
-                                    </h4>
+                <div class="regular-wrapper">
+                    //= template/promotion-platforms.html
+                </div><!-- /promotion-platforms -->
 
-                                    <h4 class="promotion-platforms__carousel-item">
-                                        Google Ads
-                                    </h4>
-
-                                    <h4 class="promotion-platforms__carousel-item">
-                                        Яндекс Маркет
-                                    </h4>
-
-                                    <h4 class="promotion-platforms__carousel-item">
-                                        Веб-аналитика
-                                    </h4>
-                                </div><!-- /promotion-platforms__carousel -->
-                            </div><!-- /promotion-platforms__carousel-container -->
-                        </div><!-- /promotion-platforms -->
-
-                        <div class="promotion-platforms promotion-platforms_simple">
-                            <h3 class="promotion-platforms__title bigger">
-                                <span class="smaller">
-                                    С чем
-                                </span>
-                                работаем:
-                            </h3><!-- /promotion-platforms__title -->
-                            <div class="promotion-platforms__list">
-                                <h4 class="promotion-platforms__list-item">
-                                    <a href="#" class="promotion-platforms__list-item-link">
-                                        Яндекс Директ
-                                    </a>
-                                </h4><!-- /promotion-platforms__list-item -->
-
-                                <h4 class="promotion-platforms__list-item">
-                                    <a href="#" class="promotion-platforms__list-item-link">
-                                        Google Ads
-                                    </a>
-                                </h4><!-- /promotion-platforms__list-item -->
-
-                                <h4 class="promotion-platforms__list-item">
-                                    <a href="#" class="promotion-platforms__list-item-link">
-                                        Яндекс Маркет
-                                    </a>
-                                </h4><!-- /promotion-platforms__list-item -->
-
-                                <h4 class="promotion-platforms__list-item">
-                                    <a href="#" class="promotion-platforms__list-item-link">
-                                        Веб-аналитика
-                                    </a>
-                                </h4><!-- /promotion-platforms__list-item -->
-                            </div><!-- /promotion-platforms__list -->
-                        </div><!-- /promotion-platforms -->
-                    </div><!-- /promotion-platforms-wrapper -->
-                </div><!-- /promotion-platforms-home-wrapper -->
-
-                <div class="free-service-home-wrapper block-fadein">
+                <div class="free-service-wrapper block-fadein">
                     <div class="free-service" data-text="Бесплатный">
                         <div class="half-number">
                             0<span class="smaller">₽</span>
                         </div>
                         <div class="free-service__inner content-fadein">
                             <h2 class="free-service__title bigger">
-                                <span class="smaller">Бесплатный аудит</span>
+                                <span class="smaller">
+                                    Бесплатный аудит
+                                </span>
                                 Рекламной компании
-                            </h2><!-- /free-service__title -->
-
+                            </h2>
                             <div class="basic-form free-service__basic-form">
                                 <div class="basic-form__row-inputs">
                                     <div class="basic-form__input-box">
                                         <input class="basic-form__input basic-form__input_bg-gray" type="text"
                                             placeholder="Адрес сайта">
-                                    </div><!-- basic-form__input-box -->
-
+                                    </div>
                                     <div class="basic-form__input-box">
                                         <input class="basic-form__input basic-form__input_bg-gray" type="text"
                                             placeholder="Номер телефона">
-                                    </div><!-- basic-form__input-box -->
-
+                                    </div>
                                     <button class="button basic-form__button">
                                         Отправить
                                     </button>
-                                </div><!-- /basic-form__row-inputs -->
-
+                                </div>
                                 <div class="basic-form__input-confirm">
                                     <label class="checkbox">
                                         <span class="checkbox__bullet">
@@ -275,32 +206,32 @@
                             </div><!-- /basic-form -->
                         </div><!-- /free-service__inner -->
                     </div><!-- /free-service -->
-                </div>
+                </div><!-- /free-service-wrapper -->
 
-                <div class="youtube-section-home-wrapper">
-                     //= template/youtube-section.html
-                </div>
+                <div class="regular-wrapper">
+                    //= template/youtube-section.html
+                </div><!-- /youtube-section -->
 
-                <div class="partner-section-home-wrapper">
+                <div class="regular-wrapper">
                     <div class="partner-section-wrapper">
                         <div class="partner-section">
                             <div class="partner-section__carousel">
                                 <div class="partner-section__carousel-item">
                                     <div class="partner-section__clients">
                                         <img src="images/temp/logo-clients-1.png" alt="">
-                                    </div><!-- /partner-section__clients -->
+                                    </div>
 
                                     <div class="partner-section__clients">
                                         <img src="images/temp/logo-clients-2.png" alt="">
-                                    </div><!-- /partner-section__clients -->
+                                    </div>
 
                                     <div class="partner-section__clients">
                                         <img src="images/temp/logo-clients-3.png" alt="">
-                                    </div><!-- /partner-section__clients -->
+                                    </div>
 
                                     <div class="partner-section__clients">
                                         <img src="images/temp/logo-clients-4.png" alt="">
-                                    </div><!-- /partner-section__clients -->
+                                    </div>
 
                                     <div class="partner-section__clients">
                                         <img src="images/temp/logo-clients-5.png" alt="">
@@ -321,25 +252,25 @@
                                     <div class="col">
                                         <div class="partner-section__clients">
                                             <img src="images/temp/logo-clients-1.png" alt="">
-                                        </div><!-- /partner-section__clients -->
+                                        </div>
 
                                         <div class="partner-section__clients">
                                             <img src="images/temp/logo-clients-2.png" alt="">
-                                        </div><!-- /partner-section__clients -->
+                                        </div>
 
                                         <div class="partner-section__clients">
                                             <img src="images/temp/logo-clients-4.png" alt="">
-                                        </div><!-- /partner-section__clients -->
-                                    </div><!-- /col -->
+                                        </div>
+                                    </div>
 
                                     <div class="col">
                                         <div class="partner-section__clients">
                                             <img src="images/temp/logo-clients-4.png" alt="">
-                                        </div><!-- /partner-section__clients -->
+                                        </div>
 
                                         <div class="partner-section__clients">
                                             <img src="images/temp/logo-clients-3.png" alt="">
-                                        </div><!-- /partner-section__clients -->
+                                        </div>
 
                                         <div class="partner-section__clients">
                                             <img src="images/temp/logo-clients-1.png" alt="">
@@ -349,107 +280,15 @@
                             </div><!-- /partner-section__carousel -->
                         </div><!-- /partner-section -->
                     </div><!-- /partner-section-wrapper -->
-                </div>
+                </div><!-- /partner-section -->
 
-                <div class="blog-briefs-home-wrapper">
-                    <div class="blog-briefs">
-                        <h2 class="blog-briefs__title bigger">
-                            <span class="smaller">Пишем блог</span>
-                            О рекламе
-                        </h2><!-- /blog-briefs__title -->
-                        <div class="blog-briefs__content">
-                            <div class="blog-briefs__post-view">
-                                <h4 class="blog-briefs__post-title">
-                                    Функциональный креатив в рекламе: как привлечь море клиентов
-                                </h4>
-                                <div class="blog-briefs__post-desc">
-                                    Зацепить потребителей и довести их до покупки становится всё сложн…
-                                </div>
-                                <a href="#" class="blog-briefs__post-read">
-                                    Читать 7 минут
-                                </a>
-                            </div><!-- /blog-briefs__post-view -->
-                            <ul class="blog-briefs__post-list">
-                                <li class="blog-briefs__post">
-                                    <h4 class="blog-briefs__post-title">
-                                        Синдром Сноудена: как много о вас знают рекламщики?
-                                    </h4>
-                                    <a href="#" class="blog-briefs__post-read">
-                                        Читать 2 минуты
-                                    </a>
-                                </li><!-- /blog-briefs__post -->
+                <div class="blog-briefs-wrapper">
+                    //= template/blog-briefs.html
+                </div><!-- /blog-briefs-wrapper -->
 
-                                <li class="blog-briefs__post">
-                                    <h4 class="blog-briefs__post-title">
-                                        Преступления и наказания: всё о санкциях Google
-                                    </h4>
-                                    <a href="#" class="blog-briefs__post-read">
-                                        Читать 2 минуты
-                                    </a>
-                                </li><!-- /blog-briefs__post -->
-
-                                <li class="blog-briefs__post">
-                                    <h4 class="blog-briefs__post-title">
-                                        Бери и делай: 10 готовых идей контента для Facebook
-                                    </h4>
-                                    <a href="#" class="blog-briefs__post-read">
-                                        Читать 2 минуты
-                                    </a>
-                                </li><!-- /blog-briefs__post -->
-
-                                <li class="blog-briefs__post">
-                                    <h4 class="blog-briefs__post-title">
-                                        Эволюция дизайна в SMM: от истоков к трендам 2019
-                                    </h4>
-                                    <a href="#" class="blog-briefs__post-read">
-                                        Читать 2 минуты
-                                    </a>
-                                </li><!-- /blog-briefs__post -->
-                            </ul><!-- /blog-briefs__post-list -->
-                        </div><!-- /blog-briefs__content -->
-                    </div><!-- /blog-briefs -->
-                </div>
-
-                <div class="team-section-home-wrapper block-fadein">
-                    <div class="team-section" data-text="Команда">
-                        <h2 class="team-section__title bigger content-fadein">
-                            <span class="smaller">
-                                Наша
-                            </span>
-                            Команда
-                        </h2><!-- /team-section__title -->
-                        <div class="team-section__carousel content-fadein">
-                            <div class="team-section__carousel-item">
-                                <div class="team-section__hero-card">
-                                    <div class="team-section__hero-image">
-                                        <div class="image-wrapper">
-                                            <div class="image">
-                                                <img src="images/team-person-1.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div><!-- /team-section__hero-image -->
-                                    <div class="team-section__hero-info">
-                                        <h4 class="team-section__hero-name">
-                                            Алексанр Деканов
-                                        </h4><!-- /team-section__hero-name -->
-                                        <div class="team-section__hero-about">
-                                            Сертифицированный специалист
-                                            Яндекс.Директ, Google AdWords
-                                        </div><!-- /team-section__hero-about -->
-                                        <div class="team-section__hero-achievements">
-                                            <svg class="google-partner-icon">
-                                                <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-google-partner-blue" />
-                                            </svg>
-                                            <svg class="google-partner-icon">
-                                                <use xlink:href="images\svg\symbol\spriteOrigin.svg#omg-media-svg-google-partner-red" />
-                                            </svg>
-                                        </div><!-- /team-section__hero-achievements -->
-                                    </div><!-- /team-section__hero-info -->
-                                </div><!-- /team-section__hero-card -->
-                            </div><!-- /team-section__carousel-item -->
-                        </div><!-- /team-section__carousel -->
-                    </div><!-- /team-section -->
-                </div>
+                <div class="team-section-wrapper block-fadein">
+                    //= template/team-section.html
+                </div><!-- /team-section -->
             </div><!-- /layout-center -->
         </main><!-- /main -->
         //= template/main-footer.html

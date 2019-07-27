@@ -23,12 +23,12 @@ $content-margin-left: 9;
         z-index: -1;
 
         @include respond(xl) {
-            top: -170px;
+            top: -153px;
             font-size: 15.6rem;
         }
 
         @include respond(lg) {
-            top: -150px;
+            top: -145px;
             font-size: 14rem;
         }
 
@@ -344,13 +344,13 @@ $content-margin-left: 9;
     }
 
     &__counter {
-      position: absolute;
-      left: 0;
-      top: 0;
-      z-index: 100;
+        position: absolute;
+        left: 30px;
+        top: 60px;
+        z-index: 100;
 
-      @include respond(md) {
-        display: none;
-      }
-    }
-}
+        @include respond(md) {
+            display: none;
+        }
+    }   
+}   

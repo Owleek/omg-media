@@ -6,6 +6,10 @@
         align-items: center;
     }
 
+    @include respond(sm) {
+        padding-top: 50px;
+    }
+
     &__title-box {
         flex-basis: 42%;
         padding-right: 80px;
@@ -53,6 +57,9 @@
             flex-basis: 50%;
         }
 
+        @include respond(sm) {
+            margin-bottom: 35px;
+        }
     }
 
     &__list-item {
@@ -105,33 +112,18 @@
     }
 
     &_offer {
-        margin-bottom: 120px;
-        
-        @include respond(md) {
-            padding-bottom: 34px;
-            margin-bottom: 50px;
-        }
-
-        @include respond(xs) {
-            margin-bottom: 0px;
-        }
-
-        .advantages__title {            
+        .advantages__title {
+            &_static {
+                white-space: nowrap;
+            }
+            
             @include respond(xs) {
                 font-size: 2rem;
-                
-                &_static {
-                    white-space: nowrap;
-                }
             }
         }
         
         .advantages__subtitle {}
-
-            
-        
     }
-
 
     &_bussines {
         .advantages__list-item {
