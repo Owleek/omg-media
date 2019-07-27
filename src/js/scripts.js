@@ -129,7 +129,7 @@ function youtubeCarousel() {
             items: 1,
             onInitialized: function(event) {
               youtubeCarousel.addClass("owl-carousel");
-              // $casesSection.find(".items-counter").addClass("items-counter_active");
+              youtubeSection.find(".items-counter").addClass("items-counter_active");
               const items = youtubeCarousel.find(".youtube-section__carousel-item");
 
               if (items.length < 2) {
@@ -148,8 +148,8 @@ function youtubeCarousel() {
                 youtubeCarousel.find(".youtube-carousel-nav__next").addClass("disabled");
               }
 
-              // $casesSection.find(".items-counter__total").text(event.item.count < 10 ? "0" + event.item.count : event.item.count);
-              // $casesSection.find(".items-counter__current").text(current < 10 ? "0" + current : current);
+              youtubeSection.find(".items-counter__total").text(event.item.count < 10 ? "0" + event.item.count : event.item.count);
+              youtubeSection.find(".items-counter__current").text(current < 10 ? "0" + current : current);
             },
           });
         }
