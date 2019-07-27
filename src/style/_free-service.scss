@@ -87,6 +87,10 @@
             color: #ffffff;
         }
 
+        @include respond(xs) {
+            font-size: 2.3rem;
+        }
+
         .smaller {
             font-size: 3.5rem;
             text-indent: -100px;
@@ -98,6 +102,10 @@
 
             @include respond(md) {
                 font-size: 2.5rem;
+            }
+
+            @include respond(xs) {
+                font-size: 2.3rem;
             }
         }
 
