@@ -64,11 +64,11 @@
         width: 670px;
         margin-left: auto;
 
-        
+
         @include respond(lg) {
             margin: 0 auto;
         }
-        
+
         @include respond(md) {
             width: 100%;
         }
@@ -132,7 +132,7 @@
         font-size: 36.8rem;
         letter-spacing: -0.04em;
         user-select: none;
-        
+
         .smaller {
             font-size: 16.3rem;
             font-weight: 500;

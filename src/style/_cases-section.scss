@@ -41,7 +41,6 @@ $content-margin-left: 9;
         display: block;
         background: $dark-blue;
         padding: 45px $layout-center-padding-md 45px $layout-center-padding-md;
-        margin: 0px -#{$layout-center-padding-md};
     }
 
     @include respond(sm) {
