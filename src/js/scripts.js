@@ -17,52 +17,40 @@ $(document).ready(function(){
   teamCarousel();
   partnerCarousel();
 
-  $('.consult-request__button')
-    .click(function() {
-      $('.consult-request')
-        .addClass('activated');
+  $('.consult-request__button').click(function() {
+      $('.consult-request').addClass('activated');
     });
 
-  $('.block-fadein')
-    .one('inview', function() {
-      $(this)
-        .addClass('inview');
+  $('.block-fadein').one('inview', function() {
+      $(this).addClass('inview');
     });
 
-
-    $('.header__menu')
-      .click(function() {
-        $('body')
-          .toggleClass('mob-menu__open')
-      });
+  $('.header__menu').click(function() {
+      $('body').toggleClass('mob-menu__open')
+    });
 
 });
 
 function initTeamParalax() {
-  var $teamSlideImage = $('.team-slider .team-slider__image'),
+  var $teamSlideImage = $('.team-paralax .team-paralax__image'),
       randomImageIndex = random(0, $teamSlideImage.find('img').length - 1);
 
   $teamSlideImage.find('img').eq(randomImageIndex).addClass('vis');
   setTimeout(() => {
-    $('.team-slider').addClass('present');
+    $('.team-paralax').addClass('present');
   }, 500);
 }
 
 function initTypewriter() {
-  $('[data-typed]')
-    .each(function() {
-      $(this)
-        .find('[data-typed_item]')
-        .each(function() {
-          $(this)
-            .css({
+  $('[data-typed]').each(function() {
+      $(this).find('[data-typed_item]').each(function() {
+          $(this).css({
               visibility: 'hidden'
             })
             .data('text', $(this).text())
             .empty();
 
-          $('<span>')
-            .css({
+          $('<span>').css({
               height: 0,
               display: 'inline-block'
             })
@@ -70,8 +58,7 @@ function initTypewriter() {
             .appendTo($(this))
       });
 
-    $(this)
-      .data('startTyper', () => {
+    $(this).data('startTyper', () => {
         startTyper($(this).find('[data-typed_item]'));
       });
   });
