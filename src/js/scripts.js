@@ -108,12 +108,12 @@ function teamCarousel() {
 }
 
 function initTeamParalax() {
-  var $teamSlideImage = $('.team-slider .team-slider__image'),
+  var $teamSlideImage = $('.team-paralax .team-paralax__image'),
       randomImageIndex = random(0, $teamSlideImage.find('img').length - 1);
 
   $teamSlideImage.find('img').eq(randomImageIndex).addClass('vis');
   setTimeout(() => {
-    $('.team-slider').addClass('present');
+    $('.team-paralax').addClass('present');
   }, 500);
 }
 
