@@ -6,21 +6,79 @@
         display: none;
     }
 
+    .owl-stage {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &__title {
         color: #ffffff;
         font-size: 2.5rem;
         margin-bottom: 40px;
     }
 
-    &__carousel {}
-    
+    &__carousel {
+        .owl-nav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 50%;
+            display: flex;
+            justify-content: space-between;
+            height: 0;
+            margin: -36px -80px 0 -80px;
+
+            .owl-next,
+            .owl-prev {
+                @include carousel-control;
+            }
+        }
+
+        .owl-dots {
+            text-align: center;
+
+            .owl-dot {
+                display: inline-block;
+                padding: 3px !important;
+                margin: 0 4px;
+                cursor: pointer;
+                opacity: 0.3;
+
+                &.active {
+                    opacity: 1;
+                }
+
+                span {
+                    display: block;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background: $white;
+                }
+            }
+        }
+    }
+
     &__carousel-item {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
-    &__clients {}
+
+    &__clients {
+        text-align: center;
+
+        img {
+            display: inline-block !important;
+            width: auto !important;
+            max-width: 100%;
+        }
+    }
+
+    .clients-gray-pic {
+        display: none !important;
+    }
 
     &_mobile {
         display: none;
@@ -36,76 +94,71 @@
             padding-right: 40px;
             padding-left: 40px;
         }
-    
+
         @include respond(xs) {
             margin-right: -24px;
             margin-left: -24px;
             padding: 50px 20px 60px 20px;
         }
 
-        .partner-section__carousel {}
-        
+        .partner-section__carousel {
+            display: flex;
+            justify-content: space-around;
+
+            @include respond(xs) {
+                margin-top: -20px;
+            }
+        }
+
         .partner-section__carousel-item {
             display: flex;
             flex-direction: column;
-            padding-right: 50px;
-            padding-left: 50px;
-
-            @include respond(sm) {
-                padding-right: 0px;
-                padding-left: 0px;            
-            }
-            
-            @include respond(xs) {
-                flex-direction: row;
-            }
         }
-        
+
         .partner-section__clients {
-            @include respond(xs) {
-                margin-bottom: 60px;
-            }
-        }
-
-        .col {
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
             margin-bottom: 50px;
 
-            @include respond(sm) {
-                padding-right: 0px;
-                padding-left: 0px;
-            }
-
             @include respond(xs) {
-                flex-direction: column;
-                margin-bottom: 0px;
-                justify-content: flex-start;
-                align-items: center;
+                margin-bottom: 40px;
+                margin-top: 20px;
+            }
+        }
+
+        &.partner-section_light {
+            background: #F0F1F3;
+
+            .partner-section__title {
+                color: $dark-blue;
+                text-align: center;
+            }
+
+            .partner-section__logo {
+                display: none !important;
+            }
+
+            .clients-gray-pic {
+                display: inline-block !important;
+            }
+
+            //img {
+            //  filter: brightness(0.5);
+            //}
+
+            .owl-dots {
+                .owl-dot {
+                    opacity: 1;
+
+                    &.active {
+                        span {
+                          background: $silver;
+                        }
+                    }
+
+                    span {
+                        background: $dark-blue;
+                    }
+                }
             }
         }
     }
-
-    .clients-gray-pic {
-        display: none;
-    }
-
-    &_mobile-light {
-        background: #F0F1F3;
-        
-        .partner-section__title {
-            color: $dark-blue;
-            text-align: center;
-        }
-
-        img {
-            display: none;
-        }
-
-        .clients-gray-pic {
-            display: inline-block;
-        }
-    }
-
 }

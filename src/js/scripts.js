@@ -6,6 +6,7 @@
 //= ./youtube-carousel.js
 //= ./cases-carousel.js
 //= ./team-carousel.js
+//= ./partner-carousel.js
 
 $(document).ready(function(){
 
@@ -14,6 +15,7 @@ $(document).ready(function(){
   casesCarousel();
   youtubeCarousel();
   teamCarousel();
+  partnerCarousel();
 
   $('.consult-request__button')
     .click(function() {
