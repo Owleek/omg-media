@@ -61,22 +61,17 @@
            margin-bottom: 0px;
            padding-bottom: 105px;    
         }
-
-        @include respond(us) {
-            flex-direction: row; 
-            justify-content: space-around;
-        }
         
         .social__box {
             margin-right: 6px;
 
             @include respond(sm) {
                 width: 94px;
-                margin-right: 0px;
+                margin-right: 25px;
             }
 
-            @include respond(us) {
-                margin-bottom: 20px;
+            @include respond(xs) {
+                margin-right: 16px;
             }
         }
 
@@ -85,23 +80,16 @@
 
             @include respond(sm) {
                 display: flex;
-                justify-content: space-between;
-                margin-right: 0px;
-                margin-bottom: 20px;
+                justify-content: center;
+                margin-right: -25px;
+                margin-bottom: 25px;
                 padding: 0px 10%;
             }
 
             @include respond(xs) {
-                display: flex;
-                justify-content: space-around;
                 padding: 0;
-            }
-
-            @include respond(us) {
-                display: flex;
-                flex-direction: column;
-                margin-bottom: 0px;
-                align-items: center;
+                margin-right: -16px;
+                margin-bottom: 16px;
             }
         }
         .social__icon {
