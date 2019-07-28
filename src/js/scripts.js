@@ -7,6 +7,7 @@
 //= ./cases-carousel.js
 //= ./team-carousel.js
 //= ./partner-carousel.js
+//= ./promotion-partners-carousel.js
 
 $(document).ready(function(){
 
@@ -16,6 +17,7 @@ $(document).ready(function(){
   youtubeCarousel();
   teamCarousel();
   partnerCarousel();
+  promotionPartnersCarousel();
 
   $('.consult-request__button').click(function() {
       $('.consult-request').addClass('activated');
