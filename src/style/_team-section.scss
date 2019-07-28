@@ -87,22 +87,17 @@
     }
 
     &__carousel {
-        &.owl-carousel {
-            width: auto !important;
-            margin-top: -20px;
-
-            @include respond(md) {
-                margin-left: -8px;
-                margin-right: 44px;
-            }
-
-            @include respond(sm) {
-                margin-right: 46px;
-            }
-        }
+        width: auto !important;
+        margin-top: -20px;
 
         @include respond(md) {
+            margin-left: -8px;
+            margin-right: 44px;
             margin-bottom: 55px;
+        }
+
+        @include respond(sm) {
+            margin-right: 46px;
         }
 
         .owl-stage-outer {
