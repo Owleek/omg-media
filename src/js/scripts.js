@@ -8,6 +8,7 @@
 //= ./team-carousel.js
 //= ./partner-carousel.js
 //= ./promotion-partners-carousel.js
+//= ./search-trigger.js
 
 $(document).ready(function(){
 
@@ -18,6 +19,7 @@ $(document).ready(function(){
   teamCarousel();
   partnerCarousel();
   promotionPartnersCarousel();
+  searchTrigger();
 
   $('.consult-request__button').click(function() {
       $('.consult-request').addClass('activated');
