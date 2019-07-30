@@ -15,6 +15,11 @@
     width: 100%;
     padding-top: 72px;
 
+    @include respond(md) {
+        padding-top: 24px;
+        align-items: center;
+    }
+
     &__primary {
         display: flex;
         justify-content: space-between;
@@ -145,6 +150,17 @@
         font-size: 1.75rem;
         text-transform: uppercase;
         margin-bottom: 0px;
+    }
+
+    // Дубль, подумать что с этим можно сделать
+    &__title {
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: 12px;
+        align-self: center;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 28px;
     }
 
     &__right-side {

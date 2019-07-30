@@ -75,15 +75,65 @@
 
     .checkbox {
         display: inline-flex;
+
+        &_aqua {
+            .checkbox__label {
+                &:before {
+                    border: 2px solid $aqua;
+                }
+
+                &:after {
+                    background-image: url(../images/svg/omg-media-svg-сheck-mark-aqua.svg);
+                }
+            }
+        }
+
+        &__label {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            padding-left: 30px;
+    
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                display: inline-block;
+                transform: translateY(10%);
+            }
+    
+            &:before {
+                width: 18px;
+                height: 18px;
+                left: 0;
+                border: 2px solid $light-blue;
+                border-radius: 2px;
+            }
+    
+            &:after {
+                width: 12px;
+                height: 9px;
+                left: 3px;
+                transform: translateY(calc(10% + 6px));
+                background-image: url(../images/svg/omg-media-svg-сheck-mark.svg);
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                opacity: 0;
+                transition-duration: 0.2s;
+            }
+        }
+        
+        &__input {
+            display: none;
+    
+            &:checked + .checkbox__label:after {
+                opacity: 1;
+            }
+        }
     }
 
-    .checkbox__bullet {
-        margin-right: 10px;
-    }
 
-    .checkbox__label {
-        cursor: pointer;
-    }
 
 
     &__hide {
