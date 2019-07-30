@@ -385,7 +385,7 @@ article ol li {
 article ol li {
     @include respond(sm) {
         padding-left: 0px;
-    }    
+    }
 }
 
 article ul li:before {
