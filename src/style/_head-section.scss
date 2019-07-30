@@ -25,6 +25,7 @@
         justify-content: space-between;
         align-items: flex-end;
         min-height: 48px;
+        position: relative;
     }
 
     &__secondary {
@@ -34,60 +35,6 @@
         @include respond(md) {
             padding-top: 85px;
         }
-
-        .header__nav {
-            display: block;
-            margin: 0;
-            padding: 0;
-            text-transform: none;
-            font-weight: 400;
-
-            @include respond(xs) {
-                font-size: 24px;
-            }
-        }
-
-        .nav__list-item {
-            display: flex;
-
-            &:not(:last-child) {
-                padding-right: 30px;
-
-                @include respond(xl) {
-                    padding-right: 26px;
-                }
-
-                @include respond(md) {
-                    padding-right: 24px;
-                }
-            }
-
-            @include respond(md) {
-                flex-shrink: 0;
-                flex-grow: 0;
-            }
-        }
-
-        .nav__list-item-link {
-            .counter {
-                font-size: 14px;
-                color: $aqua;
-
-                @include respond(sm) {
-                    font-size: 18px;
-                }
-            }
-
-            &_selected {
-                .counter {
-                    color: $dark-blue !important;
-                }
-            }
-        }
-    }
-
-    @include respond(md) {
-        padding-top: 24px;
     }
 
     &__logo-container {
@@ -96,8 +43,6 @@
     }
 
     &__logo {
-        margin-right: 16px;
-
         .logo__icon {
             @include respond(md) {
                 display: none;
@@ -109,10 +54,10 @@
         font-size: 16px;
         font-weight: 500;
         padding: 15px 16px;
-        color: #ffffff;
+        color: $white;
 
         &:hover {
-            color: #ffffff;
+            color: $white;
         }
 
         @include respond(lg) {
@@ -146,34 +91,18 @@
     }
 
     &__title {
-        color: #ffffff;
-        font-size: 1.75rem;
-        text-transform: uppercase;
-        margin-bottom: 0px;
-    }
-
-    // Дубль, подумать что с этим можно сделать
-    &__title {
+        display: none;
         margin-right: auto;
         margin-bottom: 0px;
-        margin-left: 12px;
+        margin-left: 14px;
         align-self: center;
         text-transform: uppercase;
         color: $white;
         font-size: 28px;
     }
 
-    &__right-side {
-        @include respond(md) {
-            align-items: center;
-        }
-    }
-
-    &__right-side {
-        display: flex;
-    }
-
     &__search-icon-box {
+        display: none;
         align-self: center;
         margin-left: 20px;
         margin-top: -8px;
@@ -195,97 +124,21 @@
         }
     }
 
-    &_blogged {
+    &_with-search {
         .header__nav {
             margin-left: auto;
         }
-    }
 
-///***********  BLOG
-
-    &_absolute {
-        position: absolute;
-        top: 72px; left: 0;
-        z-index: 1;
-        padding-top: 0px;
-
-        @include respond(md) {
-            top: 24px;
-        }
-    }
-
-    &_blog {
-        flex-direction: column;
-
-        .header__top {
-            display: flex;
-            width: 100%;
-            justify-content: space-between;
-            align-items: flex-end;
-            margin-bottom: 45px;
-
-            @include respond(md) {
-                margin-bottom: 85px;
-            }
+        .header__search-icon-box {
+            display: block;
         }
 
-        .header__nav {
-            margin-right: 30px;
+        .header__title {
+            display: block;
         }
 
-        .header__bottom {
-            width: 100%;
-            overflow-x: auto;
-
-            .header__nav {
-                display: block;
-                margin: 0;
-                padding: 0;
-                text-transform: none;
-                font-weight: 400;
-
-                @include respond(xs) {
-                    font-size: 24px;
-                }
-            }
-
-            .nav__list-item {
-                display: flex;
-
-                &:not(:last-child) {
-                    padding-right: 30px;
-
-                    @include respond(xl) {
-                        padding-right: 26px;
-                    }
-
-                    @include respond(md) {
-                        padding-right: 24px;
-                    }
-                }
-
-                @include respond(md) {
-                    flex-shrink: 0;
-                    flex-grow: 0;
-                }
-            }
-
-            .nav__list-item-link {
-                .counter {
-                    font-size: 14px;
-                    color: $aqua;
-
-                    @include respond(sm) {
-                        font-size: 18px;
-                    }
-                }
-
-                &_selected {
-                    .counter {
-                        color: $dark-blue !important;
-                    }
-                }
-            }
+        .header__tel {
+            display: none;
         }
     }
 
@@ -306,6 +159,17 @@
             display: flex;
         }
     }
+
+    &_absolute {
+        position: absolute;
+        top: 72px; left: 0;
+        z-index: 1;
+        padding-top: 0px;
+
+        @include respond(md) {
+            top: 24px;
+        }
+    }
 }
 
 .mob-menu__open {
@@ -321,7 +185,6 @@
 
     .header {
         &__nav {
-
             @include respond(md) {
                 &:before {
                     opacity: 0.95;
@@ -331,6 +194,10 @@
                     display: flex;
                 }
             }
+        }
+
+        &__primary {
+            z-index: 100;
         }
     }
 }

@@ -1,12 +1,7 @@
 .submenu {
     color: $white;
     font-size: 16px;
-    margin-top: 45px;
     overflow-x: auto;
-    
-    @include respond(md) {
-        margin-top: 80px;
-    }
 
     @include respond(sm) {
         font-size: 24px;
@@ -27,7 +22,7 @@
         padding-bottom: 10px;
         position: relative;
         text-decoration: none;
-        
+
         &:after {
             content: "";
             position: absolute;
@@ -37,7 +32,7 @@
             background: #ffffff;
             opacity: 0;
             transform: scaleX(0.01);
-            transition-duration: 0.3s;    
+            transition-duration: 0.3s;
         }
 
         &:hover {
@@ -57,12 +52,12 @@
             @include respond(sm) {
                 font-size: 18px;
             }
-        
+
         }
 
         &_selected {
             color: $dark-blue;
-            
+
             &:after {
                 opacity: 1;
                 background: $dark-blue;
