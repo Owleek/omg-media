@@ -120,6 +120,15 @@
 
         @include respond(sm) {
             padding-bottom: 65px;
+            .checkbox__label {
+                &:before {
+                    border: 2px solid $aqua !important;
+                }
+    
+                &:after {
+                    background-image: url(../images/svg/omg-media-svg-сheck-mark-aqua.svg) !important;
+                }
+            }
         }
     }
 
