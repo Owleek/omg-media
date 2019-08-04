@@ -6,6 +6,7 @@ $content-margin-left: 9;
     background-color: $white;
     box-shadow: 0px 20px 20px -5px rgba(0,0,0,0.25);
     display: flex;
+    flex-wrap: wrap;
 
     &:before {
         content: attr(data-text);
@@ -56,42 +57,36 @@ $content-margin-left: 9;
         margin: 0px -#{$layout-center-padding-xs};
     }
 
-    .owl-carousel {
-        .owl-stage-outer {
-            padding-top: $offset;
+    .swiper-container {
+        padding-top:  $offset;
+        margin-top: -$offset;
 
-            @include respond(md) {
-                padding-top: 0;
-            }
+        @include respond(md) {
+            margin-top: 0;
+            padding-top: 0;
         }
+    }
 
-        .owl-nav {
-            position: absolute;
-            bottom: 64px;
-            right: calc(326px + #{$offset} + ((100% - #{$offset} * 2) / 100 * #{$content-margin-left}) - #{$carousel-control-size});
+    &__pagination {
+        width: 100%;
 
-            @include respond(lg) {
-              right: calc(300px + #{$offset} + 50px);
-            }
-
-            .owl-prev,
-            .owl-next {
-                @include carousel-control;
-            }
-        }
-
-        .owl-dots {
+        .carousel-dots {
+            display: none;
             text-align: center;
             padding-top: 40px;
 
-            .owl-dot {
+            @include respond(md) {
+                display: block;
+            }
+
+            .carousel-dot {
                 display: inline-block;
                 padding: 3px !important;
                 margin: 0 4px;
                 opacity: 0.3;
                 cursor: pointer;
 
-                &.active {
+                &-active {
                     opacity: 1;
                 }
 
@@ -104,16 +99,44 @@ $content-margin-left: 9;
                 }
             }
         }
+
+        .items-counter {
+            display: block;
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            z-index: 100;
+
+            @include respond(md) {
+                display: none;
+            }
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: 64px;
+        right: calc(326px + #{$offset} + ((100% - #{$offset} * 2) / 100 * #{$content-margin-left}) - #{$carousel-control-size});
+        z-index: 100;
+        display: flex;
+
+        @include respond(lg) {
+            right: calc(300px + #{$offset} + 50px);
+        }
+
+        @include respond(md) {
+            display: none;
+        }
+
+        &-prev,
+        &-next {
+            @include carousel-control;
+        }
     }
 
     &__carousel {
         position: relative;
         bottom: 0;
-        margin-top: -$offset;
-
-        @include respond(md) {
-            margin-top: 0
-        }
     }
 
     &__carousel-item {
@@ -339,17 +362,6 @@ $content-margin-left: 9;
         @include respond(md) {
             font-size: 38px;
             padding-left: 0;
-        }
-    }
-
-    &__counter {
-        position: absolute;
-        left: 30px;
-        top: 60px;
-        z-index: 100;
-
-        @include respond(md) {
-            display: none;
         }
     }
 }

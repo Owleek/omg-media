@@ -53,8 +53,12 @@
     color: $white !important;
     text-align: center;
     cursor: pointer;
+    line-height: 72px;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
 
-    &.disabled {
+    &.disabled,
+    &.swiper-button-disabled {
         color: $dark-blue !important;
         background-color: $white !important;
         cursor: default;
