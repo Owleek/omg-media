@@ -1,8 +1,12 @@
 //= ../vendors/OwlCarousel2-2.3.4/owl.carousel.min.js
+//= ../vendors/swiper-4.5.0/swiper.min.js
 //= ../vendors/typed-v2.0.9/typed.min.js
 //= ../vendors/jquery.inview.min.js
 
-//= ./debounce.js
+//= ./utils/debounce.js
+//= ./utils/carouselInitializer.js
+//= ./utils/carouselCustomPagination.js
+
 //= ./youtube-carousel.js
 //= ./cases-carousel.js
 //= ./team-carousel.js

@@ -1,28 +1,26 @@
 function casesCarousel() {
-  const $casesSection = $(".js-cases-section");
-  const $casesCarousel = $casesSection.find(".cases-section__carousel");
-
-  if ($casesCarousel.find(".cases-section__carousel-item").length > 1) {
-    $casesCarousel.owlCarousel({
+  function launchCarousel(device) {
+    return new Swiper('.js-cases-swiper', {
       loop: false,
-      nav: false,
-      dots: true,
-      items: 1,
-      onInitialized: function(event) {
-        $casesCarousel.addClass("owl-carousel");
-        $casesSection.find(".items-counter").addClass("items-counter_active");
+      spaceBetween: 24,
+      effect: device === "mobile" ? "slide" : "fade",
+      pagination: {
+        el: '.cases-section__pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: carouselCustomPagination,
       },
-      onChanged: function(event) {
-        const current = event.item.index + 1;
-        $casesSection.find(".items-counter__total").text(event.item.count < 10 ? "0" + event.item.count : event.item.count);
-        $casesSection.find(".items-counter__current").text(current < 10 ? "0" + current : current);
+      navigation: {
+        nextEl: '.cases-section__nav-next',
+        prevEl: '.cases-section__nav-prev',
       },
-      responsive: {
-        1024: {
-          dots: false,
-          nav: true,
-        }
-      }
     });
   }
+
+  const mediaPoints = {
+    mobile: "(max-width: 1023px)",
+    desktop: "(min-width: 1024px)",
+  }
+
+  carouselInitializer(mediaPoints, launchCarousel);
 }
