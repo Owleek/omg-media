@@ -76,24 +76,13 @@
     .checkbox {
         display: inline-flex;
 
-        &_aqua {
-            .checkbox__label {
-                &:before {
-                    border: 2px solid $aqua;
-                }
-
-                &:after {
-                    background-image: url(../images/svg/omg-media-svg-сheck-mark-aqua.svg);
-                }
-            }
-        }
-
+        
         &__label {
             cursor: pointer;
             display: inline-block;
             position: relative;
             padding-left: 30px;
-    
+            
             &:before,
             &:after {
                 content: "";
@@ -126,9 +115,21 @@
         
         &__input {
             display: none;
-    
+            
             &:checked + .checkbox__label:after {
                 opacity: 1;
+            }
+        }
+
+        &_aqua {
+            .checkbox__label {
+                &:before {
+                    border: 2px solid $aqua;
+                }
+
+                &:after {
+                    background-image: url(../images/svg/omg-media-svg-сheck-mark-aqua.svg);
+                }
             }
         }
     }

@@ -56,21 +56,21 @@
         }
 
         &_selected {
-            color: $dark-blue;
+            color: $white;
 
             &:after {
                 opacity: 1;
-                background: $dark-blue;
+                background: $white;
                 transform: scaleX(1);
             }
 
             &:hover {
-                color: $dark-blue;
+                color: $white;
             }
 
-            .counter {
-                color: $dark-blue;
-            }
+            // .counter {
+            //     color: $dark-blue;
+            // }
         }
     }
 }

@@ -66,7 +66,7 @@
         }
 
         @include respond(md) {
-            display: none; //////// временно
+            display: none;
         }
     }
 
@@ -99,6 +99,114 @@
         text-transform: uppercase;
         color: $white;
         font-size: 28px;
+    }
+
+    &__nav {
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include respond(md) {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        @include respond(xl) {
+            text-transform: none;
+            font-weight: 400;
+        }
+
+        &:before {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            left: 0px; top: 0px;
+            background: $light-blue;
+            top: -100vh;
+            content: '';
+            opacity: 0;
+
+            transition:opacity 0.5s ease 0s;
+        }
+
+        .nav__list {
+            display: flex;
+
+            @include respond(md) {
+                display: none;
+
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                left: 0px; top: 0px;
+
+                opacity: 0.97;
+                z-index: 100;
+
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .nav__list-item {
+            display: flex;
+
+            @include respond(md) {
+                margin: 20px 0;
+                padding-right: 0px !important;
+            }
+
+            &:not(:last-child) {
+                padding-right: 30px;
+
+                @include respond(xl) {
+                    padding-right: 16px;
+                }
+            }
+        }
+
+        .nav__list-item-link {
+            display: block;
+            padding-bottom: 15px;
+            position: relative;
+            text-decoration: none;
+
+            &:after {
+                content: "";
+                position: absolute;
+                left: 0; bottom: 0;
+                width: 100%;
+                height: 3px;
+                background: #ffffff;
+                opacity: 0;
+                transform: scaleX(0.01);
+                transition-duration: 0.3s;
+            }
+
+            &:hover {
+                text-decoration: none;
+
+                &:after {
+                    opacity: 1;
+                    transform: scaleX(1)
+                }
+            }
+
+            &_selected {
+                color: $white;
+
+                &:hover {
+                    color: $white;
+                }
+
+                &:after {
+                    opacity: 1;
+                    background: $white;
+                    transform: scaleX(1);
+                }
+            }
+        }
     }
 
     &__search-icon-box {
@@ -202,162 +310,71 @@
     }
 }
 
-.search-icon-box {
-    .search-icon {
-        display: block;
-        line-height: 18px;
-        padding: 10px;
-        cursor: pointer;
+.search-icon {
+    display: block;
+    line-height: 18px;
+    padding: 10px;
+    cursor: pointer;
 
-        svg,
-        path {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            fill: #ffffff;
-            vertical-align: top;
-        }
-    }
-}
-
-.nav {
-    font-weight: 500;
-    text-transform: uppercase;
-
-    @include respond(md) {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-    }
-
-    @include respond(xl) {
-        text-transform: none;
-        font-weight: 400;
-    }
-
-    &:before {
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        left: 0px; top: 0px;
-        background: $light-blue;
-        top: -100vh;
-        content: '';
-        opacity: 0;
-
-        transition:opacity 0.5s ease 0s;
-    }
-
-    &__list {
-        display: flex;
-
-        @include respond(md) {
-            display: none;
-
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            left: 0px; top: 0px;
-
-            opacity: 0.97;
-            z-index: 100;
-
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    &__list-item {
-        display: flex;
-
-        @include respond(md) {
-            margin: 20px 0;
-            padding-right: 0px !important;
-        }
-
-        &:not(:last-child) {
-            padding-right: 30px;
-
-            @include respond(xl) {
-                padding-right: 16px;
-            }
-        }
-    }
-
-    &__list-item-link {
-        display: block;
-        padding-bottom: 15px;
-        position: relative;
-        text-decoration: none;
-
-        &:after {
-            content: "";
-            position: absolute;
-            left: 0; bottom: 0;
-            width: 100%;
-            height: 3px;
-            background: #ffffff;
-            opacity: 0;
-            transform: scaleX(0.01);
-            transition-duration: 0.3s;
-        }
-
-        &:hover {
-            text-decoration: none;
-
-            &:after {
-                opacity: 1;
-                transform: scaleX(1)
-            }
-        }
-
-        &_selected {
-            color: $dark-blue;
-
-            &:hover {
-                color: $dark-blue;
-            }
-
-            &:after {
-                opacity: 1;
-                background: $dark-blue;
-                transform: scaleX(1);
-            }
-        }
+    svg,
+    path {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        fill: #ffffff;
+        vertical-align: top;
     }
 }
 
 .search-bar {
     position: relative;
     background: $white;
+    font-size: 18px;
+    align-items: center;
 
     &__submit {
         cursor: pointer;
+        padding-left: 20px;
+
+        svg,
+        path {
+            fill: $secondary;
+        }
     }
 
     &__label {
         width: 100%;
         position: relative;
-        padding-right: 20px;
+        padding-right: 55px;
     }
 
     &__clear {
         display: none;
         position: absolute;
         right: 0;
-        top: 0;
-        width: 20px;
+        top: 50%;
+        width: 55px;
+        transform: translateY(-50%);
         text-align: center;
         cursor: pointer;
+
+        svg {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            fill: $secondary;
+            vertical-align: middle;
+        }
 
         &_active {
             display: block;
         }
+
     }
 
-    input {
+    &__input {
+        padding: 12px 0;
         width: 100%;
-        background: pink;
+        border: none;
     }
 }
