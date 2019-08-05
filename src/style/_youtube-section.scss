@@ -43,10 +43,21 @@
 
     &__carousel {
         display: flex;
-        margin-left: -20px;
-        margin-right: -20px;
-        margin-top: -20px;
+        margin-left: -20px !important;
+        margin-right: -20px !important;
+        margin-top: -20px !important;
         width: auto !important;
+
+        @include respond(md) {
+            padding-right: 84px;
+            margin-right: -84px;
+            margin-bottom: 20px;
+        }
+
+        @include respond(sm) {
+            padding-right: 72px;
+            margin-right: -70px;
+        }
 
         @include respond(md) {
             margin-left: -8px;
@@ -123,6 +134,18 @@
     &__carousel-item {
         display: flex;
         align-items: flex-start;
+        padding: 48px 20px;
+        opacity: 0 !important;
+
+        &.swiper-slide-active {
+            opacity: 1 !important;
+        }
+
+        @include respond(md) {
+            display: flex;
+            padding: 20px 8px;
+            opacity: 1 !important;
+        }
     }
 
     &__card {
@@ -130,6 +153,7 @@
         background-color: #ffffff;
         box-shadow: 0px 20px 20px -5px rgba(0, 0, 0, 0.25);
         position: relative;
+        flex-shrink: unset !important;
 
         @include respond(md) {
             flex-basis: 100%;
