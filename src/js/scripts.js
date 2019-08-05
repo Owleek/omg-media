@@ -26,11 +26,8 @@ $(document).ready(function(){
   searchTrigger();
 
   $('.request-trigger').click(function() {
-
       $(this).hide();
       $(this).next('.basic-form').addClass('basic-form__active');
-
-      // $('.consult-request').addClass('activated');
     });
 
   $('.block-fadein').one('inview', function() {
@@ -84,7 +81,7 @@ function initTypewriter() {
         })
         let string = $item.data('text'),
             node = $item.find('.typedNode').get(0);
-        return runTypedPlugin(node, string, () => {
+        return runTypedPlugin(node, [string], () => {
           $item
             .text(string)
             .data('type_end', true);
@@ -92,17 +89,38 @@ function initTypewriter() {
         });
       };
     }
+
+    $items.each(function() {
+      if ($(this).data('typed_strings')) {
+        setTimeout(() => {
+
+          $(this).empty();
+          $('<span>').css({
+              height: 0,
+              display: 'inline-block'
+            })
+            .appendTo($(this))
+
+          runTypedPlugin(
+            $(this).find('span').get(0), 
+            $(this).data('typed_strings'))
+          
+        }, 1000);
+      }
+    });
   };
 
-  function runTypedPlugin(node, string, callback) {
+  function runTypedPlugin(node, string, callback = null) {
     new Typed(node, {
-      strings: [string],
+      strings: string,
       typeSpeed: 50,
       backSpeed: 0,
       fadeOut: true,
-      loop: false,
+      loop: string.length > 1,
       onStringTyped: (pos, self) => {
-        self.destroy();
+        if (callback) {
+          self.destroy();
+        }
       },
       onDestroy: callback
     });
