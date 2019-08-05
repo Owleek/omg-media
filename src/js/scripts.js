@@ -25,8 +25,12 @@ $(document).ready(function(){
   promotionPartnersCarousel();
   searchTrigger();
 
-  $('.consult-request__button').click(function() {
-      $('.consult-request').addClass('activated');
+  $('.request-trigger').click(function() {
+
+      $(this).hide();
+      $(this).next('.basic-form').addClass('basic-form__active');
+
+      // $('.consult-request').addClass('activated');
     });
 
   $('.block-fadein').one('inview', function() {
