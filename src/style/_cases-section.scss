@@ -365,3 +365,9 @@ $content-margin-left: 9;
         }
     }
 }
+
+.block-fadein.inview .cases-section__carousel.content-fadein {
+    @include respond(md) {
+        transition: unset;
+    }
+}
