@@ -187,6 +187,23 @@ $content-margin-left: 9;
         }
     }
 
+    &__video.video-play a:after {
+        width: 96px;
+        height: 96px;
+        position: absolute;
+        left: 50%;        
+        top: 50%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(255,255,255,0.5) url(../images/svg/omg-media-svg-play.svg) no-repeat 55% 50%;
+         transition: all 0.15s ease-in;   
+        content: '';
+    }
+
+    &__video.video-play a:hover:after {
+        background-color: rgba(255,255,255,0.8);
+    }
+
     &__content {
         margin-left: #{$content-margin-left + "%"};
         flex-shrink: 0;

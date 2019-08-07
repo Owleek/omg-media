@@ -1,6 +1,7 @@
 //= ../vendors/OwlCarousel2-2.3.4/owl.carousel.min.js
 //= ../vendors/swiper-4.5.0/swiper.min.js
 //= ../vendors/typed-v2.0.9/typed.min.js
+//= ../vendors/fancybox-v3.5.7/jquery.fancybox.min.js
 //= ../vendors/jquery.inview.min.js
 
 //= ./utils/debounce.js
@@ -104,7 +105,7 @@ function initTypewriter() {
           runTypedPlugin(
             $(this).find('span').get(0), 
             $(this).data('typed_strings'))
-          
+
         }, 1000);
       }
     });

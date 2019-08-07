@@ -11,10 +11,37 @@
     <link rel="stylesheet" href="style/libs.css">
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="//www.youtube.com/player_api"></script>
     <script src="js/scripts.js"></script>
+
+    <script defer>
+
+        function onYouTubeIframeAPIReady() {
+          console.log('youtube ready');
+        }
+
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '390',
+            width: '640',
+            videoId: 'UDIQwGb-4YQ'
+          });
+        }
+
+        $(document).on('mouseover', '#player', function() {
+          player.playVideo();
+        });
+        $(document).on('mouseout', '#player', function() {
+          player.pauseVideo();
+        });
+    </script>
+
 
 </head>
 
