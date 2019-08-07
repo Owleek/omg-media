@@ -94,6 +94,22 @@ b {
     &_transparent {
         background: transparent;
     }
+
+    &_vk {
+        background-color: #4A76A8;
+    }
+
+    &_facebook {
+        background-color: #4267B2;
+    }
+
+    &_instagram {
+        background: linear-gradient(258.53deg, #B700A8 -2.02%, #D00158 47.25%, #EA000B 100%);
+    }
+
+    &_yandex {
+        background-color: #DF251F;
+    }
 }
 
 .page-wrapper {
