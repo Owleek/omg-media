@@ -66,6 +66,7 @@
 
     &__hero {
         flex-basis: 51%;
+        align-self: flex-end;
         padding: 10px 60px 0px 55px;
 
         @include respond(lg) {
@@ -78,6 +79,7 @@
 
         @include respond(sm) {
             flex-basis: auto;
+            align-self: stretch;
             padding: 30px 100px 0px 100px;
             margin-bottom: 30px;
         }
@@ -88,6 +90,7 @@
         }
 
         .image-wrapper {
+
             &:before {
                 padding-top: 93.3%;
             }
@@ -151,6 +154,14 @@
 
         @include respond(xs) {
             font-size: 1.5rem;
+        }
+    }
+
+    &__basic-form {
+        padding: 0px 40px 40px 0px;
+
+        @include respond(sm) {
+            padding: 0;
         }
     }
     

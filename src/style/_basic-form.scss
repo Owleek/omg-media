@@ -64,10 +64,12 @@
         color: $light-blue;
         user-select: none;
 
-        @include respond(sm) {
-            color: $aqua;
+        &_responsive-aqua {
+            @include respond(sm) {
+                color: $aqua;
+            }
         }
-
+        
         &_aqua {
             color: $aqua;
         }
