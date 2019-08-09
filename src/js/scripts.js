@@ -117,6 +117,7 @@ function initTypewriter() {
       typeSpeed: 50,
       backSpeed: 0,
       fadeOut: true,
+      backDelay: 2000,
       loop: string.length > 1,
       onStringTyped: (pos, self) => {
         if (callback) {
