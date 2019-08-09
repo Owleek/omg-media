@@ -305,6 +305,23 @@
 }
 
 
+.request-success {
+	display: none;
+	text-align: center;
 
+	h2 {
+		margin-bottom: 0;
+		font-size: 32px;
+	}
+
+	p {
+		font-weight: normal;
+		font-size: 20px;
+	}
+
+	.button {
+		width: 200px;
+	}
+}
 
 

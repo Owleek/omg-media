@@ -15,7 +15,7 @@
 //= ./promotion-partners-carousel.js
 //= ./search-trigger.js
 
-$(document).ready(function(){
+$(document).ready(function() {
 
   initTypewriter();
   initTeamParalax();
@@ -31,6 +31,16 @@ $(document).ready(function(){
       $(this).next('.basic-form').addClass('basic-form__active');
     });
 
+  $('.request-success .button').click(function() {
+      $(this) 
+        .parents('.consult-request')
+        .find('.consult-request__content')
+        .show();
+      $(this)
+        .parents('.request-success')
+        .hide();
+    });
+
   $('.block-fadein').one('inview', function() {
       $(this).addClass('inview');
     });
@@ -40,6 +50,15 @@ $(document).ready(function(){
     });
 
 });
+
+  function showConsReqSucMes(event) {
+    var $requstForm = $(event.target).parents('.consult-request');
+    $requstForm.find('.consult-request__content').hide();
+    $requstForm.find('.basic-form').removeClass('basic-form__active');
+    $requstForm.find('.request-trigger').show();
+    $requstForm.find('.request-success').show();
+  }
+
 
 function initTeamParalax() {
   var $teamSlideImage = $('.team-paralax .team-paralax__image'),
