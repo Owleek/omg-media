@@ -154,8 +154,12 @@
 	margin-top: 42px;
 	visibility: hidden;
 
-	@include respond(xs) {
+	@include respond(md) {
 		visibility: visible;
+	}			
+
+	@include respond(md) {
+		margin-top: 24px;
 	}			
 }
 
