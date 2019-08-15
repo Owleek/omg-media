@@ -135,12 +135,14 @@
     .half-number {
         position: absolute;
         left: 0; top: 0;
+        width: 100%;
         line-height: 1;
         text-indent: -11rem;
         opacity: 0.08;
         font-size: 36.8rem;
         letter-spacing: -0.04em;
         user-select: none;
+        z-index: 0;
 
         .smaller {
             font-size: 16.3rem;

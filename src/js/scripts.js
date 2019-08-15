@@ -25,6 +25,7 @@ $(document).ready(function() {
   partnerCarousel();
   promotionPartnersCarousel();
   searchTrigger();
+  offEventClickPhoneOnDesctop();
 
   $('.request-trigger').click(function() {
       $(this).hide();
@@ -48,8 +49,29 @@ $(document).ready(function() {
   $('.header__menu').click(function() {
       $('body').toggleClass('mob-menu__open')
     });
-
 });
+
+
+function offEventClickPhoneOnDesctop() {
+  var $phone = $('.js-telephone');
+  var $windowWidth = $(window).width();
+  
+  function clickPreventDefault(){
+    $phone.click(function(event){
+      event.preventDefault();
+  })}
+
+  if ($windowWidth > 1023) {
+    clickPreventDefault();
+  }
+
+  $(window).resize(function() {
+    if ($windowWidth > 1023) {
+      clickPreventDefault();
+    }
+  });
+}
+
 
   function showConsReqSucMes(event) {
     var $requstForm = $(event.target).parents('.consult-request');
