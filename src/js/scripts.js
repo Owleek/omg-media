@@ -25,7 +25,6 @@ $(document).ready(function() {
   partnerCarousel();
   promotionPartnersCarousel();
   searchTrigger();
-  offEventClickPhoneOnDesctop();
 
   $('.request-trigger').click(function() {
       $(this).hide();
@@ -52,34 +51,14 @@ $(document).ready(function() {
 });
 
 
-function offEventClickPhoneOnDesctop() {
-  var $phone = $('.js-telephone');
-  var $windowWidth = $(window).width();
-  
-  function clickPreventDefault(){
-    $phone.click(function(event){
-      event.preventDefault();
-  })}
 
-  if ($windowWidth > 1023) {
-    clickPreventDefault();
-  }
-
-  $(window).resize(function() {
-    if ($windowWidth > 1023) {
-      clickPreventDefault();
-    }
-  });
+function showConsReqSucMes(event) {
+  var $requstForm = $(event.target).parents('.consult-request');
+  $requstForm.find('.consult-request__content').hide();
+  $requstForm.find('.basic-form').removeClass('basic-form__active');
+  $requstForm.find('.request-trigger').show();
+  $requstForm.find('.request-success').show();
 }
-
-
-  function showConsReqSucMes(event) {
-    var $requstForm = $(event.target).parents('.consult-request');
-    $requstForm.find('.consult-request__content').hide();
-    $requstForm.find('.basic-form').removeClass('basic-form__active');
-    $requstForm.find('.request-trigger').show();
-    $requstForm.find('.request-success').show();
-  }
 
 
 function initTeamParalax() {

@@ -9,11 +9,12 @@
 
     &__list {
         display: flex;
+        padding-left: 24px;
         white-space: nowrap;
     }
 
     &__list-item {
-        margin-right: 30px;
+        padding-right: 30px;
     }
 
     &__list-item-link {

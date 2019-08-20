@@ -31,6 +31,7 @@
     &__secondary {
         overflow-x: auto;
         padding-top: 45px;
+        margin: 0 -24px;
 
         @include respond(md) {
             padding-top: 85px;
@@ -55,6 +56,7 @@
         font-weight: 500;
         padding: 15px 16px;
         color: $white;
+        cursor: default;
 
         &:hover {
             color: $white;
