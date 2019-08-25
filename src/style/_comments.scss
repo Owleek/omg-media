@@ -104,7 +104,14 @@
     &__avatar {
         width: 42px;
         height: 40px;
+        display: inline-block;
         margin-right: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
     
     &__header-content {
