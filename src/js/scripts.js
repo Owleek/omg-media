@@ -3,6 +3,7 @@
 //= ../vendors/typed-v2.0.9/typed.min.js
 //= ../vendors/fancybox-v3.5.7/jquery.fancybox.min.js
 //= ../vendors/jquery.inview.min.js
+//= ../vendors/Inputmask-5.x/jquery.inputmask.min.js
 
 //= ./utils/debounce.js
 //= ./utils/carouselInitializer.js
@@ -48,6 +49,8 @@ $(document).ready(function() {
   $('.header__menu').click(function() {
       $('body').toggleClass('mob-menu__open')
     });
+
+  $('.js-phone-mask').inputmask({ mask: "+7 (999) 999 9999"});
 });
 
 
