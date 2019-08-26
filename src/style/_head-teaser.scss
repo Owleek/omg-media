@@ -124,6 +124,7 @@
         font-size: 3rem;
         line-height: 1.2;
         margin-bottom: 24px;
+        padding-right: 30px;
 
         .smaller {
             font-size: 2rem;
@@ -131,6 +132,10 @@
 
             @include respond(md) {
                 margin-bottom: 5px;
+            }
+
+            @include respond(sm) {
+                padding-right: 0px;
             }
 
             @include respond(xs) {
