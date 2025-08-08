@@ -1,5 +1,5 @@
 const gulp             = require('gulp');
-const sass             = require('gulp-sass');
+const sass             = require('gulp-sass')(require('sass'));
 const autoprefixer     = require('gulp-autoprefixer');
 const cssbeautify      = require('gulp-cssbeautify');
 const imagemin         = require('gulp-imagemin');
@@ -135,7 +135,7 @@ function svgOrigin() {
 
 
 function fonts() {
-    return gulp.src(path.src.fonts)
+    return gulp.src(path.src.fonts, { allowEmpty: true })
     .pipe(gulp.dest(path.build.fonts));
 }
 
